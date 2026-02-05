@@ -1,0 +1,33 @@
+## 2. 深度过滤文件：`.gitignore`
+
+
+
+```text
+# --- 系统与临时文件 ---
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+Thumbs.db
+
+# --- 环境变量与秘钥 ---
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# --- 项目状态数据 ---
+# 如果你希望 GitHub Actions 帮你维护历史，
+# 那么 history.json 不应该在本地被 commit，
+# 但 GitHub Action 会在服务器端更新它。
+history.json
+
+# --- 配置文件 ---
+# config.ini 是通用配置，建议保留在 Git 中
+# 只有包含敏感秘钥的本地配置文件才需要忽略
+
+# --- 缓存与日志 ---
+.cache/
+.pytest_cache/
+*.log

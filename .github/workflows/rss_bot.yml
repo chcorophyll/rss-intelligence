@@ -1,0 +1,51 @@
+name: RSS Intelligence Daily
+
+on:
+  schedule:
+    - cron: '0 22 * * *' # 每天北京时间早上 6 点运行 (UTC 22:00)
+  workflow_dispatch:      # 允许在 GitHub UI 手动点击运行
+
+jobs:
+  run-and-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # 关键：允许 GitHub Action 机器人提交修改后的 history.json
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # 获取完整历史以确保推送顺畅
+          fetch-depth: 0
+
+      - name: Install uv
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Set up Python
+        run: uv python install 3.10
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run Intelligence Bot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: uv run main.py
+
+      - name: Commit & Push History
+        run: |
+          # 配置 Git 机器人信息
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # 检查 history.json 是否有更新
+          if [ -f "history.json" ]; then
+            git add history.json
+            # 如果没有变化，commit 会报错，所以用 || echo 忽略
+            git commit -m "chore: update rss history [skip ci]" || echo "No changes to commit"
+            git push
+          else
+            echo "history.json not found, skipping commit."
+          fi

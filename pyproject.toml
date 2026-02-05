@@ -1,0 +1,22 @@
+[project]
+name = "rss-intelligence"
+version = "0.1.0"
+description = "Autonomous Bilingual RSS Intelligence System via Gemini AI"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "aiohttp>=3.9.0",
+    "feedparser>=6.0.10",
+    "listparser>=0.19",
+    "google-generativeai>=0.3.0",
+    "beautifulsoup4>=4.12.0",
+    "markdown>=3.5",
+    "python-dotenv>=1.2.1",
+    "google-genai>=1.62.0",
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-html>=4.0.0",
+]
+
+[tool.uv]
+managed = true
