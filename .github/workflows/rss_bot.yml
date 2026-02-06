@@ -21,7 +21,7 @@ jobs:
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
       - name: Set up Python
-        run: uv python install 3.10
+        run: uv python install 3.13
 
       - name: Install dependencies
         run: uv sync
@@ -32,6 +32,8 @@ jobs:
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
           RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: uv run main.py
 
       - name: Commit & Push History
@@ -44,7 +46,7 @@ jobs:
           if [ -f "history.json" ]; then
             git add history.json
             # 如果没有变化，commit 会报错，所以用 || echo 忽略
-            git commit -m "chore: update rss history [skip ci]" || echo "No changes to commit"
+            git commit -m "chore: update rss processing history [skip ci]" || echo "No changes to commit"
             git push
           else
             echo "history.json not found, skipping commit."
