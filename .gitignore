@@ -1,8 +1,3 @@
-## 2. 深度过滤文件：`.gitignore`
-
-
-
-```text
 # --- 系统与临时文件 ---
 __pycache__/
 *.py[cod]
