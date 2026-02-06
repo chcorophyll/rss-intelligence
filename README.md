@@ -23,6 +23,7 @@ rss-intelligence/
 │   └── config.ini           # 非敏感运行配置（并发控制、TTL、模型参数）
 ├── src/                     # 核心模块代码目录
 ├── main.py                  # 统一入口文件，负责全流程调度
+├── debug_workflow.py        # 单链路调试工具（调试单个 RSS 地址）
 ├── pyproject.toml           # 项目元数据及 uv 依赖定义
 ├── uv.lock                  # 依赖版本精确锁定文件
 ├── .gitignore               # Git 忽略配置（保护秘钥与本地缓存）
@@ -64,6 +65,14 @@ export RECEIVER_EMAIL="您的收件邮箱"
 # 同步依赖并启动
 uv sync
 uv run main.py
+
+### 🔍 单步调试 (推荐)
+
+如果您发现某个网址无法抓取或 AI 处理异常，可以使用单步调试工具：
+```bash
+uv run debug_workflow.py
+```
+*(您可以直接在脚本中修改 `test_url` 来测试任意 RSS 地址。)*
 
 
 

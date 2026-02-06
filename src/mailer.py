@@ -33,14 +33,23 @@ class Mailer:
         msg.attach(MIMEText(body, 'html'))
 
         try:
-            with smtplib.SMTP_SSL(
-                self.cfg.config.get('SMTP', 'Server'), 
-                self.cfg.config.getint('SMTP', 'Port'),
-                timeout=30
-            ) as server:
+            host = self.cfg.config.get('SMTP', 'Server')
+            port = self.cfg.config.getint('SMTP', 'Port')
+            
+            if port == 465:
+                server = smtplib.SMTP_SSL(host, port, timeout=30)
+            else:
+                server = smtplib.SMTP(host, port, timeout=30)
+                if port == 587:
+                    server.starttls()
+            
+            with server:
                 server.login(self.cfg.SENDER, self.cfg.SMTP_PASS)
                 server.sendmail(self.cfg.SENDER, self.cfg.RECEIVER, msg.as_string())
-            print("🚀 邮件报告发送成功！")
+            print("邮件报告发送成功！")
         except Exception as e:
-            print(f"❌ 邮件发送失败: {e}")
+            print(f"邮件发送失败: {e}")
+            if "EOF" in str(e) or "protocol" in str(e).lower():
+                print("💡 诊断提示: 检测到 SSL 握手异常。这通常是因为 Gmail/国外邮箱的 SMTP 服务被网络环境封锁。")
+                print("💡 解决建议: 建议更换为国内邮箱（如 QQ、163）的 SMTP 服务，稳定性更高。")
             raise e

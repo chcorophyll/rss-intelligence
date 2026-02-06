@@ -5,7 +5,6 @@ import os
 import time
 import aiohttp
 import feedparser
-import listparser
 
 class RSSManager:
     def __init__(self, cfg, opml="subscriptions.opml", txt="feeds.txt", db="history.json"):
@@ -37,8 +36,12 @@ class RSSManager:
         """获取并解析订阅源"""
         urls = []
         if os.path.exists(self.opml):
-            result = listparser.parse(self.opml)
-            urls = [f.url for f in result.feeds if f.url]
+            from bs4 import BeautifulSoup
+            with open(self.opml, 'r', encoding='utf-8') as f:
+                # Use xml parser for correct case handling in OPML
+                soup = BeautifulSoup(f.read(), 'xml')
+                urls = [o.get('xmlUrl') for o in soup.find_all('outline') if o.get('xmlUrl')]
+            print(f"✅ Found {len(urls)} URLs in OPML")
         elif os.path.exists(self.txt):
             with open(self.txt, 'r', encoding='utf-8') as f:
                 urls = [l.strip() for l in f if l.strip() and not l.startswith("#")]

@@ -54,10 +54,14 @@ async def main():
 
         # 4. 发送邮件并持久化历史 (Phase 3)
         if processed:
-            mailer = Mailer(cfg)
-            mailer.send_report(processed)
+            try:
+                mailer = Mailer(cfg)
+                mailer.send_report(processed)
+            except Exception as e:
+                print(f"⚠️ 邮件发送环节出现问题，但已处理的文章将记入历史记录以节省配额。")
+            
             rss.save_and_clean()
-            print(f"🏁 任务圆满完成。")
+            print(f"🏁 任务处理完成（历史记录已更新）。")
 
     except Exception as e:
         print(f"🔥 程序运行期间发生致命错误: {e}")

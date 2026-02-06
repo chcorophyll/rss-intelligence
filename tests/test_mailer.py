@@ -19,10 +19,18 @@ def test_send_report_success(mock_config):
         }
     ]
     
-    with patch('smtplib.SMTP_SSL') as mock_smtp:
+    with patch('smtplib.SMTP_SSL') as mock_smtp_ssl, patch('smtplib.SMTP') as mock_smtp:
         mock_instance = MagicMock()
-        mock_smtp.return_value.__enter__.return_value = mock_instance
+        # Mocking context manager behavior:
+        # with server: calls server.__enter__()
+        mock_instance.__enter__.return_value = mock_instance
         
+        # Determine which mock to use based on the mock_config (port 465 in mock_config usually)
+        if mock_config.config.getint('SMTP', 'Port') == 465:
+            mock_smtp_ssl.return_value = mock_instance
+        else:
+            mock_smtp.return_value = mock_instance
+            
         mailer.send_report(processed_articles)
         
         mock_instance.login.assert_called_once_with(mock_config.SENDER, mock_config.SMTP_PASS)
@@ -64,10 +72,15 @@ def test_send_report_failure(mock_config):
     mailer = Mailer(mock_config)
     processed_articles = [{"title": "Art", "link": "link", "source": "src", "ai_html": "html"}]
     
-    with patch('smtplib.SMTP_SSL') as mock_smtp:
+    with patch('smtplib.SMTP_SSL') as mock_smtp_ssl, patch('smtplib.SMTP') as mock_smtp:
         mock_instance = MagicMock()
+        mock_instance.__enter__.return_value = mock_instance
         mock_instance.login.side_effect = Exception("SMTP Auth Error")
-        mock_smtp.return_value.__enter__.return_value = mock_instance
+        
+        if mock_config.config.getint('SMTP', 'Port') == 465:
+            mock_smtp_ssl.return_value = mock_instance
+        else:
+            mock_smtp.return_value = mock_instance
         
         with pytest.raises(Exception) as excinfo:
             mailer.send_report(processed_articles)
