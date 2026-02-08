@@ -47,6 +47,9 @@ jobs:
             git add -f history.json
             # 如果没有变化，commit 会报错，所以用 || echo 忽略
             git commit -m "chore: update rss processing history [skip ci]" || echo "No changes to commit"
+            
+            # 拉取远程更改并变基，解决 push 冲突
+            git pull --rebase
             git push
           else
             echo "history.json not found, skipping commit."
