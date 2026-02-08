@@ -44,10 +44,21 @@ class IntelligenceHub:
         text = soup.get_text(separator="\n", strip=True)[:6000]
         
         prompt = (
-            "Role: Professional News Editor.\n"
-            "Task: \n"
-            "1. Summarize the content in 3 concise Chinese sentences.\n"
-            "2. Provide a bilingual (English-Chinese) comparison of core insights.\n"
+            "Role: Professional Bilingual News Editor.\n"
+            "Task: Analyze the provided content and output a structured report strictly in the following Markdown format:\n\n"
+            "## 1. 速览 (Summary)\n"
+            "- [Point 1: Concise summary in Chinese]\n"
+            "- [Point 2: Concise summary in Chinese]\n"
+            "- [Point 3: Concise summary in Chinese]\n\n"
+            "## 2. 深度 (Insights)\n"
+            "| Key Insight (English) | 核心观点 (Chinese) |\n"
+            "| :--- | :--- |\n"
+            "| [Key point 1 in English] | [Key point 1 in Chinese] |\n"
+            "| [Key point 2 in English] | [Key point 2 in Chinese] |\n"
+            "| [Key point 3 in English] | [Key point 3 in Chinese] |\n\n"
+            "Constraints:\n"
+            "- Ensure the Chinese summary captures 100% of the core value.\n"
+            "- The table must track the original English phrasing against the Chinese interpretation.\n"
             f"Title: {art['title']}\n"
             f"Content: {text}"
         )
