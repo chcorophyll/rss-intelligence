@@ -15,12 +15,12 @@ class AppConfig:
         self.config = configparser.ConfigParser()
         self.config.read(os.path.join('config', 'config.ini'), encoding='utf-8')
         # 从环境变量获取敏感信息
-        self.GEMINI_KEY = os.getenv("GEMINI_API_KEY")
-        self.SMTP_PASS = os.getenv("SMTP_PASSWORD")
-        self.SENDER = os.getenv("SENDER_EMAIL")
-        self.RECEIVER = os.getenv("RECEIVER_EMAIL")
-        self.TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-        self.TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+        self.GEMINI_KEY = os.getenv("GEMINI_API_KEY", "").strip()
+        self.SMTP_PASS = os.getenv("SMTP_PASSWORD", "").strip()
+        self.SENDER = os.getenv("SENDER_EMAIL", "").strip()
+        self.RECEIVER = os.getenv("RECEIVER_EMAIL", "").strip()
+        self.TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+        self.TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
     def validate(self):
         """检查必要配置是否存在"""
