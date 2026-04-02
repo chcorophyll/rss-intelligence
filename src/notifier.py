@@ -13,7 +13,10 @@ class EmailNotifier:
         msg = MIMEMultipart()
         
         if not processed_articles:
-            msg['Subject'] = "RSS 智能情报局 - 今日暂无新情报"
+            if warning:
+                msg['Subject'] = "RSS 智能情报局 - 因额度不足,今日0篇处理"
+            else:
+                msg['Subject'] = "RSS 智能情报局 - 今日暂无新情报"
         else:
             msg['Subject'] = f"RSS 智能情报局 - {len(processed_articles)} 篇新更新"
             
