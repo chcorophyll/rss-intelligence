@@ -34,14 +34,14 @@ class RSSManager:
         return {}
 
     def save_and_clean(self):
-        """清理已处理且过期的条目，并保存历史记录"""
+        """清理过期条目（已处理或未处理），并保存历史记录"""
         cutoff = time.time() - (self.retention_days * 24 * 3600)
         cleaned = {}
         for h, info in self.history.items():
-            # 只有已处理且时间过期才清理
-            is_processed = info.get('processed', False)
             ts = info.get('ts', 0)
-            if not is_processed or ts > cutoff:
+            # 只保留 retention 窗口内的条目（无论是否处理）
+            # 超期的 pending 文章也清理，防止积压无限增长
+            if ts > cutoff:
                 cleaned[h] = info
         
         with open(self.db, 'w', encoding='utf-8') as f:
@@ -91,13 +91,19 @@ class RSSManager:
                             }
 
         # 2. 从历史记录中提取所有待处理 (processed: False) 的文章
+        # 只取 RetentionDays 窗口内的文章，避免旧积压导致每次触发 AI 配额耗尽
+        cutoff = time.time() - (self.retention_days * 24 * 3600)
         pending_data = []
         for info in self.history.values():
             if not info.get('processed', False) and 'data' in info:
-                pending_data.append(info)
+                if info.get('ts', 0) >= cutoff:
+                    pending_data.append(info)
         
         # 按时间从近到远排序 (ts 降序)
         pending_data.sort(key=lambda x: x.get('ts', 0), reverse=True)
+        
+        if pending_data:
+            print(f"📋 窗口内待处理文章: {len(pending_data)} 篇（最近 {self.retention_days} 天内）")
         
         return [item['data'] for item in pending_data]
 
