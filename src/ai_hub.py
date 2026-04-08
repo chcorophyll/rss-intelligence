@@ -24,6 +24,9 @@ class IntelligenceHub:
                 return None
             
             async with sem:
+                if self.quota_exceeded:
+                    return None
+                
                 res = await self._process_one(art)
                 if res:
                     results.append(res)
@@ -87,6 +90,9 @@ class IntelligenceHub:
                 if not self.quota_exceeded:
                     print(f"⚠️ AI 配额已耗尽，停止后续处理。")
                     self.quota_exceeded = True
+                return None
             else:
                 print(f"❌ AI 处理失败 [{art['title']}]: {e}")
-            return None
+                # 对于非配额错误，作为失败记录返回，避免无限积压重试
+                art['ai_html'] = f"<p>⚠️ AI 处理失败：{e}</p>"
+                return art

@@ -71,26 +71,29 @@ async def main():
         else:
             print("☕ 暂无待处理文章，将发送系统正常运行状态报告。")
 
-        # 4. 发送多渠道报告并持久化历史 (Phase 3)
-        warning = None
+        # 4. 持久化历史 (Phase 3) 必须在发通知之前进行
+        if processed:
+            # 标记已处理完成的文章
+            rss.mark_as_processed(processed)
+            print(f"🏁 任务处理完成：今日成功处理 {len(processed)} 篇文章。")
+        
         if quota_exceeded:
-            warning = "由于 AI 额度不足，未处理文章已安全存入历史，将在下次运行时尝试处理。"
+            remaining = len(pending_articles) - len(processed)
+            warning = f"由于 AI 额度不足，{remaining} 篇文章未处理，已保留至下次运行。"
+            print(f"⚠️ {warning}")
+        elif not processed:
+            print("🏁 任务处理完成：无新动态。")
+            warning = None
+        else:
+            warning = None
             
+        rss.save_and_clean()    
+
+        # 5. 发送多渠道报告 (Phase 4)
         try:
             await send_all_reports(cfg, processed, warning=warning)
         except Exception as e:
-            print(f"⚠️ 通知环节出现问题: {e}")
-        
-        # 处理结果持久化
-        if processed:
-            # 仅将处理并发送成功的标记为已完成
-            rss.mark_as_processed(processed)
-            print(f"🏁 任务处理完成：今日成功处理 {len(processed)} 篇文章。")
-        elif quota_exceeded:
-            print("⚠️ 未能总结任何文章（AI 配额耗尽）。文章已保留，下次运行。")
-        else:
-            print("🏁 任务处理完成：无新动态。")
-        rss.save_and_clean()    
+            print(f"⚠️ 通知环节出现问题（但不影响已处理状态）: {e}")
 
     except Exception as e:
         print(f"🔥 程序运行期间发生致命错误: {e}")

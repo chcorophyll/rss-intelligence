@@ -58,7 +58,9 @@ async def test_process_articles_failure(mock_config, mock_genai_client):
     articles = [{"title": "Fail", "content": "Content"}]
     
     results, quota_exceeded = await hub.process_articles(articles)
-    assert results == []
+    assert len(results) == 1
+    assert results[0]['title'] == "Fail"
+    assert "⚠️ AI 处理失败" in results[0]['ai_html']
     assert quota_exceeded is False
 
 @pytest.mark.asyncio

@@ -18,7 +18,10 @@ class EmailNotifier:
             else:
                 msg['Subject'] = "RSS 智能情报局 - 今日暂无新情报"
         else:
-            msg['Subject'] = f"RSS 智能情报局 - {len(processed_articles)} 篇新更新"
+            if warning:
+                msg['Subject'] = f"RSS 智能情报局 - {len(processed_articles)} 篇更新 (⚠️ 部分留存)"
+            else:
+                msg['Subject'] = f"RSS 智能情报局 - {len(processed_articles)} 篇新更新"
             
         msg['From'] = self.cfg.SENDER
         msg['To'] = self.cfg.RECEIVER
@@ -90,7 +93,11 @@ class TelegramNotifier:
                 header += f"\n\n⚠️ <b>注意: {warning}</b>"
             messages = [header]
         else:
-            header = f"🚀 <b>RSS 智能情报局 - {len(processed_articles)} 篇新更新</b>\n"
+            if warning:
+                header = f"🚀 <b>RSS 智能情报局 - {len(processed_articles)} 篇更新 (⚠️ 部分留存)</b>\n"
+            else:
+                header = f"🚀 <b>RSS 智能情报局 - {len(processed_articles)} 篇新更新</b>\n"
+                
             if warning:
                 header += f"\n⚠️ <b>注意: {warning}</b>\n"
             header += "\n"

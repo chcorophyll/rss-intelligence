@@ -62,8 +62,8 @@ def test_save_and_clean(mock_config, temp_db):
     assert "processed_new" in saved
     # processed_old should be cleaned (processed AND old)
     assert "processed_old" not in saved
-    # pending_old should stay (not processed)
-    assert "pending_old" in saved
+    # pending_old should be cleaned (old pending are now cleaned too)
+    assert "pending_old" not in saved
 
 @pytest.mark.asyncio
 async def test_fetch_one_success(mock_config):
@@ -87,14 +87,15 @@ async def test_fetch_all_with_pending(mock_config, tmp_path):
     rss = RSSManager(mock_config, db=str(db))
     
     # 1. Setup history with two pending items
+    now = time.time()
     rss.history = {
         "h1": {
-            "ts": 1000,
+            "ts": now - 100,
             "processed": False,
             "data": {"title": "Old", "hash": "h1"}
         },
         "h2": {
-            "ts": 2000,
+            "ts": now - 50,
             "processed": False,
             "data": {"title": "New", "hash": "h2"}
         }
