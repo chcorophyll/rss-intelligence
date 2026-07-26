@@ -129,3 +129,35 @@ def test_mark_as_processed(mock_config):
     assert rss.history["h1"]["processed"] is True
     assert "data" not in rss.history["h1"]
     assert rss.history["h1"]["ts"] > 1000
+
+@pytest.mark.asyncio
+async def test_slim_history_payload(mock_config, temp_db, tmp_path):
+    txt_file = tmp_path / "feeds.txt"
+    txt_file.write_text("http://example.com/feed")
+    rss = RSSManager(mock_config, opml="nonexistent.opml", txt=str(txt_file), db=temp_db)
+    
+    mock_feed = MagicMock()
+    mock_feed.feed.get.return_value = "Test Feed"
+    mock_feed.entries = [{
+        "link": "http://example.com/1",
+        "title": "Article 1",
+        "content": [{"value": "<h1>HTML Body</h1>"}],
+        "summary": "Summary"
+    }]
+    
+    with patch.object(rss, '_fetch_one', new_callable=AsyncMock) as mock_fetch:
+        mock_fetch.return_value = mock_feed
+        pending = await rss.fetch_all()
+        
+    assert len(pending) == 1
+    assert pending[0]["content"] == "<h1>HTML Body</h1>"
+    
+    rss.save_and_clean()
+    
+    with open(temp_db, 'r', encoding='utf-8') as f:
+        saved_db = json.load(f)
+        
+    for entry in saved_db.values():
+        if "data" in entry:
+            assert "content" not in entry["data"]
+

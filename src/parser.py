@@ -62,6 +62,7 @@ class RSSManager:
                 urls = [l.strip() for l in f if l.strip() and not l.startswith("#")]
         
         # 1. 抓取 RSS 订阅源并存入历史（标记为未处理）
+        fetched_contents = {}
         if urls:
             async with aiohttp.ClientSession() as session:
                 tasks = [self._fetch_one(session, u) for u in urls]
@@ -75,16 +76,17 @@ class RSSManager:
                         if not link: continue
                         
                         u_hash = hashlib.md5(link.encode()).hexdigest()
-                        # 如果是全新文章，存入历史，带上正文，标记为未处理
+                        content = entry.get('content', [{}])[0].get('value', entry.get('summary', ''))
+                        fetched_contents[u_hash] = content
+                        
+                        # 如果是全新文章，存入历史（不存正文 HTML 减小体积），标记为未处理
                         if u_hash not in self.history:
-                            content = entry.get('content', [{}])[0].get('value', entry.get('summary', ''))
                             self.history[u_hash] = {
                                 "ts": now,
                                 "processed": False,
                                 "data": {
                                     "title": entry.get('title', 'Untitled'),
                                     "link": link,
-                                    "content": content,
                                     "source": source,
                                     "hash": u_hash
                                 }
@@ -93,19 +95,30 @@ class RSSManager:
         # 2. 从历史记录中提取所有待处理 (processed: False) 的文章
         # 只取 RetentionDays 窗口内的文章，避免旧积压导致每次触发 AI 配额耗尽
         cutoff = time.time() - (self.retention_days * 24 * 3600)
-        pending_data = []
+        pending_items = []
         for info in self.history.values():
             if not info.get('processed', False) and 'data' in info:
                 if info.get('ts', 0) >= cutoff:
-                    pending_data.append(info)
+                    pending_items.append(info)
         
         # 按时间从近到远排序 (ts 降序)
-        pending_data.sort(key=lambda x: x.get('ts', 0), reverse=True)
+        pending_items.sort(key=lambda x: x.get('ts', 0), reverse=True)
         
-        if pending_data:
-            print(f"📋 窗口内待处理文章: {len(pending_data)} 篇（最近 {self.retention_days} 天内）")
+        # 限制待处理队列最大 50 篇（保留最近 50 篇）
+        pending_items = pending_items[:50]
         
-        return [item['data'] for item in pending_data]
+        if pending_items:
+            print(f"📋 窗口内待处理文章: {len(pending_items)} 篇（最近 {self.retention_days} 天内）")
+        
+        # 构造返回字典，带上内存中的 content (如果有)
+        result = []
+        for item in pending_items:
+            item_data = dict(item['data'])
+            u_hash = item_data.get('hash')
+            item_data['content'] = fetched_contents.get(u_hash, item_data.get('content', ''))
+            result.append(item_data)
+            
+        return result
 
     def mark_as_processed(self, articles):
         """将文章标记为已处理，并清除正文以减小体积"""
