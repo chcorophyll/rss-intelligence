@@ -69,6 +69,22 @@ async def test_send_all_reports(mock_config):
         mock_email.assert_called_once_with(processed_articles, warning=warning)
         mock_tg.assert_called_once_with(processed_articles, warning=warning)
 
+@pytest.mark.asyncio
+async def test_send_all_reports_thread_isolated(mock_config):
+    processed_articles = [{"title": "Art", "link": "link", "source": "src", "ai_html": "html"}]
+    warning = "test warning"
+    
+    with patch('asyncio.to_thread', new_callable=AsyncMock) as mock_to_thread, \
+         patch('src.notifier.TelegramNotifier.send_report', new_callable=AsyncMock) as mock_tg:
+        
+        await send_all_reports(mock_config, processed_articles, warning=warning)
+        
+        mock_to_thread.assert_called_once()
+        args, kwargs = mock_to_thread.call_args
+        assert args[0].__name__ == "send_report"
+        assert args[1] == processed_articles
+        assert kwargs == {"warning": warning}
+
 def test_email_notifier_standby(mock_config):
     notifier = EmailNotifier(mock_config)
     with patch('smtplib.SMTP_SSL') as mock_smtp_ssl:

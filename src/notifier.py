@@ -155,7 +155,7 @@ async def send_all_reports(cfg, processed_articles, warning=None):
     # 1. Email (Sync)
     try:
         email_notifier = EmailNotifier(cfg)
-        email_notifier.send_report(processed_articles, warning=warning)
+        await asyncio.to_thread(email_notifier.send_report, processed_articles, warning=warning)
     except Exception as e:
         print(f"邮件发送失败，跳过: {e}")
 

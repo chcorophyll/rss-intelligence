@@ -145,7 +145,7 @@ class RSSManager:
         }
         async with self.semaphore:
             try:
-                async with session.get(url, timeout=15, headers=headers, ssl=False) as res:
+                async with session.get(url, timeout=15, headers=headers) as res:
                     if res.status == 200:
                         return feedparser.parse(await res.text())
                     else:
