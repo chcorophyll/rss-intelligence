@@ -161,3 +161,16 @@ async def test_slim_history_payload(mock_config, temp_db, tmp_path):
         if "data" in entry:
             assert "content" not in entry["data"]
 
+def test_load_corrupted_history_creates_backup(mock_config, temp_db):
+    bad_content = "{invalid_json: true,"
+    with open(temp_db, 'w', encoding='utf-8') as f:
+        f.write(bad_content)
+        
+    rss = RSSManager(mock_config, db=temp_db)
+    assert rss.history == {}
+    bak_path = temp_db + ".bak"
+    assert os.path.exists(bak_path)
+    with open(bak_path, 'r', encoding='utf-8') as f:
+        assert f.read() == bad_content
+
+

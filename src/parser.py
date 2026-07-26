@@ -29,7 +29,13 @@ class RSSManager:
                         else:
                             upgraded[k] = v
                     return upgraded
-            except:
+            except (json.JSONDecodeError, OSError) as e:
+                print(f"⚠️ Failed to load history database ({self.db}): {e}")
+                if os.path.exists(self.db):
+                    try:
+                        os.replace(self.db, self.db + ".bak")
+                    except OSError:
+                        pass
                 return {}
         return {}
 
