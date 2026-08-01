@@ -1,8 +1,10 @@
 import smtplib
 import aiohttp
 import asyncio
+import html
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+
 
 class EmailNotifier:
     def __init__(self, cfg):
@@ -117,8 +119,8 @@ class TelegramNotifier:
                 ai_summary = ai_summary.replace('<li>', '• ').replace('</li>', '\n')
                 ai_summary = re.sub(r'<(?!/?(b|strong|i|em|u|ins|s|strike|del|a|code|pre)\b)[^>]+>', '', ai_summary)
                 
-                item_text = f"<b><a href='{art['link']}'>{art['title']}</a></b>\n"
-                item_text += f"<i>来源: {art['source']}</i>\n"
+                item_text = f"<b><a href='{art['link']}'>{html.escape(art['title'])}</a></b>\n"
+                item_text += f"<i>来源: {html.escape(art['source'])}</i>\n"
                 item_text += f"{ai_summary.strip()}\n\n"
                 
                 if len(current_msg) + len(item_text) > 4000:

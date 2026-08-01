@@ -121,3 +121,29 @@ async def test_telegram_notifier_standby(mock_config):
         
         args, kwargs = mock_post.call_args
         assert "今日暂无新情报" in kwargs['json']['text']
+
+@pytest.mark.asyncio
+async def test_telegram_html_escaping(mock_config):
+    notifier = TelegramNotifier(mock_config)
+    processed_articles = [
+        {
+            "title": "AT&T <Test>",
+            "link": "http://ex.com/1",
+            "source": "AT&T > Source",
+            "ai_html": "<p>Sum 1</p>"
+        }
+    ]
+    
+    with patch('aiohttp.ClientSession.post') as mock_post:
+        mock_response = AsyncMock()
+        mock_response.status = 200
+        mock_post.return_value.__aenter__.return_value = mock_response
+        
+        await notifier.send_report(processed_articles)
+        
+        assert mock_post.called
+        args, kwargs = mock_post.call_args
+        text = kwargs['json']['text']
+        assert "AT&amp;T &lt;Test&gt;" in text
+        assert "AT&amp;T &gt; Source" in text
+
