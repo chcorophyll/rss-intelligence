@@ -67,14 +67,9 @@ class IntelligenceHub:
         )
         
         try:
-            # 使用 loop 包装同步的 SDK 调用
-            loop = asyncio.get_event_loop()
-            response = await loop.run_in_executor(
-                None, 
-                lambda: self.client.models.generate_content(
-                    model=self.model_name, 
-                    contents=prompt
-                )
+            response = await self.client.aio.models.generate_content(
+                model=self.model_name, 
+                contents=prompt
             )
             
             # 获取生成文本并转为 HTML
