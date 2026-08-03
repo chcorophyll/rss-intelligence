@@ -7,7 +7,7 @@ class IntelligenceHub:
     def __init__(self, cfg):
         # 初始化最新的 Google GenAI 客户端
         self.client = genai.Client(api_key=cfg.GEMINI_KEY)
-        self.model_name = cfg.config.get('AI', 'ModelName', fallback='gemini-1.5-flash')
+        self.model_name = cfg.config.get('AI', 'ModelName', fallback='gemini-flash-latest')
         self.delay = cfg.config.getint('AI', 'RequestDelay', fallback=4)
         self.concurrency = cfg.config.getint('AI', 'Concurrency', fallback=2)
 

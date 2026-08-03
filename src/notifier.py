@@ -86,6 +86,28 @@ class TelegramNotifier:
         self.cfg = cfg
         self.token = cfg.TELEGRAM_BOT_TOKEN
         self.chat_id = cfg.TELEGRAM_CHAT_ID
+        max_concurrency = cfg.config.getint('SYSTEM', 'MaxConcurrency', fallback=5)
+        self.semaphore = asyncio.Semaphore(max_concurrency)
+
+    async def _send_one_msg(self, session, msg):
+        """带信号量限制的单条 Telegram 消息发送"""
+        url = f"https://api.telegram.org/bot{self.token}/sendMessage"
+        payload = {
+            "chat_id": self.chat_id,
+            "text": msg,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True
+        }
+        async with self.semaphore:
+            try:
+                async with session.post(url, json=payload) as resp:
+                    if resp.status != 200:
+                        err_text = await resp.text()
+                        print(f"Telegram 发送失败 ({resp.status}): {err_text}")
+                    else:
+                        print("Telegram 报告发送成功！")
+            except Exception as e:
+                print(f"Telegram 发送异常: {e}")
 
     async def send_report(self, processed_articles, warning=None):
         """发送 Telegram 消息报告"""
@@ -133,35 +155,21 @@ class TelegramNotifier:
 
         async with aiohttp.ClientSession() as session:
             for msg in messages:
-                url = f"https://api.telegram.org/bot{self.token}/sendMessage"
-                payload = {
-                    "chat_id": self.chat_id,
-                    "text": msg,
-                    "parse_mode": "HTML",
-                    "disable_web_page_preview": True
-                }
-                try:
-                    async with session.post(url, json=payload) as resp:
-                        if resp.status != 200:
-                            err_text = await resp.text()
-                            print(f"Telegram 发送失败 ({resp.status}): {err_text}")
-                        else:
-                            print("Telegram 报告发送成功！")
-                except Exception as e:
-                    print(f"Telegram 发送异常: {e}")
+                await self._send_one_msg(session, msg)
 
 async def send_all_reports(cfg, processed_articles, warning=None):
-    """根据配置发送所有启用的通知"""
-    tasks = []
-    
-    # 1. Email (Sync)
-    try:
-        email_notifier = EmailNotifier(cfg)
-        await asyncio.to_thread(email_notifier.send_report, processed_articles, warning=warning)
-    except Exception as e:
-        print(f"邮件发送失败，跳过: {e}")
+    """根据配置并发发送所有启用的通知渠道"""
+    async def _send_email_task():
+        try:
+            email_notifier = EmailNotifier(cfg)
+            await asyncio.to_thread(email_notifier.send_report, processed_articles, warning=warning)
+        except Exception as e:
+            print(f"邮件发送失败，跳过: {e}")
 
-    # 2. Telegram (Async)
-    if cfg.config.getboolean('TELEGRAM', 'Enabled', fallback=False):
-        tg_notifier = TelegramNotifier(cfg)
-        await tg_notifier.send_report(processed_articles, warning=warning)
+    async def _send_tg_task():
+        if cfg.config.getboolean('TELEGRAM', 'Enabled', fallback=False):
+            tg_notifier = TelegramNotifier(cfg)
+            await tg_notifier.send_report(processed_articles, warning=warning)
+
+    # 真正的多渠道并发发送 (Email & Telegram 并行)
+    await asyncio.gather(_send_email_task(), _send_tg_task())
