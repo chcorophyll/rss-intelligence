@@ -92,12 +92,12 @@ async def test_fetch_all_with_pending(mock_config, tmp_path):
         "h1": {
             "ts": now - 100,
             "processed": False,
-            "data": {"title": "Old", "hash": "h1"}
+            "data": {"title": "Old", "hash": "h1", "content": "Old Content"}
         },
         "h2": {
             "ts": now - 50,
             "processed": False,
-            "data": {"title": "New", "hash": "h2"}
+            "data": {"title": "New", "hash": "h2", "content": "New Content"}
         }
     }
     
@@ -172,5 +172,106 @@ def test_load_corrupted_history_creates_backup(mock_config, temp_db):
     assert os.path.exists(bak_path)
     with open(bak_path, 'r', encoding='utf-8') as f:
         assert f.read() == bad_content
+
+
+@pytest.mark.asyncio
+async def test_fetch_all_html_fallback_success(mock_config, tmp_path):
+    db = tmp_path / "test_fallback.json"
+    rss = RSSManager(mock_config, db=str(db))
+    
+    # 文章处于 pending 且缺少正文
+    now = time.time()
+    rss.history = {
+        "h1": {
+            "ts": now - 10,
+            "processed": False,
+            "data": {"title": "No Content Article", "link": "http://example.com/no-content", "hash": "h1"}
+        }
+    }
+    
+    with patch('src.parser.RSSManager._fetch_one', new_callable=AsyncMock) as mock_fetch_one, \
+         patch('src.parser.RSSManager._fetch_html_content', new_callable=AsyncMock) as mock_fallback, \
+         patch('os.path.exists', return_value=False):
+        mock_fetch_one.return_value = None
+        mock_fallback.return_value = ("Extracted Article Content", 200)
+        
+        result = await rss.fetch_all()
+        assert len(result) == 1
+        assert result[0]['hash'] == "h1"
+        assert result[0]['content'] == "Extracted Article Content"
+        mock_fallback.assert_called_once()
+
+
+@pytest.mark.asyncio
+async def test_fetch_all_fallback_retry_and_skip(mock_config, tmp_path):
+    db = tmp_path / "test_retry.json"
+    rss = RSSManager(mock_config, db=str(db))
+    
+    now = time.time()
+    rss.history = {
+        "h1_broken": {
+            "ts": now - 10,
+            "processed": False,
+            "retry_count": 0,
+            "data": {"title": "Broken Link Article", "link": "http://example.com/broken", "hash": "h1_broken"}
+        },
+        "h2_valid": {
+            "ts": now - 20,
+            "processed": False,
+            "data": {"title": "Valid Article", "link": "http://example.com/valid", "hash": "h2_valid"}
+        }
+    }
+    
+    # 模拟 h1 HTML 抓取超时失败 (status 0)，h2 包含 Feed 正文
+    async def mock_fallback_func(session, link):
+        if link == "http://example.com/broken":
+            return ("", 0)
+        return ("Valid Content", 200)
+        
+    with patch('src.parser.RSSManager._fetch_one', new_callable=AsyncMock) as mock_fetch_one, \
+         patch.object(rss, '_fetch_html_content', side_effect=mock_fallback_func), \
+         patch('os.path.exists', return_value=False):
+        mock_fetch_one.return_value = None
+        
+        result = await rss.fetch_all()
+        
+        # h1_broken 抓取失败跳过，顺序补入 h2_valid
+        assert len(result) == 1
+        assert result[0]['hash'] == "h2_valid"
+        assert result[0]['content'] == "Valid Content"
+        
+        # 检查 h1_broken 的 retry_count 增加了 1，且保留为 processed: False
+        assert rss.history["h1_broken"]["retry_count"] == 1
+        assert rss.history["h1_broken"]["processed"] is False
+
+
+@pytest.mark.asyncio
+async def test_fetch_all_fallback_max_retry_exceeded(mock_config, tmp_path):
+    db = tmp_path / "test_max_retry.json"
+    rss = RSSManager(mock_config, db=str(db))
+    
+    now = time.time()
+    rss.history = {
+        "h1_max": {
+            "ts": now - 10,
+            "processed": False,
+            "retry_count": 2, # 已经重试2次，本次为第3次
+            "data": {"title": "Failing Article", "link": "http://example.com/fail", "hash": "h1_max"}
+        }
+    }
+    
+    with patch('src.parser.RSSManager._fetch_one', new_callable=AsyncMock) as mock_fetch_one, \
+         patch.object(rss, '_fetch_html_content', return_value=("", 500)), \
+         patch('os.path.exists', return_value=False):
+        mock_fetch_one.return_value = None
+        
+        result = await rss.fetch_all()
+        
+        # 不应返回任何有效文章
+        assert len(result) == 0
+        # h1_max 因达到 3 次重试被标记为已处理
+        assert rss.history["h1_max"]["processed"] is True
+        assert "data" not in rss.history["h1_max"]
+
 
 

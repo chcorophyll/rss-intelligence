@@ -99,7 +99,6 @@ class RSSManager:
                             }
 
         # 2. 从历史记录中提取所有待处理 (processed: False) 的文章
-        # 只取 RetentionDays 窗口内的文章，避免旧积压导致每次触发 AI 配额耗尽
         cutoff = time.time() - (self.retention_days * 24 * 3600)
         pending_items = []
         for info in self.history.values():
@@ -110,21 +109,78 @@ class RSSManager:
         # 按时间从近到远排序 (ts 降序)
         pending_items.sort(key=lambda x: x.get('ts', 0), reverse=True)
         
-        # 限制待处理队列最大 50 篇（保留最近 50 篇）
-        pending_items = pending_items[:50]
-        
         if pending_items:
-            print(f"📋 窗口内待处理文章: {len(pending_items)} 篇（最近 {self.retention_days} 天内）")
+            print(f"📋 窗口内待处理候选文章: {len(pending_items)} 篇（最近 {self.retention_days} 天内）")
         
-        # 构造返回字典，带上内存中的 content (如果有)
+        # 3. 构造返回列表，确保仅传送当次抓取到非空正文的文章，不足时顺延补足（目标最多 50 篇）
         result = []
-        for item in pending_items:
-            item_data = dict(item['data'])
-            u_hash = item_data.get('hash')
-            item_data['content'] = fetched_contents.get(u_hash, item_data.get('content', ''))
-            result.append(item_data)
+        max_batch = 50
+        
+        async with aiohttp.ClientSession() as session:
+            for item in pending_items:
+                if len(result) >= max_batch:
+                    break
+                    
+                item_data = dict(item['data'])
+                u_hash = item_data.get('hash')
+                content = fetched_contents.get(u_hash, item_data.get('content', ''))
+                
+                # 如果内存及历史数据中均无正文，触发网页 HTML 补偿抓取
+                if not content.strip() and item_data.get('link'):
+                    link = item_data['link']
+                    fallback_text, status_code = await self._fetch_html_content(session, link)
+                    
+                    if fallback_text.strip():
+                        content = fallback_text
+                        fetched_contents[u_hash] = content
+                    else:
+                        current_retries = item.get('retry_count', 0) + 1
+                        item['retry_count'] = current_retries
+                        
+                        # 404/410 确定不可恢复，或重试超过 3 次：标记已失效/已处理
+                        if status_code in (404, 410) or current_retries >= 3:
+                            print(f"⚠️ 正文确定不可获取 (Status {status_code}, 重试 {current_retries}/3)，标记已失效: {item_data.get('title')}")
+                            if u_hash in self.history:
+                                self.history[u_hash]['processed'] = True
+                                if 'data' in self.history[u_hash]:
+                                    del self.history[u_hash]['data']
+                        else:
+                            print(f"⚠️ 正文补偿抓取失败 (Status {status_code}, 重试 {current_retries}/3)，本次跳过: {item_data.get('title')}")
+                        
+                        # 未成功获取正文，跳过该文章并顺延向后查找
+                        continue
+                
+                # 只有成功获得非空 content 的文章才塞入结果
+                if content.strip():
+                    item_data['content'] = content
+                    result.append(item_data)
             
         return result
+
+    async def _fetch_html_content(self, session, link):
+        """当 RSS Feed 缺失正文时，发起网页抓取进行补偿"""
+        if not link:
+            return "", 404
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+        async with self.semaphore:
+            try:
+                async with session.get(link, timeout=15, headers=headers) as res:
+                    if res.status == 200:
+                        html_text = await res.text()
+                        from bs4 import BeautifulSoup
+                        soup = BeautifulSoup(html_text, 'html.parser')
+                        for s in soup(['script', 'style', 'nav', 'footer', 'header']):
+                            s.decompose()
+                        main_content = soup.find('article') or soup.find('main') or soup.find('body')
+                        text = main_content.get_text(separator='\n', strip=True) if main_content else soup.get_text(separator='\n', strip=True)
+                        return text, 200
+                    else:
+                        return "", res.status
+            except Exception as e:
+                print(f"⚠️ HTML fallback fetch error for {link}: {e}")
+                return "", 0
 
     def mark_as_processed(self, articles):
         """将文章标记为已处理，并清除正文以减小体积"""
