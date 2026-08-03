@@ -117,22 +117,44 @@ class RSSManager:
         max_batch = 50
         
         async with aiohttp.ClientSession() as session:
-            for item in pending_items:
-                if len(result) >= max_batch:
-                    break
-                    
-                item_data = dict(item['data'])
-                u_hash = item_data.get('hash')
-                content = fetched_contents.get(u_hash, item_data.get('content', ''))
+            idx = 0
+            n = len(pending_items)
+            
+            while idx < n and len(result) < max_batch:
+                # 收集下一批需要进行 HTML 补偿抓取的文章（批次大小为 10）
+                batch_candidates = []
                 
-                # 如果内存及历史数据中均无正文，触发网页 HTML 补偿抓取
-                if not content.strip() and item_data.get('link'):
-                    link = item_data['link']
-                    fallback_text, status_code = await self._fetch_html_content(session, link)
+                while idx < n and len(batch_candidates) < 10 and (len(result) + len(batch_candidates)) < max_batch:
+                    item = pending_items[idx]
+                    idx += 1
+                    item_data = dict(item['data'])
+                    u_hash = item_data.get('hash')
+                    content = fetched_contents.get(u_hash, item_data.get('content', ''))
                     
+                    if content.strip():
+                        # 自身或内存已有正文，直接加入结果
+                        item_data['content'] = content
+                        result.append(item_data)
+                    elif item_data.get('link'):
+                        # 缺失正文，加入当批等待并发补偿抓取的候选列表
+                        batch_candidates.append((item, item_data))
+                
+                if not batch_candidates:
+                    continue
+                
+                # 并发 Task 集合处理当批补偿抓取
+                tasks = [self._fetch_html_content(session, c[1]['link']) for c in batch_candidates]
+                responses = await asyncio.gather(*tasks)
+                
+                for (item, item_data), (fallback_text, status_code) in zip(batch_candidates, responses):
+                    if len(result) >= max_batch:
+                        break
+                        
+                    u_hash = item_data.get('hash')
                     if fallback_text.strip():
-                        content = fallback_text
-                        fetched_contents[u_hash] = content
+                        item_data['content'] = fallback_text
+                        fetched_contents[u_hash] = fallback_text
+                        result.append(item_data)
                     else:
                         current_retries = item.get('retry_count', 0) + 1
                         item['retry_count'] = current_retries
@@ -146,41 +168,54 @@ class RSSManager:
                                     del self.history[u_hash]['data']
                         else:
                             print(f"⚠️ 正文补偿抓取失败 (Status {status_code}, 重试 {current_retries}/3)，本次跳过: {item_data.get('title')}")
-                        
-                        # 未成功获取正文，跳过该文章并顺延向后查找
-                        continue
-                
-                # 只有成功获得非空 content 的文章才塞入结果
-                if content.strip():
-                    item_data['content'] = content
-                    result.append(item_data)
             
         return result
 
-    async def _fetch_html_content(self, session, link):
-        """当 RSS Feed 缺失正文时，发起网页抓取进行补偿"""
-        if not link:
+    async def _fetch_raw(self, session, url):
+        """通用底层 HTTP 请求，受信号量限制并统一处理 Header 与超时"""
+        if not url:
             return "", 404
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
         }
         async with self.semaphore:
             try:
-                async with session.get(link, timeout=15, headers=headers) as res:
+                async with session.get(url, timeout=15, headers=headers) as res:
                     if res.status == 200:
-                        html_text = await res.text()
-                        from bs4 import BeautifulSoup
-                        soup = BeautifulSoup(html_text, 'html.parser')
-                        for s in soup(['script', 'style', 'nav', 'footer', 'header']):
-                            s.decompose()
-                        main_content = soup.find('article') or soup.find('main') or soup.find('body')
-                        text = main_content.get_text(separator='\n', strip=True) if main_content else soup.get_text(separator='\n', strip=True)
-                        return text, 200
+                        return await res.text(), 200
                     else:
                         return "", res.status
             except Exception as e:
-                print(f"⚠️ HTML fallback fetch error for {link}: {e}")
+                print(f"⚠️ Fetch error for {url}: {e}")
                 return "", 0
+
+    async def _fetch_one(self, session, url):
+        """带信号量限制的 RSS Feed 单源抓取"""
+        text, status = await self._fetch_raw(session, url)
+        if status == 200 and text:
+            try:
+                return feedparser.parse(text)
+            except Exception as e:
+                print(f"❌ Feed parsing error for {url}: {e}")
+                return None
+        return None
+
+    async def _fetch_html_content(self, session, link):
+        """当 RSS Feed 缺失正文时，发起网页抓取进行补偿"""
+        html_text, status = await self._fetch_raw(session, link)
+        if status == 200 and html_text.strip():
+            try:
+                from bs4 import BeautifulSoup
+                soup = BeautifulSoup(html_text, 'html.parser')
+                for s in soup(['script', 'style', 'nav', 'footer', 'header']):
+                    s.decompose()
+                main_content = soup.find('article') or soup.find('main') or soup.find('body')
+                text = main_content.get_text(separator='\n', strip=True) if main_content else soup.get_text(separator='\n', strip=True)
+                return text, 200
+            except Exception as e:
+                print(f"⚠️ HTML parsing error for {link}: {e}")
+                return "", 0
+        return "", status
 
     def mark_as_processed(self, articles):
         """将文章标记为已处理，并清除正文以减小体积"""
@@ -193,19 +228,3 @@ class RSSManager:
                 # 清除正文数据
                 if 'data' in self.history[u_hash]:
                     del self.history[u_hash]['data']
-
-    async def _fetch_one(self, session, url):
-        """带信号量限制的单源抓取"""
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        }
-        async with self.semaphore:
-            try:
-                async with session.get(url, timeout=15, headers=headers) as res:
-                    if res.status == 200:
-                        return feedparser.parse(await res.text())
-                    else:
-                        print(f"⚠️ Fetch failed for {url}: Status {res.status}")
-            except Exception as e:
-                print(f"❌ Fetch error for {url}: {e}")
-            return None
