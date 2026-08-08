@@ -53,8 +53,9 @@ async def test_telegram_notifier_with_warning(mock_config):
         
         await notifier.send_report(processed_articles, warning=warning)
         
-        args, kwargs = mock_post.call_args
-        assert warning in kwargs['json']['text']
+        assert mock_post.call_count == 2
+        header_call_args = mock_post.call_args_list[0]
+        assert warning in header_call_args.kwargs['json']['text']
 
 @pytest.mark.asyncio
 async def test_send_all_reports(mock_config):
@@ -146,4 +147,33 @@ async def test_telegram_html_escaping(mock_config):
         text = kwargs['json']['text']
         assert "AT&amp;T &lt;Test&gt;" in text
         assert "AT&amp;T &gt; Source" in text
+
+@pytest.mark.asyncio
+async def test_telegram_notifier_multi_message_ordering(mock_config):
+    notifier = TelegramNotifier(mock_config)
+    # Generate large payload to exceed single message size threshold (4000 chars)
+    processed_articles = [
+        {
+            "title": f"Article {i}",
+            "link": f"http://ex.com/{i}",
+            "source": f"Source {i}",
+            "ai_html": f"<p>{'Long Content ' * 100}</p>"
+        }
+        for i in range(10)
+    ]
+    
+    with patch('aiohttp.ClientSession.post') as mock_post:
+        mock_response = AsyncMock()
+        mock_response.status = 200
+        mock_post.return_value.__aenter__.return_value = mock_response
+        
+        await notifier.send_report(processed_articles)
+        
+        # 1 Header + at least 2 message chunks
+        assert mock_post.call_count >= 3
+        # Check call sequence: header first, then chunk 1, then chunk 2
+        calls = mock_post.call_args_list
+        assert "RSS 智能情报局" in calls[0].kwargs['json']['text']
+        assert "Article 0" in calls[1].kwargs['json']['text']
+
 

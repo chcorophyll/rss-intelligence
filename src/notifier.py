@@ -91,6 +91,8 @@ class TelegramNotifier:
 
     async def _send_one_msg(self, session, msg):
         """带信号量限制的单条 Telegram 消息发送"""
+        if not msg or not msg.strip():
+            return
         url = f"https://api.telegram.org/bot{self.token}/sendMessage"
         payload = {
             "chat_id": self.chat_id,
@@ -106,6 +108,7 @@ class TelegramNotifier:
                         print(f"Telegram 发送失败 ({resp.status}): {err_text}")
                     else:
                         print("Telegram 报告发送成功！")
+                        await asyncio.sleep(1)
             except Exception as e:
                 print(f"Telegram 发送异常: {e}")
 
@@ -115,7 +118,7 @@ class TelegramNotifier:
             header = "☕ <b>RSS 智能情报局 - 今日暂无新情报</b>\n\n系统运行正常，暂未发现新文章。"
             if warning:
                 header += f"\n\n⚠️ <b>注意: {warning}</b>"
-            messages = [header]
+            messages = []
         else:
             if warning:
                 header = f"🚀 <b>RSS 智能情报局 - {len(processed_articles)} 篇更新 (⚠️ 部分留存)</b>\n"
@@ -127,7 +130,7 @@ class TelegramNotifier:
             header += "\n"
             
             messages = []
-            current_msg = header
+            current_msg = ""
             
             for art in processed_articles:
                 # AI summary is in HTML, we need to convert or strip it for Telegram
@@ -145,17 +148,23 @@ class TelegramNotifier:
                 item_text += f"<i>来源: {html.escape(art['source'])}</i>\n"
                 item_text += f"{ai_summary.strip()}\n\n"
                 
-                if len(current_msg) + len(item_text) > 4000:
+                if current_msg and (len(current_msg) + len(item_text) > 4000):
                     messages.append(current_msg)
                     current_msg = item_text
                 else:
                     current_msg += item_text
             
-            messages.append(current_msg)
+            if current_msg.strip():
+                messages.append(current_msg)
 
         async with aiohttp.ClientSession() as session:
-            for msg in messages:
-                await self._send_one_msg(session, msg)
+            # 1. 显式屏障：必定最先发送 Header 战报置顶
+            await self._send_one_msg(session, header)
+            
+            # 2. 顺序发送后续文章包，保障 Telegram 消息严格正序并规避 API 限频
+            if messages:
+                for msg in messages:
+                    await self._send_one_msg(session, msg)
 
 async def send_all_reports(cfg, processed_articles, warning=None):
     """根据配置并发发送所有启用的通知渠道"""
