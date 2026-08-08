@@ -2,6 +2,7 @@ import smtplib
 import aiohttp
 import asyncio
 import html
+import re
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -86,11 +87,9 @@ class TelegramNotifier:
         self.cfg = cfg
         self.token = cfg.TELEGRAM_BOT_TOKEN
         self.chat_id = cfg.TELEGRAM_CHAT_ID
-        max_concurrency = cfg.config.getint('SYSTEM', 'MaxConcurrency', fallback=5)
-        self.semaphore = asyncio.Semaphore(max_concurrency)
 
     async def _send_one_msg(self, session, msg):
-        """带信号量限制的单条 Telegram 消息发送"""
+        """单条 Telegram 消息顺序发送与律动防限频"""
         if not msg or not msg.strip():
             return
         url = f"https://api.telegram.org/bot{self.token}/sendMessage"
@@ -100,17 +99,18 @@ class TelegramNotifier:
             "parse_mode": "HTML",
             "disable_web_page_preview": True
         }
-        async with self.semaphore:
-            try:
-                async with session.post(url, json=payload) as resp:
-                    if resp.status != 200:
-                        err_text = await resp.text()
-                        print(f"Telegram 发送失败 ({resp.status}): {err_text}")
-                    else:
-                        print("Telegram 报告发送成功！")
-                        await asyncio.sleep(1)
-            except Exception as e:
-                print(f"Telegram 发送异常: {e}")
+        try:
+            async with session.post(url, json=payload) as resp:
+                if resp.status != 200:
+                    err_text = await resp.text()
+                    print(f"Telegram 发送失败 ({resp.status}): {err_text}")
+                    raise RuntimeError(f"Telegram API 响应失败 ({resp.status}): {err_text}")
+                else:
+                    print("Telegram 报告发送成功！")
+                    await asyncio.sleep(1)
+        except Exception as e:
+            print(f"Telegram 发送异常: {e}")
+            raise e
 
     async def send_report(self, processed_articles, warning=None):
         """发送 Telegram 消息报告"""
@@ -133,11 +133,9 @@ class TelegramNotifier:
             current_msg = ""
             
             for art in processed_articles:
-                # AI summary is in HTML, we need to convert or strip it for Telegram
+                # AI summary is in HTML, convert for Telegram HTML format
                 ai_summary = art.get('ai_html', '')
                 
-                # Simple HTML to Telegram HTML conversion
-                import re
                 ai_summary = re.sub(r'<h[1-6]>(.*?)</h[1-6]>', r'<b>\1</b>', ai_summary)
                 ai_summary = ai_summary.replace('<p>', '').replace('</p>', '\n')
                 ai_summary = ai_summary.replace('<ul>', '').replace('</ul>', '')
@@ -177,8 +175,12 @@ async def send_all_reports(cfg, processed_articles, warning=None):
 
     async def _send_tg_task():
         if cfg.config.getboolean('TELEGRAM', 'Enabled', fallback=False):
-            tg_notifier = TelegramNotifier(cfg)
-            await tg_notifier.send_report(processed_articles, warning=warning)
+            try:
+                tg_notifier = TelegramNotifier(cfg)
+                await tg_notifier.send_report(processed_articles, warning=warning)
+            except Exception as e:
+                print(f"Telegram 发送失败，跳过: {e}")
 
     # 真正的多渠道并发发送 (Email & Telegram 并行)
     await asyncio.gather(_send_email_task(), _send_tg_task())
+
