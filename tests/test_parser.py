@@ -274,4 +274,50 @@ async def test_fetch_all_fallback_max_retry_exceeded(mock_config, tmp_path):
         assert "data" not in rss.history["h1_max"]
 
 
+def test_save_and_clean_pending_overflow_truncation(mock_config, temp_db):
+    """测试 pending 积压队列超过 50 条时自动强平截断至最新 50 条"""
+    rss = RSSManager(mock_config, db=temp_db)
+    now = time.time()
+    
+    # 构造 60 条 pending 数据，ts 依次增加
+    for i in range(60):
+        rss.history[f"hash_{i}"] = {
+            "ts": now + i,
+            "processed": False,
+            "data": {"title": f"Article {i}", "hash": f"hash_{i}"}
+        }
+        
+    rss.save_and_clean()
+    
+    with open(temp_db, 'r', encoding='utf-8') as f:
+        saved = json.load(f)
+        
+    # 应截断保留最新的 50 条 (i from 10 to 59)
+    assert len(saved) == 50
+    assert "hash_0" not in saved
+    assert "hash_9" not in saved
+    assert "hash_10" in saved
+    assert "hash_59" in saved
+
+
+def test_save_and_clean_atomic_write(mock_config, temp_db):
+    """测试 atomic write 落盘文件正确性与无残留临时文件"""
+    rss = RSSManager(mock_config, db=temp_db)
+    rss.history = {"h1": {"ts": time.time(), "processed": True}}
+    
+    rss.save_and_clean()
+    
+    # 确认数据库文件已写入
+    assert os.path.exists(temp_db)
+    with open(temp_db, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        assert "h1" in data
+        
+    # 确认所在的临时目录下没有未被 replace 的 tmp 文件
+    db_dir = os.path.dirname(temp_db)
+    tmp_files = [f for f in os.listdir(db_dir) if f.startswith("tmp")]
+    assert len(tmp_files) == 0
+
+
+
 

@@ -5,6 +5,7 @@ import html
 import re
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from src.utils.logger import logger
 
 
 class EmailNotifier:
@@ -74,12 +75,12 @@ class EmailNotifier:
             with server:
                 server.login(self.cfg.SENDER, self.cfg.SMTP_PASS)
                 server.sendmail(self.cfg.SENDER, self.cfg.RECEIVER, msg.as_string())
-            print("邮件报告发送成功！")
+            logger.info("邮件报告发送成功！")
         except Exception as e:
-            print(f"邮件发送失败: {e}")
+            logger.error(f"邮件发送失败: {e}")
             if "EOF" in str(e) or "protocol" in str(e).lower():
-                print("💡 诊断提示: 检测到 SSL 握手异常。这通常是因为 Gmail/国外邮箱的 SMTP 服务被网络环境封锁。")
-                print("💡 解决建议: 建议更换为国内邮箱（如 QQ、163）的 SMTP 服务，稳定性更高。")
+                logger.info("💡 诊断提示: 检测到 SSL 握手异常。这通常是因为 Gmail/国外邮箱的 SMTP 服务被网络环境封锁。")
+                logger.info("💡 解决建议: 建议更换为国内邮箱（如 QQ、163）的 SMTP 服务，稳定性更高。")
             raise e
 
 class TelegramNotifier:
@@ -103,13 +104,13 @@ class TelegramNotifier:
             async with session.post(url, json=payload) as resp:
                 if resp.status != 200:
                     err_text = await resp.text()
-                    print(f"Telegram 发送失败 ({resp.status}): {err_text}")
+                    logger.error(f"Telegram 发送失败 ({resp.status}): {err_text}")
                     raise RuntimeError(f"Telegram API 响应失败 ({resp.status}): {err_text}")
                 else:
-                    print("Telegram 报告发送成功！")
+                    logger.info("Telegram 报告发送成功！")
                     await asyncio.sleep(1)
         except Exception as e:
-            print(f"Telegram 发送异常: {e}")
+            logger.error(f"Telegram 发送异常: {e}")
             raise e
 
     async def send_report(self, processed_articles, warning=None):
@@ -171,7 +172,7 @@ async def send_all_reports(cfg, processed_articles, warning=None):
             email_notifier = EmailNotifier(cfg)
             await asyncio.to_thread(email_notifier.send_report, processed_articles, warning=warning)
         except Exception as e:
-            print(f"邮件发送失败，跳过: {e}")
+            logger.error(f"邮件发送失败，跳过: {e}")
 
     async def _send_tg_task():
         if cfg.config.getboolean('TELEGRAM', 'Enabled', fallback=False):
@@ -179,8 +180,9 @@ async def send_all_reports(cfg, processed_articles, warning=None):
                 tg_notifier = TelegramNotifier(cfg)
                 await tg_notifier.send_report(processed_articles, warning=warning)
             except Exception as e:
-                print(f"Telegram 发送失败，跳过: {e}")
+                logger.error(f"Telegram 发送失败，跳过: {e}")
 
     # 真正的多渠道并发发送 (Email & Telegram 并行)
     await asyncio.gather(_send_email_task(), _send_tg_task())
+
 

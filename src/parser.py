@@ -2,9 +2,13 @@ import asyncio
 import hashlib
 import json
 import os
+import tempfile
 import time
 import aiohttp
+from bs4 import BeautifulSoup
 import feedparser
+from src.utils.logger import logger
+
 
 class RSSManager:
     def __init__(self, cfg, opml="subscriptions.opml", txt="feeds.txt", db="history.json"):
@@ -30,7 +34,7 @@ class RSSManager:
                             upgraded[k] = v
                     return upgraded
             except (json.JSONDecodeError, OSError) as e:
-                print(f"⚠️ Failed to load history database ({self.db}): {e}")
+                logger.warning(f"⚠️ Failed to load history database ({self.db}): {e}")
                 if os.path.exists(self.db):
                     try:
                         os.replace(self.db, self.db + ".bak")
@@ -40,29 +44,53 @@ class RSSManager:
         return {}
 
     def save_and_clean(self):
-        """清理过期条目（已处理或未处理），并保存历史记录"""
+        """清理过期条目（已处理或未处理），并保存历史记录（原子落盘 + pending Max 50 截断）"""
         cutoff = time.time() - (self.retention_days * 24 * 3600)
-        cleaned = {}
+        
+        # 1. 过滤 retention 窗口内的条目
+        valid_items = {}
         for h, info in self.history.items():
             ts = info.get('ts', 0)
-            # 只保留 retention 窗口内的条目（无论是否处理）
-            # 超期的 pending 文章也清理，防止积压无限增长
             if ts > cutoff:
-                cleaned[h] = info
-        
-        with open(self.db, 'w', encoding='utf-8') as f:
-            json.dump(cleaned, f, ensure_ascii=False, indent=2)
+                valid_items[h] = info
+
+        # 2. 分离 processed 与 pending 条目
+        processed_items = {h: info for h, info in valid_items.items() if info.get('processed', False)}
+        pending_items = [(h, info) for h, info in valid_items.items() if not info.get('processed', False)]
+
+        # 3. 硬防爆截断：Pending 队列超过 50 条时保留最新的 50 条
+        if len(pending_items) > 50:
+            pending_items.sort(key=lambda x: x[1].get('ts', 0), reverse=True)
+            pending_items = pending_items[:50]
+
+        # 4. Processed 队列超过 1000 条时保留最新的 1000 条
+        if len(processed_items) > 1000:
+            sorted_proc = sorted(processed_items.items(), key=lambda x: x[1].get('ts', 0), reverse=True)[:1000]
+            processed_items = dict(sorted_proc)
+
+        cleaned = {**processed_items, **dict(pending_items)}
+
+        # 5. POSIX 原子落盘 (NamedTemporaryFile + fsync + os.replace)
+        db_path = os.path.abspath(self.db)
+        dir_name = os.path.dirname(db_path) or '.'
+
+        with tempfile.NamedTemporaryFile('w', dir=dir_name, delete=False, encoding='utf-8') as tf:
+            json.dump(cleaned, tf, ensure_ascii=False, indent=2)
+            tf.flush()
+            os.fsync(tf.fileno())
+            tmp_name = tf.name
+
+        os.replace(tmp_name, db_path)
         self.history = cleaned
 
     async def fetch_all(self):
         """获取源更新，并与历史记录中的待处理文章合并"""
         urls = []
         if os.path.exists(self.opml):
-            from bs4 import BeautifulSoup
             with open(self.opml, 'r', encoding='utf-8') as f:
                 soup = BeautifulSoup(f.read(), 'xml')
                 urls = [o.get('xmlUrl') for o in soup.find_all('outline') if o.get('xmlUrl')]
-            print(f"✅ Found {len(urls)} URLs in OPML")
+            logger.info(f"✅ Found {len(urls)} URLs in OPML")
         elif os.path.exists(self.txt):
             with open(self.txt, 'r', encoding='utf-8') as f:
                 urls = [l.strip() for l in f if l.strip() and not l.startswith("#")]
@@ -110,7 +138,7 @@ class RSSManager:
         pending_items.sort(key=lambda x: x.get('ts', 0), reverse=True)
         
         if pending_items:
-            print(f"📋 窗口内待处理候选文章: {len(pending_items)} 篇（最近 {self.retention_days} 天内）")
+            logger.info(f"📋 窗口内待处理候选文章: {len(pending_items)} 篇（最近 {self.retention_days} 天内）")
         
         # 3. 构造返回列表，确保仅传送当次抓取到非空正文的文章，不足时顺延补足（目标最多 50 篇）
         result = []
@@ -161,13 +189,13 @@ class RSSManager:
                         
                         # 404/410 确定不可恢复，或重试超过 3 次：标记已失效/已处理
                         if status_code in (404, 410) or current_retries >= 3:
-                            print(f"⚠️ 正文确定不可获取 (Status {status_code}, 重试 {current_retries}/3)，标记已失效: {item_data.get('title')}")
+                            logger.warning(f"⚠️ 正文确定不可获取 (Status {status_code}, 重试 {current_retries}/3)，标记已失效: {item_data.get('title')}")
                             if u_hash in self.history:
                                 self.history[u_hash]['processed'] = True
                                 if 'data' in self.history[u_hash]:
                                     del self.history[u_hash]['data']
                         else:
-                            print(f"⚠️ 正文补偿抓取失败 (Status {status_code}, 重试 {current_retries}/3)，本次跳过: {item_data.get('title')}")
+                            logger.warning(f"⚠️ 正文补偿抓取失败 (Status {status_code}, 重试 {current_retries}/3)，本次跳过: {item_data.get('title')}")
             
         return result
 
@@ -186,7 +214,7 @@ class RSSManager:
                     else:
                         return "", res.status
             except Exception as e:
-                print(f"⚠️ Fetch error for {url}: {e}")
+                logger.warning(f"⚠️ Fetch error for {url}: {e}")
                 return "", 0
 
     async def _fetch_one(self, session, url):
@@ -196,7 +224,7 @@ class RSSManager:
             try:
                 return feedparser.parse(text)
             except Exception as e:
-                print(f"❌ Feed parsing error for {url}: {e}")
+                logger.error(f"❌ Feed parsing error for {url}: {e}")
                 return None
         return None
 
@@ -205,7 +233,6 @@ class RSSManager:
         html_text, status = await self._fetch_raw(session, link)
         if status == 200 and html_text.strip():
             try:
-                from bs4 import BeautifulSoup
                 soup = BeautifulSoup(html_text, 'html.parser')
                 for s in soup(['script', 'style', 'nav', 'footer', 'header']):
                     s.decompose()
@@ -213,7 +240,7 @@ class RSSManager:
                 text = main_content.get_text(separator='\n', strip=True) if main_content else soup.get_text(separator='\n', strip=True)
                 return text, 200
             except Exception as e:
-                print(f"⚠️ HTML parsing error for {link}: {e}")
+                logger.warning(f"⚠️ HTML parsing error for {link}: {e}")
                 return "", 0
         return "", status
 

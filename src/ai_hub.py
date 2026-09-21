@@ -2,6 +2,7 @@ import asyncio
 from google import genai
 from bs4 import BeautifulSoup
 import markdown
+from src.utils.logger import logger
 
 class IntelligenceHub:
     def __init__(self, cfg):
@@ -40,7 +41,7 @@ class IntelligenceHub:
 
     async def _process_one(self, art):
         """处理单篇文章"""
-        print(f"🤖 正在处理: {art['title']}")
+        logger.info(f"🤖 正在处理: {art['title']}")
         
         # 清理 HTML 标签
         soup = BeautifulSoup(art['content'], "html.parser")
@@ -83,11 +84,11 @@ class IntelligenceHub:
             error_msg = str(e)
             if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
                 if not self.quota_exceeded:
-                    print(f"⚠️ AI 配额已耗尽，停止后续处理。")
+                    logger.warning("⚠️ AI 配额已耗尽，停止后续处理。")
                     self.quota_exceeded = True
                 return None
             else:
-                print(f"❌ AI 处理失败 [{art['title']}]: {e}")
+                logger.error(f"❌ AI 处理失败 [{art['title']}]: {e}")
                 # 对于非配额错误，作为失败记录返回，避免无限积压重试
                 art['ai_html'] = f"<p>⚠️ AI 处理失败：{e}</p>"
                 return art

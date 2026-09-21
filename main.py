@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from src.parser import RSSManager
 from src.ai_hub import IntelligenceHub
 from src.notifier import send_all_reports
+from src.utils.logger import logger
 
 
 load_dotenv()
@@ -65,24 +66,24 @@ async def main():
         quota_exceeded = False
         
         if pending_articles:
-            print(f"✅ 准备处理 {len(pending_articles)} 篇待办文章（含历史遗留）。")
+            logger.info(f"✅ 准备处理 {len(pending_articles)} 篇待办文章（含历史遗留）。")
             hub = IntelligenceHub(cfg)
             processed, quota_exceeded = await hub.process_articles(pending_articles)
         else:
-            print("☕ 暂无待处理文章，将发送系统正常运行状态报告。")
+            logger.info("☕ 暂无待处理文章，将发送系统正常运行状态报告。")
 
         # 4. 持久化历史 (Phase 3) 必须在发通知之前进行
         if processed:
             # 标记已处理完成的文章
             rss.mark_as_processed(processed)
-            print(f"🏁 任务处理完成：今日成功处理 {len(processed)} 篇文章。")
+            logger.info(f"🏁 任务处理完成：今日成功处理 {len(processed)} 篇文章。")
         
         if quota_exceeded:
             remaining = len(pending_articles) - len(processed)
             warning = f"由于 AI 额度不足，{remaining} 篇文章未处理，已保留至下次运行。"
-            print(f"⚠️ {warning}")
+            logger.warning(f"⚠️ {warning}")
         elif not processed:
-            print("🏁 任务处理完成：无新动态。")
+            logger.info("🏁 任务处理完成：无新动态。")
             warning = None
         else:
             warning = None
@@ -93,10 +94,10 @@ async def main():
         try:
             await send_all_reports(cfg, processed, warning=warning)
         except Exception as e:
-            print(f"⚠️ 通知环节出现问题（但不影响已处理状态）: {e}")
+            logger.error(f"⚠️ 通知环节出现问题（但不影响已处理状态）: {e}")
 
     except Exception as e:
-        print(f"🔥 程序运行期间发生致命错误: {e}")
+        logger.error(f"🔥 程序运行期间发生致命错误: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())
