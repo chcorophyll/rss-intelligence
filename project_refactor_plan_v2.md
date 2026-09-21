@@ -9,18 +9,18 @@
 ## 阶段 1：基础设施与数据安全重构 (Infrastructure & Data Safety)
 
 ### Task 1.1: 基础设施日志系统化 (`logger.py`)
-- [ ] 创建 `src/utils/logger.py`，配置 `rss_logger` 单例（包含控制台 Handler 与标准日志格式）。
-- [ ] 全量替换 `main.py`, `src/parser.py`, `src/ai_hub.py`, `src/notifier.py` 中的 `print()` 为 `logger.info() / logger.warning() / logger.error()`。
-- [ ] 经验证：`python3 -c "from src.utils.logger import logger; logger.info('Test')"` 正常输出。
+- [x] 创建 `src/utils/logger.py`，配置 `rss_logger` 单例（包含控制台 Handler 与标准日志格式）。
+- [x] 全量替换 `main.py`, `src/parser.py`, `src/ai_hub.py`, `src/notifier.py` 中的 `print()` 为 `logger.info() / logger.warning() / logger.error()`。
+- [x] 经验证：`python3 -c "from src.utils.logger import logger; logger.info('Test')"` 正常输出。
 
 ### Task 1.2: 持久化原子写入与队列控爆 (`save_history`)
-- [ ] 重构 `src/parser.py` 中的 `save_history`：使用 `tempfile.NamedTemporaryFile` + `os.replace` 实现原子文件写入。
-- [ ] 在 `save_and_clean` 中新增 pending 队列 `Max 50` 截断逻辑，防止死链堆积。
-- [ ] 经验证：编写单元测试模拟写入中断，确保 `history.json` 不损坏。
+- [x] 重构 `src/parser.py` 中的 `save_history`：使用 `tempfile.NamedTemporaryFile` + `os.replace` 实现原子文件写入。
+- [x] 在 `save_and_clean` 中新增 pending 队列 `Max 50` 截断逻辑，防止死链堆积。
+- [x] 经验证：编写单元测试模拟写入中断，确保 `history.json` 不损坏。
 
 ### Task 1.3: PEP 8 导包治理
-- [ ] 将 `src/parser.py` 中局部 `from bs4 import BeautifulSoup` 提升至文件头部。
-- [ ] 经验证：静态检查无 PEP 8 导包警告。
+- [x] 将 `src/parser.py` 中局部 `from bs4 import BeautifulSoup` 提升至文件头部。
+- [x] 经验证：静态检查无 PEP 8 导包警告。
 
 ---
 
