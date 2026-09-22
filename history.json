@@ -1,28 +1,4 @@
 {
-  "18e0abc67cfa06c70adad79b24d6c641": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
-  "656559020d4fa6acd0f8a24bd4e90931": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
-  "30ee1c9f47bd555a7fe0b1dc3309d37c": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
-  "d4581814d40b8e27c4eeebddd55df604": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
-  "ab244696dfa0ca35ee61e65d8ad97a8c": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
-  "df7d9d2802dfb2ee0871f455f8c5f6e8": {
-    "ts": 1787523336.3543422,
-    "processed": true
-  },
   "092b5cbd4581363621d9c855d4251dfd": {
     "ts": 1787609975.4427123,
     "processed": true
@@ -895,517 +871,532 @@
     "ts": 1790037041.1307743,
     "processed": true
   },
-  "537ea53e0cc776c499e5084ecdcfba33": {
-    "ts": 1790036995.4267519,
+  "3535d8809ec91609a281b35a45936174": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "5cc6c6530fb076435f187dc9331f4eb8": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "834ef1172c7139c278bf55595c7d22c9": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "528977b9c68cfc01af76b155d3b79987": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "94adeac2a00c55e606786d57f387a390": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "150ba7c681517a0ec2968a47168bff79": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "b208c3d8837c1ee65e971a515caa1115": {
+    "ts": 1790121463.5582914,
+    "processed": true
+  },
+  "61f4e9189509084aad1412109861d62b": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "GM Confirms They’re Still Smoking Crack",
-      "link": "https://x.com/JoannaStern/status/2102105565195288859",
-      "source": "Daring Fireball",
-      "hash": "537ea53e0cc776c499e5084ecdcfba33"
+      "title": "I tested every IP KVM in my Homelab",
+      "link": "https://www.jeffgeerling.com/blog/2026/i-tested-every-ip-kvm/",
+      "source": "Jeff Geerling",
+      "hash": "61f4e9189509084aad1412109861d62b"
     }
   },
-  "c78bb8b9f9fecaf7e9ce46c56f20c394": {
-    "ts": 1790036995.4267519,
+  "cbc5138dae87ad8eefe09efc3227c301": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "America’s Decline Can Be Measured by the Names of Ballparks and Arenas",
-      "link": "https://www.mlb.com/news/tigers-ballpark-name-changed-to-fifth-third-park",
-      "source": "Daring Fireball",
-      "hash": "c78bb8b9f9fecaf7e9ce46c56f20c394"
+      "title": "Don't build tools for AI agents",
+      "link": "https://seangoedecke.com/dont-build-tools-for-ai-agents/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "cbc5138dae87ad8eefe09efc3227c301"
     }
   },
-  "1e3fc9be01d28cfb45ff62c7fe4e67ef": {
-    "ts": 1790036995.4267519,
+  "943567d1cf3c8966758b0fe41295802f": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Ichiro, at 52, Throws 127-Pitch Shutout Against All-Star Girls Team in Japan",
-      "link": "https://www.seattletimes.com/sports/mariners/ichiro-at-52-throws-127-pitch-shutout-against-all-star-girls-team-in-japan/",
-      "source": "Daring Fireball",
-      "hash": "1e3fc9be01d28cfb45ff62c7fe4e67ef"
+      "title": "You should never be angry at work",
+      "link": "https://seangoedecke.com/you-should-never-be-angry-at-work/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "943567d1cf3c8966758b0fe41295802f"
     }
   },
-  "13fa69b7d92fbe0988b1de786fab69bd": {
-    "ts": 1790036995.4267519,
+  "058304e184cafc029b3114a727193f9f": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Glenn Fleishman on the Increasing Impracticality of Shipping From the U.S. to the E.U.",
-      "link": "https://glog.glennf.com/blog/2026/09/17/u-s-small-biz-cant-ship-to-the-eu-anymore/",
-      "source": "Daring Fireball",
-      "hash": "13fa69b7d92fbe0988b1de786fab69bd"
+      "title": "No, local models will not win",
+      "link": "https://seangoedecke.com/local-models-will-not-win/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "058304e184cafc029b3114a727193f9f"
     }
   },
-  "3132c1b97e3c01819593fd6762730e34": {
-    "ts": 1790036995.4267519,
+  "faf73de6618225a676e7680211bfc95b": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "David Pogue: ‘125 Tests of the New AI Siri’",
-      "link": "https://pogueman.substack.com/p/125-tests-of-the-new-ai-siri",
-      "source": "Daring Fireball",
-      "hash": "3132c1b97e3c01819593fd6762730e34"
+      "title": "How to keep thinking",
+      "link": "https://seangoedecke.com/how-to-keep-thinking/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "faf73de6618225a676e7680211bfc95b"
     }
   },
-  "67516bbb09385bd107725b3c4e606b31": {
-    "ts": 1790036995.4267519,
+  "df41c62ff62959b6897cdc96cc348763": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Matthew Butterick: ‘Big AI to Humanity: Drop Dead’",
-      "link": "https://matthewbutterick.com/chron/drop-dead.html",
-      "source": "Daring Fireball",
-      "hash": "67516bbb09385bd107725b3c4e606b31"
+      "title": "Giving and taking credit in big tech companies",
+      "link": "https://seangoedecke.com/giving-and-taking-credit/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "df41c62ff62959b6897cdc96cc348763"
     }
   },
-  "4b4500cb31152d9f7560aeef32daa886": {
-    "ts": 1790036995.4267519,
+  "b332d0907ffa076ba2b1eeba352af104": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "‘Measuring Nothing (With Great Accuracy)’",
-      "link": "https://seths.blog/2014/01/measuring-nothing-with-great-accuracy/",
-      "source": "Daring Fireball",
-      "hash": "4b4500cb31152d9f7560aeef32daa886"
+      "title": "Microsoft Plugs Nearly 400 Security Holes",
+      "link": "https://krebsonsecurity.com/2026/08/microsoft-plugs-nearly-400-security-holes/",
+      "source": "Krebs on Security",
+      "hash": "b332d0907ffa076ba2b1eeba352af104"
     }
   },
-  "e628710b3b128b36a5598c601de1982c": {
-    "ts": 1790036995.4267519,
+  "d08dc295c10bd1b0f8901ab29dd0173c": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Apple TV to Finally Air ‘The Savant’ in Early 2027, Supposedly",
-      "link": "https://deadline.com/2026/09/jessica-chastain-the-savant-new-release-date-apple-tv-1237108228/",
-      "source": "Daring Fireball",
-      "hash": "e628710b3b128b36a5598c601de1982c"
+      "title": "Canadian Man Pleads Guilty in Snowflake Extortions",
+      "link": "https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/",
+      "source": "Krebs on Security",
+      "hash": "d08dc295c10bd1b0f8901ab29dd0173c"
     }
   },
-  "f8c32a7cb26d64be196c22e024caaeb7": {
-    "ts": 1790036995.4267519,
+  "9f753904c4945eea5ceaced1b28f2501": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Yours Truly on CNBC’s ‘Squawk on the Street’ Friday",
-      "link": "https://youtu.be/WrwY_jVaN-w",
-      "source": "Daring Fireball",
-      "hash": "f8c32a7cb26d64be196c22e024caaeb7"
+      "title": "Read This Before You Buy That TV Streaming Stick",
+      "link": "https://krebsonsecurity.com/2026/07/read-this-before-you-buy-that-tv-streaming-stick/",
+      "source": "Krebs on Security",
+      "hash": "9f753904c4945eea5ceaced1b28f2501"
     }
   },
-  "1fc1ae9d0b1e786d826895d1309785f9": {
-    "ts": 1790036995.4267519,
+  "d67e072f042c2546f873d736a1b6c828": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "How I Use My Index 01 + Production Update",
-      "link": "https://repebble.com/blog/how-i-use-my-index-01-production-update",
+      "title": "Meta’s Muse Logomark, Designed by Jessica Hische",
+      "link": "https://thedieline.com/jessica-hische-metas-muse-and-the-ethical-landmines-of-design/",
+      "source": "Daring Fireball",
+      "hash": "d67e072f042c2546f873d736a1b6c828"
+    }
+  },
+  "8b86f15ab077a182a290c5295b3c884c": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Meta’s New Muse AI Agent Read Jason Aten’s Messages Database",
+      "link": "https://www.inc.com/jason-aten/metas-new-muse-ai-agent-read-my-private-messages-i-never-asked-it-to/91408202",
+      "source": "Daring Fireball",
+      "hash": "8b86f15ab077a182a290c5295b3c884c"
+    }
+  },
+  "f520b8e6f7e37de91b9f5b50aacd974a": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Why Didn’t Google Build Muse?",
+      "link": "https://spyglass.org/why-didnt-google-build-muse/",
+      "source": "Daring Fireball",
+      "hash": "f520b8e6f7e37de91b9f5b50aacd974a"
+    }
+  },
+  "15b00e036319c473f74e92a0a8589038": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Amazon Blocks Meta’s Muse AI Assistant",
+      "link": "https://www.geekwire.com/2026/amazon-blocks-metas-muse-ai-assistant-in-new-standoff-over-agentic-shopping/",
+      "source": "Daring Fireball",
+      "hash": "15b00e036319c473f74e92a0a8589038"
+    }
+  },
+  "408361bcea79a781cb957b713621b04e": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Meta’s New Muse AI Agent App Overtakes ChatGPT as Top iPhone App",
+      "link": "https://9to5mac.com/2026/09/18/metas-new-muse-ai-agent-app-overtakes-chatgpt-as-top-iphone-app/",
+      "source": "Daring Fireball",
+      "hash": "408361bcea79a781cb957b713621b04e"
+    }
+  },
+  "95e385612744567df9483411a290ce3a": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Xcode 27.2 Now Supports a New JSON Project File Format",
+      "link": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes",
+      "source": "Daring Fireball",
+      "hash": "95e385612744567df9483411a290ce3a"
+    }
+  },
+  "1b2f01e7bb69e7f763bb28b2c7b697ca": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Siri AI Class-Action Lawsuit Settlement Website Is Now Live",
+      "link": "https://www.macrumors.com/2026/09/20/siri-ai-settlement-website-now-live/",
+      "source": "Daring Fireball",
+      "hash": "1b2f01e7bb69e7f763bb28b2c7b697ca"
+    }
+  },
+  "b7db59965efe4a570b3583bc258f1e0c": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "WorkOS: How SSO Works and the Fastest Way to Add It",
+      "link": "https://workos.com/guide/the-developers-guide-to-sso?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q32026",
+      "source": "Daring Fireball",
+      "hash": "b7db59965efe4a570b3583bc258f1e0c"
+    }
+  },
+  "6a9958a643e1db5acd6e3aacbbf41508": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Will Oremus Is a Duo Doubter",
+      "link": "https://www.theatlantic.com/technology/2026/09/apple-folding-iphone/688562/?gift=aQyUJR7AIw1mJWdQ6Ed6yE6RbvpIGGpQGFPIX827p48",
+      "source": "Daring Fireball",
+      "hash": "6a9958a643e1db5acd6e3aacbbf41508"
+    }
+  },
+  "91c71e1c6510cc4c28f3702fcef2d840": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Apple Releases Xcode 27.1, First SDK With Support for iPhone Duo",
+      "link": "https://developer.apple.com/news/?id=nyuppv9r",
+      "source": "Daring Fireball",
+      "hash": "91c71e1c6510cc4c28f3702fcef2d840"
+    }
+  },
+  "4f1dd520e0eab760ed2454cb51cde061": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Warren Buffett, at 96, Steps Down as Chairman at Berkshire Hathaway",
+      "link": "https://www.berkshirehathaway.com/news/sep1826.pdf",
+      "source": "Daring Fireball",
+      "hash": "4f1dd520e0eab760ed2454cb51cde061"
+    }
+  },
+  "0aba2fad2e999ce28ceaebc7783878be": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Trump Says He’s Banning MS NOW, CNN, and Politico From White House",
+      "link": "https://truthsocial.com/@realDonaldTrump/posts/117293599348325006",
+      "source": "Daring Fireball",
+      "hash": "0aba2fad2e999ce28ceaebc7783878be"
+    }
+  },
+  "235dbbbe437f06aaac4beb7eea6cae32": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Hollywood Wants the Duo",
+      "link": "https://pagesix.com/2026/09/16/hollywood/mysterious-apple-ceo-charms-hollywood-following-big-emmys-night-by-showing-off-new-iphone/",
+      "source": "Daring Fireball",
+      "hash": "235dbbbe437f06aaac4beb7eea6cae32"
+    }
+  },
+  "28189071c48c420de417e30594194e69": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Gauging Interest in the iPhone Duo",
+      "link": "https://maxfrequency.net/2026/09/17/iphone-duo-mkbhd-popularity-or-curiosity/",
+      "source": "Daring Fireball",
+      "hash": "28189071c48c420de417e30594194e69"
+    }
+  },
+  "9303f76e8d9292beb226728a413ab6de": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "One More Thing About the iPhones 18 Pro: the Bigger/Smaller Dynamic Island",
+      "link": "https://daringfireball.net/2026/09/the_iphones_18_pro#:~:text=OR%20IS%20IT%20BIGGER",
+      "source": "Daring Fireball",
+      "hash": "9303f76e8d9292beb226728a413ab6de"
+    }
+  },
+  "3e225a61ac889793755ccb2abcf7eb7f": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "YouTube Changed How It Counts ‘Views’ Last Month, Inflating New Numbers",
+      "link": "https://support.google.com/youtube/thread/433409976/an-update-to-how-we-count-public-views-across-youtube?hl=en",
+      "source": "Daring Fireball",
+      "hash": "3e225a61ac889793755ccb2abcf7eb7f"
+    }
+  },
+  "ff1d1bad2b2b5860e6559b264f1be54f": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "★ The iPhones 18 Pro",
+      "link": "https://daringfireball.net/2026/09/the_iphones_18_pro",
+      "source": "Daring Fireball",
+      "hash": "ff1d1bad2b2b5860e6559b264f1be54f"
+    }
+  },
+  "3eedc8492b333b9b47c1ec150264965f": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Is That a Duo in Ternus’s Pocket or Was He Just Happy That Apple TV Shows Won 28 Emmys?",
+      "link": "https://x.com/DEADLINE/status/2099645816361332775",
+      "source": "Daring Fireball",
+      "hash": "3eedc8492b333b9b47c1ec150264965f"
+    }
+  },
+  "acc22249ab53409b69a5dd5ecf5d9a73": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Woz Launches Merch Store",
+      "link": "https://x.com/stevewoz/status/2100074363605397658",
+      "source": "Daring Fireball",
+      "hash": "acc22249ab53409b69a5dd5ecf5d9a73"
+    }
+  },
+  "fa8e2f6d2cc0d5fd27e49eb39ec211fb": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Apple OS 27.2 Betas Are Out; Version 27.1 Is the Duo-Exclusive iOS Fork",
+      "link": "https://www.macrumors.com/2026/09/16/heres-why-apple-released-ios-27-2-beta/",
+      "source": "Daring Fireball",
+      "hash": "fa8e2f6d2cc0d5fd27e49eb39ec211fb"
+    }
+  },
+  "b37dcc6c4b642161f124e005c0943c9f": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "AirPods 5 With Wireless Charging Case Works With MagSafe, But Not Magnetically",
+      "link": "https://www.apple.com/airpods-5/specs/",
+      "source": "Daring Fireball",
+      "hash": "b37dcc6c4b642161f124e005c0943c9f"
+    }
+  },
+  "b313b3cff8735ffb298f994c45e4ea3a": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "‘Apple Reference Image: A New Approach for Verified Photography’",
+      "link": "https://security.apple.com/blog/apple-reference-image/",
+      "source": "Daring Fireball",
+      "hash": "b313b3cff8735ffb298f994c45e4ea3a"
+    }
+  },
+  "b2584c0a2e251eedd2aacd4c08b38d5a": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "Apple’s 27.0 OS Updates",
+      "link": "https://scriptingosx.com/2026/09/apple-27-platform-updates-september-2026/",
+      "source": "Daring Fireball",
+      "hash": "b2584c0a2e251eedd2aacd4c08b38d5a"
+    }
+  },
+  "243d7c14cfd5301b706d773f114c7177": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "★ SuperDuper 4",
+      "link": "https://daringfireball.net/2026/09/superduper_4",
+      "source": "Daring Fireball",
+      "hash": "243d7c14cfd5301b706d773f114c7177"
+    }
+  },
+  "248a8a48ecf109f7b0234d634d5afbee": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "★ And It’s True That I Stole Your Lighter, and It’s Also True That I Lost the Map",
+      "link": "https://daringfireball.net/2026/09/its_true_that_i_stole_your_lighter",
+      "source": "Daring Fireball",
+      "hash": "248a8a48ecf109f7b0234d634d5afbee"
+    }
+  },
+  "3dc38d3865020e2fce6c4acac38a8c2b": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "★ Writing With Unnatural Constraints",
+      "link": "https://daringfireball.net/2026/09/writing_with_unnatural_constraints",
+      "source": "Daring Fireball",
+      "hash": "3dc38d3865020e2fce6c4acac38a8c2b"
+    }
+  },
+  "6aba702da4bd6e965f00f74aad4dfa65": {
+    "ts": 1790121424.0642598,
+    "processed": false,
+    "data": {
+      "title": "New Pebble Weather App + Software Updates",
+      "link": "https://repebble.com/blog/new-pebble-weather-app-software-updates",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "1fc1ae9d0b1e786d826895d1309785f9"
+      "hash": "6aba702da4bd6e965f00f74aad4dfa65"
     }
   },
-  "8204c064ac80ff441ad59e33f173d669": {
-    "ts": 1790036995.4267519,
+  "faadad8ba24dc5d00ff72af06d01033b": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Pluralistic: The Claude Delusion (21 Sep 2026)",
-      "link": "https://pluralistic.net/2026/09/21/sunsetting/",
-      "source": "Pluralistic: Daily links from Cory Doctorow",
-      "hash": "8204c064ac80ff441ad59e33f173d669"
+      "title": "Index 01 Is In Mass Production!",
+      "link": "https://repebble.com/blog/index-01-is-in-mass-production",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "faadad8ba24dc5d00ff72af06d01033b"
     }
   },
-  "a124155e8a9f5576f13de07a446cc93e": {
-    "ts": 1790036995.4267519,
+  "99f1d4ba72ee2c2d688fa64509f7d29e": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Pluralistic: The actual epistemic crisis (20 Aug 2026)",
-      "link": "https://pluralistic.net/2026/08/20/epistemic-void/",
-      "source": "Pluralistic: Daily links from Cory Doctorow",
-      "hash": "a124155e8a9f5576f13de07a446cc93e"
+      "title": "Pebble Time 2 Is In Mass Production!",
+      "link": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "99f1d4ba72ee2c2d688fa64509f7d29e"
     }
   },
-  "25a801e05654d41cb0ba16b539efe7e4": {
-    "ts": 1790036995.4267519,
+  "5bd668624849783ee10d864da514bf40": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "What’s the highest legal FILETIME? Is it safe to use?",
-      "link": "https://devblogs.microsoft.com/oldnewthing/20260921-00/?p=112711",
-      "source": "The Old New Thing",
-      "hash": "25a801e05654d41cb0ba16b539efe7e4"
+      "title": "CloudPebble Returns! Plus New Pure JavaScript and Round 2 SDK",
+      "link": "https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "5bd668624849783ee10d864da514bf40"
     }
   },
-  "0afcf18254e0f6ddd704cbff4940f3ed": {
-    "ts": 1790036995.4267519,
+  "f8ee080801da89c8f944297bb9093270": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Comparing exception behavior of magic statics, std::call_once, and std::async",
-      "link": "https://devblogs.microsoft.com/oldnewthing/20260918-00/?p=112709",
-      "source": "The Old New Thing",
-      "hash": "0afcf18254e0f6ddd704cbff4940f3ed"
+      "title": "February Pebble Production and Software Updates",
+      "link": "https://repebble.com/blog/february-pebble-production-and-software-updates",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "f8ee080801da89c8f944297bb9093270"
     }
   },
-  "6664817c9a9301814b9a8662e63a3cb4": {
-    "ts": 1790036995.4267519,
+  "f89000414aa432a0378faed865aefee4": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Haversine law",
-      "link": "https://www.johndcook.com/blog/2026/09/21/haversine-law/",
-      "source": "John D. Cook",
-      "hash": "6664817c9a9301814b9a8662e63a3cb4"
+      "title": "On Being A Canadian In America In 2026",
+      "link": "https://ericmigi.com/blog/on-being-a-canadian-in-america-in-2026",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "f89000414aa432a0378faed865aefee4"
     }
   },
-  "ac81b1211030cb24d017ddb0d5c1cd50": {
-    "ts": 1790036995.4267519,
+  "83adf6af26b1f89302e068d8e8246527": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Rust Glancer",
-      "link": "https://matklad.github.io/2026/08/21/rust-glancer.html",
-      "source": "matklad",
-      "hash": "ac81b1211030cb24d017ddb0d5c1cd50"
+      "title": "Pebble Round 2 - The Most Stylish Pebble Ever",
+      "link": "https://repebble.com/blog/pebble-round-2-the-most-stylish-pebble-ever",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "83adf6af26b1f89302e068d8e8246527"
     }
   },
-  "a6c5ba064939faf5b5400a01b7fc0db3": {
-    "ts": 1790036995.4267519,
+  "a4682b4e813e0bce485afe7d9d6ded61": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Memory Safety's Hardest Problem",
-      "link": "https://matklad.github.io/2026/07/20/memory-safety-hardest-problem.html",
-      "source": "matklad",
-      "hash": "a6c5ba064939faf5b5400a01b7fc0db3"
+      "title": "Pebble Relaunch - Year One Done!",
+      "link": "https://ericmigi.com/blog/pebble-relaunch-year-one-done",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "a4682b4e813e0bce485afe7d9d6ded61"
     }
   },
-  "e7020df7472ad14f5df838583cf1898b": {
-    "ts": 1790036995.4267519,
+  "1af2697014c9397eab85d99f9c417367": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Cursed Napster",
-      "link": "https://feed.tedium.co/link/15204/17468568/napster-ai-pivot",
-      "source": "Tedium: The Dull Side of the Internet.",
-      "hash": "e7020df7472ad14f5df838583cf1898b"
+      "title": "Meet Pebble Index 01 - External Memory For Your Brain",
+      "link": "https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "1af2697014c9397eab85d99f9c417367"
     }
   },
-  "9466238507aa85f0a1729f7ff2b67608": {
-    "ts": 1790036995.4267519,
+  "dd2d4ed8004a87a8ce34d3ff96bb11d2": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "GLM 5.2 playing text adventures",
-      "link": "https://entropicthoughts.com/glm-5-2-playing-text-adventures",
-      "source": "Entropic Thoughts",
-      "hash": "9466238507aa85f0a1729f7ff2b67608"
+      "title": "Pebble Watch Software Is Now 100% Open Source + Tick Talk #4 - PT2 Demos!",
+      "link": "https://ericmigi.com/blog/pebble-watch-software-is-now-100percent-open-source",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "dd2d4ed8004a87a8ce34d3ff96bb11d2"
     }
   },
-  "a0a75b763757f7120a230afda5f413af": {
-    "ts": 1790036995.4267519,
+  "c280f67d25f375cc78be809dedede02e": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Human Bottlenecks",
-      "link": "https://borretti.me/article/human-bottlenecks",
-      "source": "Fernando Borretti",
-      "hash": "a0a75b763757f7120a230afda5f413af"
+      "title": "Pebble, Rebble, and a Path Forward",
+      "link": "https://ericmigi.com/blog/pebble-rebble-and-a-path-forward",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "c280f67d25f375cc78be809dedede02e"
     }
   },
-  "8c4abe8014fe6f626b85e33f36592c8a": {
-    "ts": 1790036995.4267519,
+  "4a0ba1a9d5b5bc82fb121921fbc930bb": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Abusing CD-Rs, DVD-Rs, and BD-Rs for Science",
-      "link": "https://jayd.ml/2026/09/05/burned-media-torture-test.html",
-      "source": "Jayden’s Blog",
-      "hash": "8c4abe8014fe6f626b85e33f36592c8a"
+      "title": "The new Pebble app is live on iOS and Android",
+      "link": "https://ericmigi.com/blog/the-new-pebble-app-is-live-on-ios-and-android",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "4a0ba1a9d5b5bc82fb121921fbc930bb"
     }
   },
-  "961851b888fb3a972e4ded4c6e76254c": {
-    "ts": 1790036995.4267519,
+  "4daf178422049c18629d81cad77ed64d": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "Writing Rust code that's faster than state-of-the-art libraries by asking agents to make the code faster",
-      "link": "https://minimaxir.com/2026/09/agentic-iteration/",
-      "source": "Max Woolf's Blog",
-      "hash": "961851b888fb3a972e4ded4c6e76254c"
+      "title": "How To Build A Smartwatch: Software - Setting Expectations & Roadmap",
+      "link": "https://ericmigi.com/blog/how-to-build-a-smartwatch-software-setting-expectations-and-roadmap",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "4daf178422049c18629d81cad77ed64d"
     }
   },
-  "356e1e6bb51d3facac2cde620c1a2fe7": {
-    "ts": 1790036995.4267519,
+  "f8171fcef08101c22c92fdc42472ff8a": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "You don’t understand, prices can’t go down",
-      "link": "https://geohot.github.io//blog/jekyll/update/2026/06/18/prices-cant-go-down.html",
-      "source": "the singularity is nearer",
-      "hash": "356e1e6bb51d3facac2cde620c1a2fe7"
+      "title": "(re)Introducing the Pebble Appstore",
+      "link": "https://ericmigi.com/blog/re-introducing-the-pebble-appstore",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "f8171fcef08101c22c92fdc42472ff8a"
     }
   },
-  "667786f04cdf221a8c6fbacf65611089": {
-    "ts": 1790036995.4267519,
+  "d5bef13115f65e002555067d186832f8": {
+    "ts": 1790121424.0642598,
     "processed": false,
     "data": {
-      "title": "A Need for Speed",
-      "link": "https://www.filfre.net/2026/08/a-need-for-speed/",
-      "source": "The Digital Antiquarian",
-      "hash": "667786f04cdf221a8c6fbacf65611089"
-    }
-  },
-  "14dcb24fee1ddc860f404ea5117245a1": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "The iPhone Model Hall of Fame",
-      "link": "https://blog.jim-nielsen.com/2026/iphone-hall-of-fame/",
-      "source": "Jim Nielsen’s Blog",
-      "hash": "14dcb24fee1ddc860f404ea5117245a1"
-    }
-  },
-  "9b3d2500b9ca4843306c6e3042cd488e": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "NEC V20 CPU: A bit of pep for an XT",
-      "link": "https://dfarq.homeip.net/nec-v20-cpu-a-bit-of-pep-for-an-xt/?utm_source=rss&utm_medium=rss&utm_campaign=nec-v20-cpu-a-bit-of-pep-for-an-xt",
-      "source": "The Silicon Underground",
-      "hash": "9b3d2500b9ca4843306c6e3042cd488e"
-    }
-  },
-  "c4c60edbe557c02c37ada5125d024f55": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Hedley Davis has died",
-      "link": "https://oldvcr.blogspot.com/2026/03/hedley-davis-has-died.html",
-      "source": "Old Vintage Computing Research",
-      "hash": "c4c60edbe557c02c37ada5125d024f55"
-    }
-  },
-  "b95a6a65fcbd1fb8474baa861df6353e": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "OpenTK: nu ook met Internetconsultaties & notificaties",
-      "link": "https://berthub.eu/articles/posts/opentk-internetconsultaties/",
-      "source": "Bert Hubert's writings",
-      "hash": "b95a6a65fcbd1fb8474baa861df6353e"
-    }
-  },
-  "32b1486aa71127562f8e120aa24db50e": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "FediMeteo, HAProxy, and the art of not wasting snac threads",
-      "link": "https://it-notes.dragas.net/2026/05/18/fedimeteo-haproxy-and-the-art-of-not-wasting-snac-threads/",
-      "source": "IT Notes",
-      "hash": "32b1486aa71127562f8e120aa24db50e"
-    }
-  },
-  "bd2789b8bb5e7080ada3d8d1337ba661": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "In Purgatory Everyone Likes Crepes: My Time at a Greek All-Inclusive",
-      "link": "https://matduggan.com/in-purgatory-everyone-likes-crepes-my-time-at-a-greek-all-inclusive/",
-      "source": "matduggan.com",
-      "hash": "bd2789b8bb5e7080ada3d8d1337ba661"
-    }
-  },
-  "9651a4083b6c333318a28a5718de1638": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "I added a blogroll",
-      "link": "https://matduggan.com/i-added-a-blogroll/",
-      "source": "matduggan.com",
-      "hash": "9651a4083b6c333318a28a5718de1638"
-    }
-  },
-  "a37ec105d5393423aacb458a2baf60d3": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Why I Stopped \"Creating Content\"",
-      "link": "https://refactoringenglish.com/blog/why-i-stopped-creating-content/",
-      "source": "Refactoring English",
-      "hash": "a37ec105d5393423aacb458a2baf60d3"
-    }
-  },
-  "167ed8f9094b764b313bc45f7f1abb4b": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Your Startup Is Probably Dead On Arrival",
-      "link": "https://steveblank.com/2026/03/17/your-startup-is-probably-dead-on-arrival/",
-      "source": "Steve Blank",
-      "hash": "167ed8f9094b764b313bc45f7f1abb4b"
-    }
-  },
-  "bb27787a36517e5bf3cd4551092dc4c8": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Travel notes: RubyKaigi Hakodate",
-      "link": "https://bernsteinbear.com/blog/travel-notes-rubykaigi-hakodate/?utm_source=rss",
-      "source": "Max Bernstein's Blog",
-      "hash": "bb27787a36517e5bf3cd4551092dc4c8"
-    }
-  },
-  "55a195f3314c5b8a1ccaf0fec5012695": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Help I'm being persecuted",
-      "link": "https://www.experimental-history.com/p/help-im-being-persecuted",
-      "source": "Experimental History",
-      "hash": "55a195f3314c5b8a1ccaf0fec5012695"
-    }
-  },
-  "941b4c9c390a1227324afcfee28f6746": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Why shaming people about AI slop isn’t enough to stop Big AI",
-      "link": "https://anildash.com/2026/08/21/ai-slop-and-shame/",
-      "source": "Anil Dash",
-      "hash": "941b4c9c390a1227324afcfee28f6746"
-    }
-  },
-  "3bbd68b53cfb0871e11d3afd52094b2f": {
-    "ts": 1790036995.4267519,
-    "processed": false,
-    "data": {
-      "title": "Show your hands honor for the strange power they bring you",
-      "link": "https://aresluna.org/show-your-hands-honor",
-      "source": "Aresluna",
-      "hash": "3bbd68b53cfb0871e11d3afd52094b2f"
-    }
-  },
-  "14c72bcf1d52480d427a0416f8f0fd45": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Vibing a Non-Trivial Ghostty Feature",
-      "link": "https://mitchellh.com/writing/non-trivial-vibing",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "14c72bcf1d52480d427a0416f8f0fd45"
-    }
-  },
-  "68f59a1031464f57a57e6e8c396f2425": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Zig Builds Are Getting Faster",
-      "link": "https://mitchellh.com/writing/zig-builds-getting-faster",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "68f59a1031464f57a57e6e8c396f2425"
-    }
-  },
-  "41b2823973c8363212d787d7fa7d6940": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Libghostty Is Coming",
-      "link": "https://mitchellh.com/writing/libghostty-is-coming",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "41b2823973c8363212d787d7fa7d6940"
-    }
-  },
-  "41d6314586ce76d55edaf6c3b3af8fce": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "You Have to Feel It",
-      "link": "https://mitchellh.com/writing/feel-it",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "41d6314586ce76d55edaf6c3b3af8fce"
-    }
-  },
-  "b542e9d19f2f1027b67e9611921ecb6d": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Advice for Tech Non-Profits",
-      "link": "https://mitchellh.com/writing/advice-for-tech-nonprofits",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "b542e9d19f2f1027b67e9611921ecb6d"
-    }
-  },
-  "ed802785e36e24257fd66d280fd19f57": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "We Rewrote the Ghostty GTK Application",
-      "link": "https://mitchellh.com/writing/ghostty-gtk-rewrite",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "ed802785e36e24257fd66d280fd19f57"
-    }
-  },
-  "96c16db188889ff0ff75e460d45f3dc7": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "\"As Code\"",
-      "link": "https://mitchellh.com/writing/as-code",
-      "content": "",
-      "source": "Mitchell Hashimoto",
-      "hash": "96c16db188889ff0ff75e460d45f3dc7"
-    }
-  },
-  "9eb8ef01e7e402f1d1c8bf86b20a46fe": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "This is why we play",
-      "link": "https://xeiaso.net/blog/2026/this-is-why-we-play/",
-      "content": "<p>Lately I've been playing classic World of Warcraft to get a feel for it and see if I like it before I try and go head-first into <a href=\"https://worldofwarcraft.blizzard.com/en-us/forever\">WoW Forever</a> fairly blind with some friends. People have told me that World of Warcraft is good, but I haven't personally played it (or really any MMO outside of Final Fantasy 14). I've wanted to see for myself, so I dug in.</p>\n        <p>I've been leveling an undead warlock and recently I've gotten my way to The Barrens. My goal was to kill some planestriders and collect their beaks as proof of my kills so that the population can get back under control or whatever. I wandered around and found another player also on that quest and waved to them. He was a gnome warlock named Borton and waved at me when I walked over. I waved back and invited him to a party. We walked around the area and started spreading our aggro to farm the planestriders and grab their drops. After a few kills he stopped for a second and said &quot;this is why we play&quot;.</p>\n        <p>I was taken a bit aback by this. It felt out of nowhere but also felt like one of the more human encounters I've had with people in a video game in a long time. One of the great parts about MMOs is that you end up having a lot of these itinerant bits of community like this. You both get a quest from an NPC asking you to go and farm some drops and then this sends you all out into the world to naturally do it together. These conversations and liminal bits of community end up adding up into the greater experiences and really giving you the flavour of the game's vibe. You do it together for the fun of the game.</p>\n        <p>After a while we finished our farming, got all the planestrider beaks, commiserated about the drop tables, and decided to just sit down on a nearby hill and take a screenshot because it just <em>felt</em> right.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/borton-shot.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img alt=\"Two players sitting in golden fields with a backdrop of mountains and a blue sky enjoying the moment together wordlessly.\" src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/borton-shot.jpg\" /></a><figcaption class=\"max-w-xl\">Two players sitting in golden fields with a backdrop of mountains and a blue sky enjoying the moment together wordlessly.</figcaption></figure>\n        <p>This has really gotten me thinking about what I really want to get out of games and why I play them. I think I've been doing it wrong.</p>\n        <h2>The endless treadmill of “dead content”</h2>\n        <p>At some level the “high end” content of online games like Final Fantasy 14 or Retail World of Warcraft looks endless. There’s intricate dances of choreography as you and your friends puzzle your way through each boss mechanic towards victory. Hell, games like Final Fantasy 14 have their fights <em>defined</em> by the little call->response pairs as the boss telegraphs things and you react to it in concert. Not to mention the feeling of utter serotonin that comes from figuring it out and winning.</p>\n        <p>One of the main problems with this is that the “high end” raids in this game tend to be a mile wide in theory but practically an inch deep. Don’t get me wrong, even as far back as a decade ago there’s still encounters that are actually hard (eg: XIV’s ultimate raids, I'm personally at Quickmarch Trio in UCOB if you have the right brainworms to know what that means), but as the fights get older there’s a sharp dropoff in the number of people that actually want to run them. This ends up with entire subsystems of the game (Deep Dungeons, Bozja before Shadowbringers went into the free trial, etc) becoming “dead content” because if you queue for them, nobody shows up. If you put up an entry for them in Party Finder, nobody will join you unless you set aside time to wait for hours. You end up with modes where you're encouraged to do it in a group being bereft of people so you're &quot;forced&quot; to figure it out on your own.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/party-boat.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/party-boat.jpg\" /></a></figure>\n        <p>As a result everyone is funneled into the high end and trying to min-max it as much as possible to squeeze all the game they can out as fast as they can before “everyone else” gets what they want out of it and moves on. The world becomes a theme park where only the newest rides have the most people there and getting a group for anything else becomes a slog in party finder or needing you to seek out people that focus on that thing and nothing else.</p>\n        <p>This also means that if you’re “slow” or have to take a break during the small sliver when content is “current”, you’re going to be stuck &quot;behind&quot; on it for a long time without significant effort to find a way around it. It really makes you wonder what the point of it all is if you can’t find anyone to do it. Worse, when you're trying to find a group to do it regularly (a &quot;static&quot; group), they look at how you did on previous raid tiers as a way to vet if you're a &quot;shitter&quot; or not.</p>\n        <p>The records of your ultimate achievements of an entire raid tier, or the relic weapons for an entire expansion just end up becoming things you can do if you want that give you a shiny skin for your weapons to coordinate with an outfit that looks better. Maybe in edge cases those stats will be better for complicated maths reasons. All that effort you put into them is just ultimately &quot;wasted&quot; when the next ride comes out, all the stats get reset, and everyone moves on to wait in line for the next thing. All of your gear you spent weeks grinding for is reduced to sticks that increase the statistics correlated to aspects of your character that make the funny numbers go up so you can kill the boss faster to move on to the next thing.</p>\n        <p>Maybe this is just something endemic to the theme park design philosophy where you’re given a goal by the developers and a series of actions that really boil down to TODO items that are the barrier from you and that thing you actually want (do these quests, fight these normal raid bosses, beat the savage versions of those bosses, beat the ultimate boss, get the shiny weapons, and finally look cool afk-ing in Limsa Lominsa). Maybe this is why people end up seeing things like the overworld as the <em>barrier</em> to the rides instead of an integral part of the experience. Maybe this is the pressure that makes people want to have flying mounts or other ways to &quot;skip the grind&quot;.</p>\n        <h2>A meditation on Death Stranding</h2>\n        <p>I haven't really touched Death Stranding since <a href=\"https://xeiaso.net/blog/death-stranding-review-2019-11-11/\">I did my review on it way back in 2019</a>. It's always had a special place in my heart though, it's kind of a touching experience even though it's incredibly isolating at the same time. This game has two main characters: Sam &quot;Porter&quot; Bridges and the game world. The overworld's system of traversal is the protagonist as much as the actual protagonist is.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/gods-promise-broken.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img alt=\"[object Object]\" src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/gods-promise-broken.jpg\" /></a><figcaption class=\"max-w-xl\">Sam &quot;Porter&quot; Bridges looking out past the hill he just climbed and seeing an upside-down rainbow.<br /><br />God sent the rainbow as a promise to mankind that he wouldn't try to destroy them again, and this rainbow is upside down after mankind's near destruction.</figcaption></figure>\n        <p>Honestly I think one of the best features of Death Stranding is the camera mode. At any point you can hit a button (on the Steam Controller it's one of the back buttons by default) and the action stops so you can position the camera and just soak in the scenery. If you've never played Death Stranding before, I highly suggest you stop reading this post right now and buy it on whatever platform you buy games on. Worst case you can experience it on the iPhone as Hideo Kojima surely intended.</p>\n        <center><blockquote class=\"bluesky-embed mb-4\"><p lang=\"en\"><br /><br /><a href=\"https://bsky.app/profile/did:plc:e5nncb3dr5thdkjir5cfaqfe/post/3mvxl3weo3k2q?ref_src=embed\"><p>[image or embed]</p></a></p><p>— Xe (</p><a href=\"https://bsky.app/profile/did:plc:e5nncb3dr5thdkjir5cfaqfe?ref_src=embed\"><p>@xeiaso.net</p></a><p>) </p><a href=\"https://bsky.app/profile/did:plc:e5nncb3dr5thdkjir5cfaqfe/post/3mvxl3weo3k2q?ref_src=embed\"><p>September 20, 2026 at 12:02 PM</p></a></blockquote></center>\n        \n        <div class=\"flex space-x-2 bg-bg-soft dark:bg-bgDark-soft mx-auto min-h-fit\n        lg:w-[80ch] sm:w-[65ch] w-full\n        lg:p-4 p-2\n        // Base styles for all messages\n        mt-0 mb-0 rounded-none\n        // First message styles\n        first:mt-4 first:rounded-t-lg first:pb-2\n        // Last message styles\n        last:mb-4 last:rounded-b-lg last:pt-1\n        // Middle message top/bottom adjustment\n        [&amp;:not(:first-child)]:-mt-[1px] [&amp;:not(:first-child)]:py-1\"><div class=\"h-16 w-16 shrink-0 not-prose\"><img alt=\"Cadey is coffee\" class=\"h-16 w-16 shrink-0 max-w-none object-contain rounded-xs\" height=\"64\" src=\"https://stickers.xeiaso.net/sticker/cadey/coffee\" width=\"64\" /></div><div class=\"flex-1 min-w-0\"><span class=\"font-semibold text-sm block mb-1\"><a href=\"https://xeiaso.net/characters#cadey\">Cadey</a></span><span class=\"mx-auto\"></span><div class=\"text-fg-1 dark:text-fgDark-1 text-sm prose-p:my-2\"><p>If you actually do this on an iPhone, please do it with a controller. The\n        touch controls are kinda awful.</p></div></div></div>\n        <p>As you progress your way delivering packages to save America, every so often the camera will pull back, the game actions will become muted, and the normally contemplative and silent experience will suddenly be augmented by soft music.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/low-roar.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img alt=\"[object Object]\" src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/low-roar.jpg\" /></a><figcaption class=\"max-w-xl\">The protagonist of Death Stranding riding on a tricycle down to a port city with the Death Stranding logo overlaid.</figcaption></figure>\n        <p>It turns this process of progression into a serene bit of negative space in a way that makes you really stop and think about the experience, the dramatis personae, and the kind of story that's trying to be conveyed. The world itself turns into this sense of wanderlust that makes you mentally pause and just process things.</p>\n        <p>I don't really know if I'm doing this justice, in the moment it's an almost spiritual kind of connection between you and the overworld mediated by the soft sounds of <a href=\"https://youtu.be/R2t8pHCbVFc\">Silent Poets' Asylum For The Feeling</a> or <a href=\"https://youtu.be/n1HndAedkhQ\">Low Roar's Don't Be So Serious</a>. The game makes you feel so small yet so connected to the world around you and there's just this overwhelming sense of equanimity.</p>\n        <center></center>\n        <p>Just take a moment to watch the Don't Be So Serious video with Death Stranding gameplay underlaid. That's a snapshot of how the game literally plays out. It's these liminal bits of wanderlust combined with a story that only Kojima or Yoko Taro could come up with.</p>\n        <h2>I miss the feeling of exploring</h2>\n        <p>This kind of overwhelming emotion is the kind of thing that made me fall in love with gaming back in the days when the most complicated games I'd play would be Banjo Kazooie, Super Mario 64, Super Mario Sunshine, Pikmin 2, Sonic Adventure 2, and other games of that vintage. At some level I kind of long for <em>not</em> knowing what's beyond the next hill and being forced to figure it out by just <em>going there</em> to find out.</p>\n        <p>Hell, I also get this sense of romance in Breath of the Wild or Tears of the Kingdom when I just turn off all the UI elements and wander around wherever the wind takes me.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/lanayru.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img alt=\"[object Object]\" src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/lanayru.jpg\" /></a><figcaption class=\"max-w-xl\">Link in Breath of the Wild looking towards a sunset bathing a lake in twilight as the light refracts on the smooth stone surface he's standing on.</figcaption></figure>\n        <p>Breath of the Wild is one of those games where you can just wander around the overworld for ages and still find new things. Combine it with flying and you just <em>feel</em> things as you go from hither to thither. Even with fast travel you still have to <em>go there yourself</em>. You have to climb every mountain. You have to cross the vast expanse of the desert. You have to figure out how to get a boat to the island with some awesome gear. And even months or years after you capture screenshots/video of the adventure, looking at them takes you back there and you just <em>feel</em> it again.</p>\n        <p>You have the power and you have to pick what you do with it. There is no wrong way to do it. Want to fly over Gerudo Town after sunset knowing well and good that the moment you land you're gonna get kicked out of it for being a guy? Hell yeah, you can just DO IT.</p>\n        <figure class=\"full-bleed not-prose my-8 \"><a href=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/gerudo-town.jpg\"><source type=\"image/avif\" /><source type=\"image/webp\" /><img alt=\"[object Object]\" src=\"https://files.xeiaso.net/blog/2026/this-is-why-we-play/gerudo-town.jpg\" /></a><figcaption class=\"max-w-xl\">Link in Breath of the Wild gliding above Gerudo Town at sunset, just soaking in the vibes.</figcaption></figure>\n        <p>This is making me think, fuck, am I actually getting what I want out of my time? In my race to min-max my way through &quot;current&quot; things so I don't get &quot;behind&quot; have I just lost that sense of wanderlust from the experience? I miss that feeling of just exploring the world for what it is and letting myself get there the long way.</p>\n        <p>Have I been skipping over the real &quot;good part&quot; in my effort to be efficient in getting to what I thought the &quot;good part&quot; really was?</p>\n        <p>Have I just been playing games the wrong way?</p>\n        <h2>This is why we play</h2>\n        <p>I think I've been playing the games I'm immersing myself in incorrectly and I want to change that. I want to lose myself in the fantasy worlds. I want to let myself see the sights, hear the sounds, feel the breeze on my back, go fishing at what feels like the little corner of civilization just at the edge of the universe, and just let that sense of overwhelming wanderlust come back into my life.</p>\n        <p>This is why we play, we play to let the fantasies of these fantasy worlds take charge and show you something that you didn't think you needed in your life yet you're all the richer for it. As World of Warcraft Forever comes out in November and Final Fantasy 14's Evercold expansion comes out next year, I'm going to just let those worlds enrapture me in their designs and lose myself to the wanderlust. I'll let The Fourth take me where it does and that's okay.</p>\n        <p>It's absurd that the root of this revelation was a bot in a single-player MMO on my homelab picking a random chat message out of a list of dozens randomly triggered by a random overworld mob dying.</p>\n        <p>Yeah, I forgot to mention, this all was caused by an experiment in playing with bots to teach me what it means to have a community. I was gonna lead this post with that fact but I think it all lands better if I just spill it all out at the end while I'm having the revelations like this. Given the utter absurdities of this modern era where we live in Clown World, I think it only makes sense that it would boil down to something like that.</p>\n        <p>Honestly I think it's even more absurd that it took a proc of a proc of a bot saying things for me to figure out what was wrong with myself.</p>\n        <p>I feel like I've just torn out a chunk of my soul and rended it unto the canvas for this. I don't really know why this helped me, but I hope this helps you too. Stay fresh out there, and if you're going to also venture forth to that millennial retirement home of a launch, maybe I'll see you in Azeroth in early November for World of Warcraft Forever. I'm gonna go in blind, you should too. We'll figure it all out together, one terrible loot table at a time.</p>",
-      "source": "Xe Iaso's blog",
-      "hash": "9eb8ef01e7e402f1d1c8bf86b20a46fe"
-    }
-  },
-  "bb06f5ab8e95e053dbb5bbe4622f399a": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Use the built-in GELU, don't roll your own!",
-      "link": "https://www.gilesthomas.com/2026/08/built-in-gelu",
-      "content": "<p>Unsurprisingly, <a href=\"https://docs.pytorch.org/docs/2.13/generated/torch.nn.GELU.html\">PyTorch's own built-in GELU function</a>\nis faster than the hand-rolled one I've been using to date.  But I was surprised at\nhow <em>much</em> faster using it made things when training my models.  I discovered this\naccidentally just now while working on something unrelated, but am logging the details\nhere for anyone else that might find it useful.</p>\n\n<p>The headline numbers: the same code, training the same model on the same data, ran\nat about:</p>\n\n<ul>\n<li>21,000 tokens per second using the hand-rolled GELU from <a href=\"https://sebastianraschka.com/\">Sebastian Raschka</a>'s book\n\"<a href=\"https://www.manning.com/books/build-a-large-language-model-from-scratch\">Build a Large Language Model (from Scratch)</a>\".</li>\n<li>25,000 tokens per second using PyTorch's built-in GELU with no arguments.</li>\n<li>25,000 tokens per second using the built-in GELU with <code>approximate=\"tanh\"</code>, which\nuses the same maths as Raschka's version under the hood.</li>\n</ul>\n\n<p>That's a 20% increase in throughput for both of the built-in versions -- definitely nothing to be sneezed at.</p>\n\n<p>And what is particularly\ninteresting is that there aren't that many GELUs going on -- it's a GPT-2 small-style\nmodel, with 12 layers.  So that's 12 GELUs handling tensors\nshaped <code>(batch_size, seq_len, 4 * d_emb)</code>, which is <code>(6, 1024, 3072)</code> for my training setup.\nGiven that the rest of the model is doing all of the normal full attention stuff for GPT-2, it's\n<em>really</em> surprising that the GELUs alone must have been taking up so much of the time.  The throughput\nnumbers mean that we must have been spending about 17% of our time on the extra overhead from the hand-rolled\nversion, so that sets a lower bound for how much time the GELUs were taking up.</p>\n<p>Back when I was doing the \"interventions\" part of my <a href=\"/llm-from-scratch\">LLM from scratch series</a>, training\ndozens of GPT-2 small-sized models in the cloud and on my local machines, to keep things simple I used\nthe original model code from Raschka's book.\nThat happens to have its own implementation of the GELU function --\nyou can see <a href=\"https://github.com/gpjt/ddp-base-model-from-scratch/blob/16dd249447754c3a7be4f1212ccaf312c7416d92/gpt.py#L78\">my copy here</a>.</p>\n\n<p>I'm not that sure why the hand-rolled version is in there -- he covers the maths, but the specific implementation isn't explained\nin that much depth, and it seems rather like boilerplate, just a \"type this in and use it\"\nkind of thing.  By contrast, for example, while he does explain the maths behind cross-entropy loss in similar detail,\nwe use the built-in function for it rather than coding it up ourselves.</p>\n\n<p>When I switched to using JAX for <a href=\"/2026/07/llm-from-scratch-34b-building-and-training-gpt-2-small-in-jax\">my own from-scratch implementation</a>,\nI decided to not bother porting the boilerplate, and just used <a href=\"https://docs.jax.dev/en/latest/_autosummary/jax.nn.gelu.html#jax.nn.gelu\">JAX's own built-in version</a>.</p>\n\n<p>I was revisiting the PyTorch code -- I'm in the process of extending it with mixture-of-experts\nsupport, about which more in a later post -- and decided to switch from the hand-written GELU to the PyTorch one just to\ntidy things up a bit.\nI noticed something interesting -- my new MoE code suddenly seemed to speed up.</p>\n\n<p>Was that a mirage?  Or had I discovered part -- or even all -- of the reason why the\nJAX code was so much faster than the PyTorch code?  With PyTorch, I was typically\ngetting training speeds of about 21,000 tokens per second, while in JAX I was getting 24,000 tps or so.\nI'd been chalking that up to JAX's JIT compilation, but could it have been just a result\nof a random implementation choice I'd made?</p>\n\n<p>I did three partial test training runs, letting each one run for 20 minutes to allow the\ntraining speed to settle down from any startup overhead.  Firstly, with the old\nhand-coded GELU:</p>\n\n<div class=\"codehilite\">\n<pre><span></span><code>giles@poppy:~/Dev/ddp-base-model-from-scratch<span class=\"w\"> </span><span class=\"o\">((</span>HEAD<span class=\"w\"> </span>detached<span class=\"w\"> </span>at<span class=\"w\"> </span>16dd249<span class=\"o\">))</span>$<span class=\"w\"> </span>uv<span class=\"w\"> </span>run<span class=\"w\"> </span>torchrun<span class=\"w\"> </span>--nproc_per_node<span class=\"o\">=</span><span class=\"m\">1</span><span class=\"w\"> </span>ddp_train.py<span class=\"w\"> </span>1xrtx3090-baseline<span class=\"w\"> </span>datasets/\nFetching<span class=\"w\"> </span><span class=\"m\">4</span><span class=\"w\"> </span>files:<span class=\"w\"> </span><span class=\"m\">100</span>%<span class=\"p\">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">4</span>/4<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:00&lt;<span class=\"m\">00</span>:00,<span class=\"w\"> </span><span class=\"m\">3173</span>.90it/s<span class=\"o\">]</span>\nStarting<span class=\"w\"> </span>rank<span class=\"w\"> </span><span class=\"m\">0</span><span class=\"w\"> </span>training<span class=\"w\"> </span>at<span class=\"w\"> </span>global<span class=\"w\"> </span>step<span class=\"w\"> </span><span class=\"m\">0</span>\n<span class=\"w\">  </span><span class=\"m\">0</span>%<span class=\"p\">|</span><span class=\"w\">                                                                                                                  </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">0</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:04&lt;?,<span class=\"w\"> </span>?it/s,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">10</span>.991,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">19</span>,982<span class=\"o\">]</span>\n\n\nCheckpoint\n\nContinuing<span class=\"w\"> </span>training\n<span class=\"w\">  </span><span class=\"m\">1</span>%<span class=\"p\">|</span>▊<span class=\"w\">                                                                                                     </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">257</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">20</span>:07&lt;<span class=\"m\">42</span>:53:57,<span class=\"w\">  </span><span class=\"m\">4</span>.69s/it,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">6</span>.570,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">20</span>,920<span class=\"o\">]</span>\n</code></pre>\n</div>\n\n<p>So it was getting 20,920 on average over those 257 global steps.  That speed was in line with <a href=\"/2026/04/llm-from-scratch-32k-interventions-training-our-best-model-locally-gradient-accumulation#the-new-local-baseline\">the original run</a>\nof the configuration I was using.</p>\n\n<p>Next, I introduced the built-in PyTorch GELU with no arguments:</p>\n\n<div class=\"codehilite\">\n<pre><span></span><code><span class=\"gd\">-</span>\n<span class=\"gd\">-class GELU(nn.Module):</span>\n<span class=\"gd\">-</span>\n<span class=\"gd\">-    def forward(self, x):</span>\n<span class=\"gd\">-        return 0.5 * x * (1 + torch.tanh(torch.sqrt(torch.tensor(2.0 / torch.pi)) * (x + 0.044715 * torch.pow(x, 3))))</span>\n<span class=\"gd\">-</span>\n<span class=\"gd\">-</span>\n<span class=\"gd\">-</span>\n<span class=\"w\"> </span>class FeedForward(nn.Module):\n\n<span class=\"w\"> </span>    def __init__(self, cfg):\n<span class=\"w\"> </span>        super().__init__()\n<span class=\"w\"> </span>        self.layers = nn.Sequential(\n<span class=\"w\"> </span>            nn.Linear(cfg[&quot;emb_dim&quot;], cfg[&quot;emb_dim&quot;] * 4),\n<span class=\"gd\">-            GELU(),</span>\n<span class=\"gi\">+            nn.GELU(),</span>\n<span class=\"w\"> </span>            nn.Linear(cfg[&quot;emb_dim&quot;] * 4, cfg[&quot;emb_dim&quot;])\n<span class=\"w\"> </span>        )\n</code></pre>\n</div>\n\n<p>That does the full calculations for GELU, rather than using the <code>tanh</code>-based approximation that\nthe hand-rolled code did.  After 20 minutes, it looked like this:</p>\n\n<div class=\"codehilite\">\n<pre><span></span><code>giles@poppy:~/Dev/ddp-base-model-from-scratch<span class=\"w\"> </span><span class=\"o\">(</span>main<span class=\"o\">)</span>$<span class=\"w\"> </span>uv<span class=\"w\"> </span>run<span class=\"w\"> </span>torchrun<span class=\"w\"> </span>--nproc_per_node<span class=\"o\">=</span><span class=\"m\">1</span><span class=\"w\"> </span>ddp_train.py<span class=\"w\"> </span>1xrtx3090-baseline<span class=\"w\"> </span>datasets/\nFetching<span class=\"w\"> </span><span class=\"m\">4</span><span class=\"w\"> </span>files:<span class=\"w\"> </span><span class=\"m\">100</span>%<span class=\"p\">|</span>██████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">4</span>/4<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:00&lt;<span class=\"m\">00</span>:00,<span class=\"w\"> </span><span class=\"m\">11222</span>.22it/s<span class=\"o\">]</span>\nStarting<span class=\"w\"> </span>rank<span class=\"w\"> </span><span class=\"m\">0</span><span class=\"w\"> </span>training<span class=\"w\"> </span>at<span class=\"w\"> </span>global<span class=\"w\"> </span>step<span class=\"w\"> </span><span class=\"m\">0</span>\n<span class=\"w\">  </span><span class=\"m\">0</span>%<span class=\"p\">|</span><span class=\"w\">                                                                                                                  </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">0</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:04&lt;?,<span class=\"w\"> </span>?it/s,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">10</span>.991,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">23</span>,953<span class=\"o\">]</span>\n\n\nCheckpoint\n\nContinuing<span class=\"w\"> </span>training\n<span class=\"w\">  </span><span class=\"m\">1</span>%<span class=\"p\">|</span>▉<span class=\"w\">                                                                                                     </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">307</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">20</span>:00&lt;<span class=\"m\">35</span>:40:59,<span class=\"w\">  </span><span class=\"m\">3</span>.91s/it,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">6</span>.331,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">25</span>,134<span class=\"o\">]</span>\n</code></pre>\n</div>\n\n<p>So this time we were getting 25,134 tokens per second -- 20% faster!</p>\n\n<p>By default, PyTorch's GELU uses an exact calculation of the function -- the hand-written\ncode from the book uses an approximation using <code>tanh</code>.  Luckily, you can get that same\napproximation from PyTorch:</p>\n\n<div class=\"codehilite\">\n<pre><span></span><code><span class=\"w\"> </span>        super().__init__()\n<span class=\"w\"> </span>        self.layers = nn.Sequential(\n<span class=\"w\"> </span>            nn.Linear(cfg[&quot;emb_dim&quot;], cfg[&quot;emb_dim&quot;] * 4),\n<span class=\"gd\">-            nn.GELU(),</span>\n<span class=\"gi\">+            nn.GELU(approximate=&quot;tanh&quot;),</span>\n<span class=\"w\"> </span>            nn.Linear(cfg[&quot;emb_dim&quot;] * 4, cfg[&quot;emb_dim&quot;])\n<span class=\"w\"> </span>        )\n</code></pre>\n</div>\n\n<p>So, training with that for 20 minutes:</p>\n\n<div class=\"codehilite\">\n<pre><span></span><code>giles@poppy:~/Dev/ddp-base-model-from-scratch<span class=\"w\"> </span><span class=\"o\">(</span>main<span class=\"o\">)</span>$<span class=\"w\"> </span>uv<span class=\"w\"> </span>run<span class=\"w\"> </span>torchrun<span class=\"w\"> </span>--nproc_per_node<span class=\"o\">=</span><span class=\"m\">1</span><span class=\"w\"> </span>ddp_train.py<span class=\"w\"> </span>1xrtx3090-baseline<span class=\"w\"> </span>datasets/\nFetching<span class=\"w\"> </span><span class=\"m\">4</span><span class=\"w\"> </span>files:<span class=\"w\"> </span><span class=\"m\">100</span>%<span class=\"p\">|</span>███████████████████████████████████████████████████████████████████████████████████████████████████████████████████<span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">4</span>/4<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:00&lt;<span class=\"m\">00</span>:00,<span class=\"w\"> </span><span class=\"m\">4115</span>.09it/s<span class=\"o\">]</span>\nStarting<span class=\"w\"> </span>rank<span class=\"w\"> </span><span class=\"m\">0</span><span class=\"w\"> </span>training<span class=\"w\"> </span>at<span class=\"w\"> </span>global<span class=\"w\"> </span>step<span class=\"w\"> </span><span class=\"m\">0</span>\n<span class=\"w\">  </span><span class=\"m\">0</span>%<span class=\"p\">|</span><span class=\"w\">                                                                                                                  </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">0</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">00</span>:04&lt;?,<span class=\"w\"> </span>?it/s,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">10</span>.991,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">23</span>,875<span class=\"o\">]</span>\n\n\nCheckpoint\n\nContinuing<span class=\"w\"> </span>training\n<span class=\"w\">  </span><span class=\"m\">1</span>%<span class=\"p\">|</span>▉<span class=\"w\">                                                                                                     </span><span class=\"p\">|</span><span class=\"w\"> </span><span class=\"m\">307</span>/33165<span class=\"w\"> </span><span class=\"o\">[</span><span class=\"m\">20</span>:00&lt;<span class=\"m\">35</span>:39:42,<span class=\"w\">  </span><span class=\"m\">3</span>.91s/it,<span class=\"w\"> </span><span class=\"nv\">loss</span><span class=\"o\">=</span><span class=\"m\">6</span>.332,<span class=\"w\"> </span><span class=\"nv\">tps</span><span class=\"o\">=</span><span class=\"m\">25</span>,142<span class=\"o\">]</span>\n</code></pre>\n</div>\n\n<p>25,142 tokens per second -- basically the same as the non-approximate version.</p>\n\n<p>So: switching to the built-in GELU made my PyTorch code run 20% faster, at about 25,000 tps\nrather than 21,000.</p>\n\n<p>My JAX code, which used JAX's built-in GELU, ran at around 24,000 tps.  I'd actually\nfound that rather surprising, because in JAX I was training in full-fat 32-bit floating point, while in PyTorch I was using\nAutomatic Mixed Precision (AMP) -- a special mode that allows it to use 16-bit calculations\nwhere it won't hurt the model much.</p>\n\n<p>I'd <a href=\"/2025/12/llm-from-scratch-28-training-a-base-model-from-scratch\">found</a> that\nAMP gave PyTorch a huge speedup -- from 15,402 tps to 19,797 on one test.  So JAX without AMP\nbeing so much faster than PyTorch with AMP was a bit of a surprise.  Its JIT is pretty\namazing, but I didn't expect it to be <em>that</em> much faster.</p>\n\n<p>Now I think that we have at least part of an explanation.  I was using JAX's\nbuilt-in GELU (interestingly, with its default parameters, which means that it used the <code>tanh</code>\napproximation), but the PyTorch code was using the hand-rolled one, and that unduly\npenalised it and erased some of the gains it got from AMP.</p>\n\n<p>If I really wanted to dig into this, I suppose I might try JAX with a hand-rolled GELU\nto see what happened.  My guess is that because of its JIT, it might actually handle it\nbetter -- the whole hand-rolled thing could be compiled into one thing on the GPU.  Perhaps\nit would also be interesting to try the non-AMP PyTorch code with the built-in GELU.\nBut I doubt that would really be the best use of my time (and my electricity bill),\nso I'll leave it here.</p>\n\n<p>On the other hand, I do intend to have a look at <code>torch.compile</code> in the future, to see\nwhat kind of speedup I can get from it.  And it might be able to compile and fuse together\nthe hand-rolled GELU -- so that would be an interesting thing to experiment with in that\npost: does the built-in GELU advantage disappear if we're compiling?</p>\n\n<p>But anyway, for now, lesson learned: use built-in PyTorch modules when you can.\nIt's a pretty obvious one ;-)</p>\n\n<p>[Update] On X, <a href=\"https://x.com/rasbt/status/2090254612557156587\">Sebastian Raschka noted</a> that\nhe used the approximate version of GELU in his code so that the models were compatible with the\nOpenAI weights -- they were trained with that version, so they may behave slightly differently\nif you use the \"pure\" version.  That's a great point, and so I've updated my own copy of the\ncode to use <code>approximate=\"tanh\"</code>.</p>",
-      "source": "Giles' blog",
-      "hash": "bb06f5ab8e95e053dbb5bbe4622f399a"
-    }
-  },
-  "9aa1fc195d9818ae5f602459c99ac82e": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Better Batteries",
-      "link": "https://matklad.github.io/2026/08/20/better-batteries.html",
-      "content": "<header>\n  <h1>Better Batteries</h1>\n  <time class=\"meta\" datetime=\"2026-08-20\">Aug 20, 2026</time>\n</header>\n<p>One of the eternal schisms in programming is over the question of whether the\nstandard library should be minimal or encompassing. This is the wrong question\nto ask. The right one is:</p>\n\n<figure class=\"blockquote\">\n<blockquote><p>Which social architecture creates a high-quality standard library?</p>\n</blockquote>\n\n</figure>\n<p>Python is always brought up as example of leaky batteries exploding in slow\nmotion, but this has nothing to do with <em>size</em>. The problem with Python’s stdlib\nis its, ahem, uneven quality. Some standard library modules don’t follow\nlanguage naming conventions! You know which <code>unittest</code> module I am talking about\n:-)</p>\n<p>But even that is not a mistake. It’s actually Python core’s advantage — that\nit makes functionality available early, not thinking about the future too much.\nThat’s how we ended up with ossified cAPI which makes CPython the language, but\nthat is <em>also</em> how we ended up with Python powering data scientific revolution.</p>\n<p>The Go standard library is similarly encompassing, but it is held in a high\nregard. Go team has institutional capacity to deliver well-designed API for the\nstandard library, and then some: <a class=\"display url\" href=\"https://pkg.go.dev/golang.org/x\">https://pkg.go.dev/golang.org/x</a></p>\n<p>Rust is an interesting case. The 1.0 standard library APIs are brilliant.\nCollections and iterators are a work of art. But it also feels that, while the\ncurrent team has the capacity to preserve existing APIs and fill in <em>some</em> gaps,\nthe capacity to execute design decisions is limited. While <code>golang.org/x</code>\ncaptures excess capacity, <code>rust-lang-nursery</code> is a graveyard. Maybe I am\nover-indexing on\n<a href=\"https://matklad.github.io/2023/01/04/on-random-numbers.html#True-Randomness\">my favorite hobby-horse</a>,\nbut it seems that the reason for Rust not having an API to get a stream of\nrandom bytes from the OS in 2026 is that, while it is an easy technical problem,\nit requires tricky organization architecture (including getting money in\npeoples’ pockets, of course) to actually get solved in the high-stakes\nenvironment of a world-wide coordination problem called a programming language.</p>",
-      "source": "matklad",
-      "hash": "9aa1fc195d9818ae5f602459c99ac82e"
-    }
-  },
-  "97bd644489f6c1d7d72633fadf4b2fd0": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "You Got Faster. Your Company Didn’t.",
-      "link": "https://terriblesoftware.org/2026/06/17/you-got-faster-your-company-didnt/",
-      "content": "<blockquote class=\"wp-block-quote is-layout-flow wp-block-quote-is-layout-flow\">\n<p class=\"wp-block-paragraph\"><em>&#8220;I would have written a shorter letter, but I did not have the time.&#8221;</em> — Blaise Pascal</p>\n</blockquote>\n\n\n\n<p class=\"wp-block-paragraph\">Because of AI, everyone on your team is more productive than they were a year ago, just ask them. So why isn&#8217;t <em>the company</em> itself faster?</p>\n\n\n\n<p class=\"wp-block-paragraph\">I think I know why.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Let&#8217;s say an engineer needs to write a tech brief for a database migration. Two years ago, this would&#8217;ve cost him an entire afternoon: reading the code and some articles online, weighing the options, writing, deleting, rewriting. The result was short, and every word of it had survived contact with his brain. </p>\n\n\n\n<p class=\"wp-block-paragraph\">Fast forward to today, and he pastes the context into a model and hits send. A few minutes later, the agent hands back a plan several times longer than anything he would&#8217;ve written by hand.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Well, he&#8217;s more productive now, right? A fraction of the time, many times the output. But what about everyone else? A handful of reviewers open a document several times longer than it needs to be, with that unmistakable AI smell on it.</p>\n\n\n\n<p class=\"wp-block-paragraph\">And the length is not the biggest concern! Given that the doc was clearly AI-generated, every reviewer is now also fact-checking the thing. The brief says the current job processes events sequentially. Does it, though? It says the migration touches nine tables. Is it nine? When a colleague writes a sentence like that by hand, you trust it, because someone counted and put their name on the count. When a model writes it, and the author didn&#8217;t check, the sentence looks exactly the same. You can&#8217;t tell which claims he stands behind and which ones the model dreamed up, so you have to treat every single line as unverified. The reviewers end up doing the thinking the author skipped (except this time it arrives nicely formatted, and with confidence <img alt=\"🥲\" class=\"wp-smiley\" src=\"https://s.w.org/images/core/emoji/17.0.2/72x72/1f972.png\" style=\"height: 1em;\" />).</p>\n\n\n\n<p class=\"wp-block-paragraph\">So every one of those reviews now takes longer than it used to. He saved <em>himself</em> the afternoon and quietly spent everyone else&#8217;s. The time was just transferred, and because a document has one writer and many readers, one person&#8217;s shortcut becomes everyone else&#8217;s problem.</p>\n\n\n\n<p class=\"wp-block-paragraph\">You see, a document is supposed to be a service. The (implicit) deal is that the writer spends their time so the readers don&#8217;t have to. It&#8217;s why Pascal, in that quote at the top, was apologizing: the long letter is cheap for me and expensive for you, the short letter is expensive for me and cheap for you. At the workplace, I usually owe you the short one because there&#8217;s one of me and many of you. Compression, editing, and fact-checking <em>are</em> the work.</p>\n\n\n\n<p class=\"wp-block-paragraph\">By the way, it&#8217;s not just documents&#8230; I&#8217;m also seeing the same pattern in pull requests, automated tests, and even decisions. <strong>We&#8217;re going faster by passing the slow part (the reading, the actual understanding) to whoever comes next</strong>. A Ponzi scheme?</p>\n\n\n\n<p class=\"wp-block-paragraph\">Don&#8217;t get me wrong: by all means, do use AI. I do too, and I&#8217;m (probably) not going back. The thing is: the model is giving you many hours back, so please spend a bit of them editing!</p>\n\n\n\n<p class=\"wp-block-paragraph\">I already have a rule for AI-written code: <a href=\"https://terriblesoftware.org/2026/05/27/using-my-fucking-brain/\">if I can&#8217;t explain the change, I can&#8217;t ship it</a>. The same rule applies here: if you can&#8217;t defend a sentence with the document done, it&#8217;s not really done, is it?</p>\n\n\n\n<p class=\"wp-block-paragraph\">And if you&#8217;re on the receiving end of these, you&#8217;re allowed to push back and say: <em>&#8220;This reads like an unedited draft. Can you cut it down to the decision, the tradeoffs, and what you need from me? Happy to review it then.&#8221;</em></p>\n\n\n\n<hr class=\"wp-block-separator has-alpha-channel-opacity\" />\n\n\n\n<p class=\"wp-block-paragraph\">So that&#8217;s why the company never speeds up, even when everyone in it does. The time that the engineer saved didn&#8217;t go anywhere good: it landed on everyone who had to read his document.</p>\n\n\n\n<p class=\"wp-block-paragraph\">And again, he&#8217;s not lying when he says he&#8217;s faster. He is. So am I, most days. The speed is very much real for each of us <em>individually</em>. It&#8217;s just that when you add it up across the team, it points the wrong way; everybody&#8217;s faster, and the whole thing somehow moves slower.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Which makes me think we owe the people reading us a bit more than we&#8217;ve been giving them lately.</p>",
-      "source": "Terrible Software",
-      "hash": "97bd644489f6c1d7d72633fadf4b2fd0"
-    }
-  },
-  "c62ffe79b9fa1d6b56fe92f9507bcae3": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Logic for Programmers v0.15, Livecoding",
-      "link": "https://buttondown.com/hillelwayne/archive/logic-for-programmers-v015-livecoding/",
-      "content": "<p>There's a new release of <a href=\"https://logicforprogrammers.com\" target=\"_blank\">Logic for Programmers</a>! This one, version 0.15, is the first true release candidate. There's a couple of minor touch-ups I need to do but all content is in and copy edited and proofread. Unless something absolutely major comes up, the next release will be 1.0 and available in print. Full release notes <a href=\"https://github.com/logicforprogrammers/book-assets/blob/master/CHANGELOG.md\" target=\"_blank\">here</a>.</p>\n<p>(I'm also testing if a smaller low margin PDF is better for phones and computers. The printed book is going to have much larger proper margins. Let me know what you think about this experiment!)</p>\n<p>Anyway I hurt my wrist and can't write a whole newsletter, so I'll just do a couple of recommendations. My friend <a href=\"https://whal.ing/\" target=\"_blank\">Richard Whaling</a> invited me to the <a href=\"https://www.instagram.com/reel/DYzyJ-ZJ-7S/\" target=\"_blank\">inaugural livecode.chicago meetup</a>, which was pretty cool! Among other things, people demoed two languages for livecoding music:</p>\n<ul>\n<li><a href=\"https://strudel.cc\" target=\"_blank\">Strudel</a> is an extensive javascript DSL that seems relatively friendly to get into</li>\n<li><a href=\"https://clavier36.com/about\" target=\"_blank\">CLAVIER-36</a> is a ground-up special purpose language where the program is a 2D grid</li>\n</ul>\n<p>It all kinda makes me wish I knew the basics of music because it seems like it'd be a lot of fun to compare and contrast all of the various approaches to livecoding languages. Check em out if that's at all your thing!</p>\n<p>(For completeness, Strudel is a port of the Haskell <a href=\"https://tidalcycles.org/\" target=\"_blank\">TidalCycles</a> and C36 was inspired by <a href=\"https://metasyn.srht.site/learn-orca/\" target=\"_blank\">Orca</a>)</p>",
-      "source": "Computer Things",
-      "hash": "c62ffe79b9fa1d6b56fe92f9507bcae3"
-    }
-  },
-  "6083a31e394870212f3b832b44cb1a83": {
-    "ts": 1789948010.9727757,
-    "processed": false,
-    "data": {
-      "title": "Our Servants Will Do That For Us",
-      "link": "https://borretti.me/article/our-servants-will-do-that-for-us",
-      "content": "<p>The implicit promise of modernity is: we have to work really hard for a few\ncenturies, but eventually we’ll get to the <em>Star Trek</em> future where we’ve\nautomated all the drudgery, and all work is meaningful, heroic, and dignifies\nthe spirit. We will be artists, scholars, captains of the starship <em>Enterprise</em>,\netc. There’s a few problems with this idea:</p>\n\n<ol>\n  <li>“Drudgery” and “meaningful work” are in the same complexity class, so the\ntechnology to automates the former also automates the latter.</li>\n  <li>Our revealed preference seems to be that we prefer solipsistic convenience\nover human relationships.</li>\n</ol>\n\n<p>The rest of this post elaborates the argument.</p>\n\n<h1 id=\"task-complexity-and-agi\">Task Complexity and AGI</h1>\n\n<p>We’ve spent the last 250 years building machines to automate one task at a time,\nand the result has been overwhelmingly positive, for the simple reason that if a\nhuman can design a machine or an effective procedure to perform some task, then\nby definition the task is drudgery. And so the economic incentive to automate\nwork has led to more human flourishing: over time work becomes safer,\nhigher-paying, less monotonous, healthier, more intellectually and socially\nstimulating.</p>\n\n<p>You can think of it as a graph where the $x$ axis is time and the $y$ axis is\ntask complexity. Somewhere along the $y$ axis there’s a limit: tasks below the\nlimit are those which we can design machines or programs to perform, tasks above\nthe limit are too complex, we have tried and <a href=\"https://en.wikipedia.org/wiki/GOFAI\">failed</a> (and <a href=\"https://yuxi.ml/cyc\">failed</a>\nand <a href=\"https://en.wikipedia.org/wiki/Soar_(cognitive_architecture)\">failed</a> and <a href=\"https://en.wikipedia.org/wiki/ACT-R\">failed</a>) to automate them with software. The\nindustrial revolution, and later the computer revolution, automated most tasks\nunder this limit:</p>\n\n<p><img alt=\"A line plot. The X axis is time, ranging from the year 1800 to the year 2100. A vertical dotted line marks the year 2026. The Y axis is qualitative, showing a list of tasks, sorted from top to bottom by increasing complexity. A horizontal dotted line marks the 'Limit of Formalizability'. The region above this line is labeled 'Human-Complete Region'. The region below this line is labeled 'Formalizable Region'. A sigmoid curve, representing technological progress, is drawn starting from just above the origin in the year 1800, to just below the limit of formalizability in 2026.\" src=\"/assets/content/our-servants-will-do-that-for-us/graph1.png\" /></p>\n\n<p>The human-complete tasks are those you need a human to perform. Some are\nmeaningful, like writing essays, some are drudgery, but human-level drudgery,\nlike life admin.</p>\n\n<p>But note that nowhere in the $y$ axis is there a “Limit of Drudgery”: the line\nwe draw between “good” and “bad” work is not the line nature draws between easy\nand hard to automate. The invention of AGI—“highly autonomous systems that\noutperform humans at most economically valuable work”, as per the <a href=\"https://openai.com/charter/\">OpenAI\ncharter</a>—creates an obvious discontinuity: suddenly we shoot up to 100%\nautomation, both of the meaningful work and the drudgery:</p>\n\n<p><img alt=\"A line plot identical to the above, with one addition: the sigmoid curve representing technical progress shoots up almost vertically a few years after 2026, reaching the top of the Y axis.\" src=\"/assets/content/our-servants-will-do-that-for-us/graph2.png\" /></p>\n\n<p>And at this point AGI the economic incentives <a href=\"/article/no-one-escapes-the-permanent-underclass\">work against\nhumanity</a>. The only niche to escape to is the relational economy, where\nhaving a human face is an intrinsic part of the job description, like being a\npodcaster or a human liability crumple zone.</p>\n\n<h1 id=\"solipsism\">Solipsism</h1>\n\n<p>The second problem has to do with people’s preferences. We think of our own work\nas meaningful, but we think of most everyone else’s work in instrumental terms:\nwe care about the ends rather than the human means. Thus when selling we\nemphasize human qualities like experience, reputation, trust, relationships,\netc., and when buying we want cheap, fast, and convenient. And, all else being\nequal, we prefer the transactional and faceless over the human and\nrelational. Waymo is a thousand times better than Uber, even though it’s slower\nand more expensive, because there’s no human.</p>\n\n<p>The flip side of this is: whatever work you do, most people would rather an\nalternative that gave them the same outcome or better<sup id=\"fnref:fn1\"><a class=\"footnote\" href=\"#fn:fn1\" rel=\"footnote\">1</a></sup>, without having to\ndeal with a human person. That is, if you ask everyone on Earth what jobs they’d\nlike to see automated, and take the union of that, it’s everything. There’s\nnothing left.</p>\n\n<p>We see this with ordinary consumer products and services, where often the\nadvertising seems premised on you being some kind of stylite who lives in a\nlittle human terrarium, probably in a building called something like “The Soho”,\nfood arrives through a hole in the wall, and you have this sovereign,\nsolipsistic existence that leaves no physical trace in the world.</p>\n\n<p>We see this, increasingly, with knowledge work. Personally, I think software\nengineering is a very meaningful and intellectually-rewarding activity. But\nusers just want working software. They’re not paying me to sit around polishing\nthe database API into a jewel of flawless, geometric logic. They don’t care\nabout my opinions on the Standard ML module system. They just want the\nsoftware. Why deal with some opinionated maniac when, for $20 a month, you get\naccess to this little machine ghost that writes reams and reams of mostly\nworking code, tirelessly, instantly?</p>\n\n<p>The revealed preference of many software firms is: let AI write the code, and\nsoftware engineers move one level up, to wrangle the AIs and complement the\nthings they can’t do. But this change in job description is not because firms\nlove employing humans, it’s because today’s AI models have serious limitations:\nno online learning, no mutable long-term memory, and while they can write code\nthat works, they’re not good at organizing and structuring that code. If, in the\nfuture, these limitations are overcome (and trillions of dollars are being spent\non overcoming them), then software engineering as a profession will\ndisappear.</p>\n\n<p>Mathematicians <a href=\"https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics\">are going through this process</a> now, too, and it’s an\n<a href=\"https://x.com/qualiascript/status/2090168914445508873\">exact parallel</a> of what happened to software engineering, only twelve\nmonths later. The difference is that most mathematicians <a href=\"https://tasmin.substack.com/p/mathematicians-need-to-act\">hate the\nde-intellectualization of their field</a>, while software engineering is\nfull of narrow-minded, hustle culture-brained, incurious, anti-intellectual\nhucksters who are overjoyed that they no longer have to read or write another\nline of code, or think using formal systems at all. Why reason at all? <a href=\"https://en.wikipedia.org/wiki/Ax%C3%ABl\">Our\nservants will do that for us</a>.</p>\n\n<p>What about art? Art is the <em>ne plus ultra</em> of meaning, so artists should be\nsafe. But every work of art is two things: there’s a concrete thing, a text or a\npainting or a song; and there’s a constellation of human aspects: who made it,\nand why, what madness they were trying to exorcise in making it, what minor\ndeity breathed the work into them, the discourse around the work, later art\ninspired by it, and so on. And these things are separable: you can enjoy a work\nof art for its aesthetic value, as a sequence of sensory impressions, and ignore\nevery other dimension.</p>\n\n<p>Now say that a machine could generate texts or images of equivalent aesthetic\nvalue<sup id=\"fnref:fn2\"><a class=\"footnote\" href=\"#fn:fn2\" rel=\"footnote\">2</a></sup> to your own, instantly and at ~zero cost. How much of your audience\nwould desert you? Relational jobs have an analogous problem: you might like\nbeing a podcaster, but how much of your audience would prefer an infinite stream\nof AI-generated speech on whatever topic they want to hear about?</p>\n\n<p>This is an empirical question, and we can’t answer it, because AI is not there,\nyet. But we might discover that our preferences are a lot less humanist and a\nlot more solipsistic that we want to believe.</p>\n\n<h1 id=\"acknowledgements\">Acknowledgements</h1>\n\n<p>Emmy Noether once said that “everything is already in Dedekind”. As for me,\neverything I write about AI was already said by <a href=\"https://jdpressman.com/\">J. D. Pressman</a>.</p>\n\n<h1 id=\"footnotes\">Footnotes</h1>\n\n<div class=\"footnotes\">\n  <ol>\n    <li id=\"fn:fn1\">\n\n      <p>This is a horrendous oversimplification, because I’ve stuffed all the\ncomplexity into the notion of “same outcome or better”. So let’s try it\nagain, <a href=\"https://en.wikipedia.org/wiki/Spinoza%27s_Ethics\"><em>more geometrico</em></a> and with unnecessary LaTeX. You want to\nbuy a good. You look around, assemble a set of options, sort them by utility\nand pick the winner. And you can think of the utility as like a weighted\nsum:</p>\n\n\\[\\mathfrak{u}(x) = \\sum\\limits_{a \\in A} \\alpha_a x_a\\]\n\n      <p>Where the a’s are the aspects you are weighing (price, shipping speed, trust\nin the brand, how much social status I get from this thing, etc.), the\nvariables quantify these aspects, and the alphas are the coefficients. So if\nyou’re a hypebeast your $\\alpha_\\text{clout}$ is much higher than your\n$\\alpha_\\text{price}$, and if you’re a neckbeard the $x_\\text{clout}$ of a\nbusted ThinkPad is higher than that of a MacBook.</p>\n\n      <p>Now, humans are slow, because biology; and because of <a href=\"https://en.wikipedia.org/wiki/Baumol_effect\">Baumol</a> we\nget more expensive over time. Computers are fast and cheap. On top of that,\nthe pace of improvement in AI is vastly greater than the pace of improvement\nin humans. So the utility of automated production gets pulled up, and the\nutility of human production gets pulled down, and eventually they are so far\napart that you have to be an extremist with a very high\n$\\alpha_\\text{human}$ coefficient to choose the human alternative. <a class=\"reversefootnote\" href=\"#fnref:fn1\">&#8617;</a></p>\n    </li>\n    <li id=\"fn:fn2\">\n\n      <p>I’m being careful to say “texts or images” rather than “art”, and “aesthetic\nvalue” rather than “quality”, because you might object that machine-made art\nis not art. And what I’m trying to say is that is doesn’t have to be art. It\ncan just be a pleasing image, a pleasing text, and so on. <a class=\"reversefootnote\" href=\"#fnref:fn2\">&#8617;</a></p>\n    </li>\n  </ol>\n</div>",
-      "source": "Fernando Borretti",
-      "hash": "6083a31e394870212f3b832b44cb1a83"
+      "title": "Quick P2D production update",
+      "link": "https://ericmigi.com/blog/quick-p2d-production-update",
+      "source": "Eric Migicovsky's Blog RSS Feed",
+      "hash": "d5bef13115f65e002555067d186832f8"
     }
   }
 }
