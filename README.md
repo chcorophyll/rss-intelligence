@@ -13,6 +13,12 @@ RSS Intelligence Bot 是一款遵循“极简主义”工程哲学设计的全�
 - **Atomic Persistence & File Safety / 持久化落盘与文件安全 (V2)**: 
   - *EN*: Employs POSIX-guaranteed atomic file I/O (`tempfile.NamedTemporaryFile` + `fsync` + `os.replace`) to eliminate file corruption risks during history saving.
   - *ZH*: 采用 POSIX 级原子落地机制（`tempfile.NamedTemporaryFile` + `fsync` + `os.replace`），彻底杜绝因意外中断导致 `history.json` 损坏的风险。
+- **Domain-Driven Design & Strong Typing / 领域驱动与强类型设计**:
+  - *EN*: Standardizes internal data flow around a robust `Article` dataclass, eliminating fragile dictionary manipulations across parser, AI, and notifier modules.
+  - *ZH*: 引入强类型 `Article` 数据类规范内部数据流转，根除在抓取、推理与推送模块间脆弱的字典透传。
+- **429 Rate Limit Resilience / API 限流级联熔断**:
+  - *EN*: Implements precise `asyncio.Event` based cascading task cancellation; upon hitting 429 Quota Exhausted limits, all pending AI tasks are aborted instantaneously.
+  - *ZH*: 基于 `asyncio.Event` 实现精准的级联取消机制；当任意 Worker 触发 429 限流异常时，队列中挂起的所有 AI 任务将在秒级内被熔断取消。
 - **Backlog Overflow Prevention / 待处理队列硬防爆**: 
   - *EN*: Enforces a strict `Max 50` hard cap on pending items and retains up to 1000 processed records, preventing backlog inflation.
   - *ZH*: 对待处理队列设置 `Max 50` 篇硬上限，并最多保留 1000 条历史纪录，防止死链与超期文章无限积压。
@@ -44,10 +50,12 @@ rss-intelligence/
 │   └── config.ini        # Application settings / 非敏感运行配置
 ├── src/                  # Core modules / 核心模块
 │   ├── ai_hub.py         # Gemini AI hub & rate limit handler / AI 处理核心逻辑
+│   ├── models.py         # Domain models (Article) / 领域数据模型
 │   ├── notifier.py       # Email & Telegram notification engines / 多渠道通知服务
 │   ├── parser.py         # Feed fetching, atomic persistence & backlog control / RSS 抓取与原子历史管理
 │   └── utils/            # Utilities / 基础工具
 │       ├── __init__.py
+│       ├── html_cleaner.py # HTML parsing & sanitization / HTML 清理与转义工具
 │       └── logger.py     # Unified rss_logger singleton / 标准化日志系统
 ├── tests/                # Automated test suite / 自动化测试套件
 │   ├── test_ai_hub.py    # AI concurrency & quota test cases / AI 并发与配额异常测试
