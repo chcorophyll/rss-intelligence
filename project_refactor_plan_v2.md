@@ -50,8 +50,8 @@
 ## 阶段 4：全量测试回归与交付 (Testing & Verification)
 
 ### Task 4.1: 测试用例全面重构与覆盖
-- [ ] 更新 `tests/test_parser.py`, `tests/test_ai_hub.py`, `tests/test_notifier.py` 适配 `Article` 强类型。
-- [ ] 运行 `./.venv/bin/pytest -v` 确保所有 26+ 项测试用例 **100% PASSED**。
+- [x] 更新 `tests/test_parser.py`, `tests/test_ai_hub.py`, `tests/test_notifier.py` 适配 `Article` 强类型。
+- [x] 运行 `./.venv/bin/pytest -v` 确保所有 26+ 项测试用例 **100% PASSED**。
 
 ### Task 4.2: Git 提交与发布
-- [ ] 提交代码变更至 git，打上 `refactor(v2): complete architecture & safety refactoring` 标签。
+- [x] 提交代码变更至 git，打上 `refactor(v2): complete architecture & safety refactoring` 标签。
