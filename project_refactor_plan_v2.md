@@ -27,14 +27,14 @@
 ## 阶段 2：领域建模与 HTML 工具库抽取 (Domain Modeling & Utilities)
 
 ### Task 2.1: 强类型 `Article` 建模 (`models.py`)
-- [ ] 创建 `src/models.py`，定义 `Article` 数据类（包含 `title`, `link`, `source`, `content`, `hash`, `ai_html`）。
-- [ ] 重构 `src/parser.py`, `src/ai_hub.py`, `src/notifier.py` 的函数签名与数据流，全量收敛至 `Article` 对象。
-- [ ] 经验证：数据流转过程具备强类型推断。
+- [x] 创建 `src/models.py`，定义 `Article` 数据类（包含 `title`, `link`, `source`, `content`, `hash`, `ai_html`）。
+- [x] 重构 `src/parser.py`, `src/ai_hub.py`, `src/notifier.py` 的函数签名与数据流，全量收敛至 `Article` 对象。
+- [x] 经验证：数据流转过程具备强类型推断。
 
 ### Task 2.2: 抽离 `html_cleaner.py` 共享组件
-- [ ] 创建 `src/utils/html_cleaner.py`，收拢 `bs4` 标签剥离逻辑。
-- [ ] 提供 `clean_to_text()` 和 `sanitize_telegram_html()` 规范化函数。
-- [ ] 经验证：Telegram 不再因非法 AI 标签产生 400 异常。
+- [x] 创建 `src/utils/html_cleaner.py`，收拢 `bs4` 标签剥离逻辑。
+- [x] 提供 `clean_to_text()` 和 `sanitize_telegram_html()` 规范化函数。
+- [x] 经验证：Telegram 不再因非法 AI 标签产生 400 异常。
 
 ---
 

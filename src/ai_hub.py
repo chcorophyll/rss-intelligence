@@ -1,8 +1,9 @@
 import asyncio
 from google import genai
-from bs4 import BeautifulSoup
 import markdown
 from src.utils.logger import logger
+from src.models import Article
+from src.utils.html_cleaner import clean_to_text
 
 class IntelligenceHub:
     def __init__(self, cfg):
@@ -39,13 +40,12 @@ class IntelligenceHub:
                 
         return results, self.quota_exceeded
 
-    async def _process_one(self, art):
+    async def _process_one(self, art: Article):
         """处理单篇文章"""
-        logger.info(f"🤖 正在处理: {art['title']}")
+        logger.info(f"🤖 正在处理: {art.title}")
         
         # 清理 HTML 标签
-        soup = BeautifulSoup(art['content'], "html.parser")
-        text = soup.get_text(separator="\n", strip=True)[:6000]
+        text = clean_to_text(art.content)
         
         prompt = (
             "Role: Professional Bilingual News Editor.\n"
@@ -63,7 +63,7 @@ class IntelligenceHub:
             "Constraints:\n"
             "- Ensure the Chinese summary captures 100% of the core value.\n"
             "- The table must track the original English phrasing against the Chinese interpretation.\n"
-            f"Title: {art['title']}\n"
+            f"Title: {art.title}\n"
             f"Content: {text}"
         )
         
@@ -74,7 +74,7 @@ class IntelligenceHub:
             )
             
             # 获取生成文本并转为 HTML
-            art['ai_html'] = markdown.markdown(response.text)
+            art.ai_html = markdown.markdown(response.text)
             
             # 免费版 API 必须设置延迟以防 RPM 限制
             await asyncio.sleep(self.delay)
@@ -88,7 +88,7 @@ class IntelligenceHub:
                     self.quota_exceeded = True
                 return None
             else:
-                logger.error(f"❌ AI 处理失败 [{art['title']}]: {e}")
+                logger.error(f"❌ AI 处理失败 [{art.title}]: {e}")
                 # 对于非配额错误，作为失败记录返回，避免无限积压重试
-                art['ai_html'] = f"<p>⚠️ AI 处理失败：{e}</p>"
+                art.ai_html = f"<p>⚠️ AI 处理失败：{e}</p>"
                 return art

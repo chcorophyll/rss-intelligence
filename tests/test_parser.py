@@ -4,6 +4,7 @@ import json
 import time
 from unittest.mock import AsyncMock, patch, MagicMock
 from src.parser import RSSManager
+from src.models import Article
 
 @pytest.fixture
 def temp_db(tmp_path):
@@ -111,8 +112,8 @@ async def test_fetch_all_with_pending(mock_config, tmp_path):
             
             # Should return BOTH pending items, sorted Newest first
             assert len(result) == 2
-            assert result[0]['title'] == "New"
-            assert result[1]['title'] == "Old"
+            assert result[0].title == "New"
+            assert result[1].title == "Old"
 
 def test_mark_as_processed(mock_config):
     rss = RSSManager(mock_config)
@@ -123,7 +124,7 @@ def test_mark_as_processed(mock_config):
             "data": {"title": "Old", "hash": "h1"}
         }
     }
-    articles = [{"hash": "h1"}]
+    articles = [Article(hash="h1", title="", link="", source="")]
     rss.mark_as_processed(articles)
     
     assert rss.history["h1"]["processed"] is True
@@ -150,7 +151,7 @@ async def test_slim_history_payload(mock_config, temp_db, tmp_path):
         pending = await rss.fetch_all()
         
     assert len(pending) == 1
-    assert pending[0]["content"] == "<h1>HTML Body</h1>"
+    assert pending[0].content == "<h1>HTML Body</h1>"
     
     rss.save_and_clean()
     
@@ -197,8 +198,8 @@ async def test_fetch_all_html_fallback_success(mock_config, tmp_path):
         
         result = await rss.fetch_all()
         assert len(result) == 1
-        assert result[0]['hash'] == "h1"
-        assert result[0]['content'] == "Extracted Article Content"
+        assert result[0].hash == "h1"
+        assert result[0].content == "Extracted Article Content"
         mock_fallback.assert_called_once()
 
 
@@ -237,8 +238,8 @@ async def test_fetch_all_fallback_retry_and_skip(mock_config, tmp_path):
         
         # h1_broken 抓取失败跳过，顺序补入 h2_valid
         assert len(result) == 1
-        assert result[0]['hash'] == "h2_valid"
-        assert result[0]['content'] == "Valid Content"
+        assert result[0].hash == "h2_valid"
+        assert result[0].content == "Valid Content"
         
         # 检查 h1_broken 的 retry_count 增加了 1，且保留为 processed: False
         assert rss.history["h1_broken"]["retry_count"] == 1

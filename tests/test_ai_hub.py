@@ -2,6 +2,7 @@ import pytest
 import asyncio
 from unittest.mock import MagicMock, patch, AsyncMock
 from src.ai_hub import IntelligenceHub
+from src.models import Article
 
 @pytest.fixture
 def mock_genai_client():
@@ -19,12 +20,13 @@ async def test_process_articles_success(mock_config, mock_genai_client):
     hub.client.aio.models.generate_content = AsyncMock(return_value=mock_response)
     
     articles = [
-        {
-            "title": "Test Title",
-            "content": "<p>Test Content</p>",
-            "link": "http://example.com",
-            "source": "Test Source"
-        }
+        Article(
+            title="Test Title",
+            content="<p>Test Content</p>",
+            link="http://example.com",
+            source="Test Source",
+            hash="h1"
+        )
     ]
     
     with patch('markdown.markdown') as mock_md:
@@ -36,7 +38,7 @@ async def test_process_articles_success(mock_config, mock_genai_client):
         results, quota_exceeded = await hub.process_articles(articles)
         
         assert len(results) == 1
-        assert results[0]['ai_html'] == "<html>Summary</html>"
+        assert results[0].ai_html == "<html>Summary</html>"
         assert quota_exceeded is False
         hub.client.aio.models.generate_content.assert_called_once()
 
@@ -47,12 +49,12 @@ async def test_process_articles_failure(mock_config, mock_genai_client):
     hub.client.aio.models.generate_content = AsyncMock(side_effect=Exception("API Error"))
     hub.delay = 0
     
-    articles = [{"title": "Fail", "content": "Content"}]
+    articles = [Article(title="Fail", content="Content", link="", source="", hash="h1")]
     
     results, quota_exceeded = await hub.process_articles(articles)
     assert len(results) == 1
-    assert results[0]['title'] == "Fail"
-    assert "⚠️ AI 处理失败" in results[0]['ai_html']
+    assert results[0].title == "Fail"
+    assert "⚠️ AI 处理失败" in results[0].ai_html
     assert quota_exceeded is False
 
 @pytest.mark.asyncio
@@ -61,7 +63,10 @@ async def test_process_articles_quota_exceeded(mock_config, mock_genai_client):
     hub.client = MagicMock()
     hub.delay = 0
     
-    articles = [{"title": "Art 1", "content": "Content 1"}, {"title": "Art 2", "content": "Content 2"}]
+    articles = [
+        Article(title="Art 1", content="Content 1", link="", source="", hash="h1"),
+        Article(title="Art 2", content="Content 2", link="", source="", hash="h2")
+    ]
     
     mock_response = MagicMock()
     mock_response.text = "Summary 1"

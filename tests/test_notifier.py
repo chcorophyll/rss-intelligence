@@ -3,11 +3,12 @@ from email.header import decode_header
 import pytest
 from unittest.mock import MagicMock, patch, AsyncMock
 from src.notifier import EmailNotifier, TelegramNotifier, send_all_reports
+from src.models import Article
 
 @pytest.fixture
 def sample_articles():
     return [
-        {"title": "Art 1", "link": "http://ex.com/1", "source": "Src 1", "ai_html": "<p>Sum 1</p>"}
+        Article(title="Art 1", link="http://ex.com/1", source="Src 1", hash="h1", ai_html="<p>Sum 1</p>")
     ]
 
 def test_email_notifier_success(mock_config, sample_articles):
@@ -136,12 +137,13 @@ async def test_telegram_notifier_standby(mock_config):
 async def test_telegram_html_escaping(mock_config):
     notifier = TelegramNotifier(mock_config)
     processed_articles = [
-        {
-            "title": "AT&T <Test>",
-            "link": "http://ex.com/1",
-            "source": "AT&T > Source",
-            "ai_html": "<p>Sum 1</p>"
-        }
+        Article(
+            title="AT&T <Test>",
+            link="http://ex.com/1",
+            source="AT&T > Source",
+            hash="h1",
+            ai_html="<p>Sum 1</p>"
+        )
     ]
     
     with patch('aiohttp.ClientSession.post') as mock_post:
@@ -162,12 +164,13 @@ async def test_telegram_notifier_multi_message_ordering(mock_config):
     notifier = TelegramNotifier(mock_config)
     # Generate large payload to exceed single message size threshold (4000 chars)
     processed_articles = [
-        {
-            "title": f"Article {i}",
-            "link": f"http://ex.com/{i}",
-            "source": f"Source {i}",
-            "ai_html": f"<p>{'Long Content ' * 100}</p>"
-        }
+        Article(
+            title=f"Article {i}",
+            link=f"http://ex.com/{i}",
+            source=f"Source {i}",
+            hash=f"h{i}",
+            ai_html=f"<p>{'Long Content ' * 100}</p>"
+        )
         for i in range(10)
     ]
     

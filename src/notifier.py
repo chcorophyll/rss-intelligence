@@ -6,6 +6,8 @@ import re
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from src.utils.logger import logger
+from src.models import Article
+from src.utils.html_cleaner import sanitize_telegram_html
 
 
 class EmailNotifier:
@@ -52,9 +54,9 @@ class EmailNotifier:
             for art in processed_articles:
                 body += f"""
                 <div style='margin-bottom: 40px; border-left: 4px solid #1a73e8; padding-left: 15px;'>
-                    <h2 style='margin-top: 0;'><a href='{art['link']}' style='text-decoration: none; color: #1a73e8;'>{art['title']}</a></h2>
-                    <p style='font-size: 0.9em; color: #666;'>来源: {art['source']}</p>
-                    <div style='line-height: 1.6;'>{art['ai_html']}</div>
+                    <h2 style='margin-top: 0;'><a href='{art.link}' style='text-decoration: none; color: #1a73e8;'>{art.title}</a></h2>
+                    <p style='font-size: 0.9em; color: #666;'>来源: {art.source}</p>
+                    <div style='line-height: 1.6;'>{art.ai_html}</div>
                 </div>
                 """
         
@@ -134,17 +136,10 @@ class TelegramNotifier:
             current_msg = ""
             
             for art in processed_articles:
-                # AI summary is in HTML, convert for Telegram HTML format
-                ai_summary = art.get('ai_html', '')
+                ai_summary = sanitize_telegram_html(art.ai_html or '')
                 
-                ai_summary = re.sub(r'<h[1-6]>(.*?)</h[1-6]>', r'<b>\1</b>', ai_summary)
-                ai_summary = ai_summary.replace('<p>', '').replace('</p>', '\n')
-                ai_summary = ai_summary.replace('<ul>', '').replace('</ul>', '')
-                ai_summary = ai_summary.replace('<li>', '• ').replace('</li>', '\n')
-                ai_summary = re.sub(r'<(?!/?(b|strong|i|em|u|ins|s|strike|del|a|code|pre)\b)[^>]+>', '', ai_summary)
-                
-                item_text = f"<b><a href='{art['link']}'>{html.escape(art['title'])}</a></b>\n"
-                item_text += f"<i>来源: {html.escape(art['source'])}</i>\n"
+                item_text = f"<b><a href='{art.link}'>{html.escape(art.title)}</a></b>\n"
+                item_text += f"<i>来源: {html.escape(art.source)}</i>\n"
                 item_text += f"{ai_summary.strip()}\n\n"
                 
                 if current_msg and (len(current_msg) + len(item_text) > 4000):

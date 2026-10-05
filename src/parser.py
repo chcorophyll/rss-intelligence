@@ -8,6 +8,7 @@ import aiohttp
 from bs4 import BeautifulSoup
 import feedparser
 from src.utils.logger import logger
+from src.models import Article
 
 
 class RSSManager:
@@ -162,7 +163,7 @@ class RSSManager:
                     if content.strip():
                         # 自身或内存已有正文，直接加入结果
                         item_data['content'] = content
-                        result.append(item_data)
+                        result.append(Article.from_dict(item_data))
                     elif item_data.get('link'):
                         # 缺失正文，加入当批等待并发补偿抓取的候选列表
                         batch_candidates.append((item, item_data))
@@ -182,7 +183,7 @@ class RSSManager:
                     if fallback_text.strip():
                         item_data['content'] = fallback_text
                         fetched_contents[u_hash] = fallback_text
-                        result.append(item_data)
+                        result.append(Article.from_dict(item_data))
                     else:
                         current_retries = item.get('retry_count', 0) + 1
                         item['retry_count'] = current_retries
@@ -248,7 +249,7 @@ class RSSManager:
         """将文章标记为已处理，并清除正文以减小体积"""
         now = time.time()
         for art in articles:
-            u_hash = art.get('hash')
+            u_hash = art.hash
             if u_hash in self.history:
                 self.history[u_hash]['processed'] = True
                 self.history[u_hash]['ts'] = now
