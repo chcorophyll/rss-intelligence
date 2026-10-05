@@ -41,9 +41,9 @@
 ## 阶段 3：并发调度与 429 级联取消 (Scheduler & 429 Resilience)
 
 ### Task 3.1: AI Hub 429 任务快速取消
-- [ ] 在 `src/ai_hub.py` 中加入 `quota_exhausted_event`。
-- [ ] 当任一 Worker 触发 429 时，立刻 `cancel()` 其余仍挂载在 asyncio 队列上的 Tasks。
-- [ ] 经验证：429 触发后剩余任务秒级取消，无无效挂起。
+- [x] 在 `src/ai_hub.py` 中加入 `quota_exhausted_event`。
+- [x] 当任一 Worker 触发 429 时，立刻 `cancel()` 其余仍挂载在 asyncio 队列上的 Tasks。
+- [x] 经验证：429 触发后剩余任务秒级取消，无无效挂起。
 
 ---
 

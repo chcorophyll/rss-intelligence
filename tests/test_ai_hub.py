@@ -63,19 +63,41 @@ async def test_process_articles_quota_exceeded(mock_config, mock_genai_client):
     hub.client = MagicMock()
     hub.delay = 0
     
+    # 模拟并发数，以便第一个抛错时其他的可以被取消
+    hub.concurrency = 2
+    
     articles = [
         Article(title="Art 1", content="Content 1", link="", source="", hash="h1"),
-        Article(title="Art 2", content="Content 2", link="", source="", hash="h2")
+        Article(title="Art 2", content="Content 2", link="", source="", hash="h2"),
+        Article(title="Art 3", content="Content 3", link="", source="", hash="h3")
     ]
     
     mock_response = MagicMock()
     mock_response.text = "Summary 1"
     
-    hub.client.aio.models.generate_content = AsyncMock(side_effect=[mock_response, Exception("429 RESOURCE_EXHAUSTED")])
+    async def mock_generate(*args, **kwargs):
+        content = kwargs.get('contents', '')
+        if "Content 1" in content:
+            # Art 1 触发 429
+            raise Exception("429 RESOURCE_EXHAUSTED")
+        else:
+            # 其他文章模拟耗时任务，如果未被取消将卡主
+            await asyncio.sleep(0.5)
+            return mock_response
+            
+    hub.client.aio.models.generate_content = AsyncMock(side_effect=mock_generate)
     
     with patch('markdown.markdown') as mock_md:
         mock_md.return_value = "html"
-        results, quota_exceeded = await hub.process_articles(articles)
         
-        assert len(results) == 1
+        import time
+        start_t = time.time()
+        results, quota_exceeded = await hub.process_articles(articles)
+        end_t = time.time()
+        
+        # 验证结果
         assert quota_exceeded is True
+        
+        # 验证秒级取消：如果不取消，Art 2 和 Art 3 会 sleep 0.5 秒。
+        # 由于取消机制，应该非常快完成，这里断言总时间远小于 0.5 秒。
+        assert (end_t - start_t) < 0.2

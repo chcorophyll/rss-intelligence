@@ -17,26 +17,43 @@ class IntelligenceHub:
         """并行处理所有文章列表，支持配额异常捕获"""
         results = []
         self.quota_exceeded = False
+        self.quota_exhausted_event = asyncio.Event()
         
         # 使用信号量控制并发，从配置中读取
         sem = asyncio.Semaphore(self.concurrency) 
         
         async def _worker(art):
-            if self.quota_exceeded:
+            if self.quota_exhausted_event.is_set():
                 return None
             
             async with sem:
-                if self.quota_exceeded:
+                if self.quota_exhausted_event.is_set():
                     return None
                 
-                res = await self._process_one(art)
-                if res:
-                    results.append(res)
-                return res
+                try:
+                    res = await self._process_one(art)
+                    if res:
+                        results.append(res)
+                    return res
+                except asyncio.CancelledError:
+                    return None
 
         # 创建所有任务
-        tasks = [_worker(art) for art in articles]
-        await asyncio.gather(*tasks)
+        tasks = [asyncio.create_task(_worker(art)) for art in articles]
+        
+        async def _monitor():
+            await self.quota_exhausted_event.wait()
+            for t in tasks:
+                if not t.done():
+                    t.cancel()
+                    
+        monitor_task = asyncio.create_task(_monitor())
+        
+        # 捕捉所有的异常（包括 CancelledError）以防止抛出
+        await asyncio.gather(*tasks, return_exceptions=True)
+        
+        if not monitor_task.done():
+            monitor_task.cancel()
                 
         return results, self.quota_exceeded
 
@@ -81,11 +98,15 @@ class IntelligenceHub:
             return art
 
         except Exception as e:
+            if isinstance(e, asyncio.CancelledError):
+                raise e
+                
             error_msg = str(e)
             if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
                 if not self.quota_exceeded:
                     logger.warning("⚠️ AI 配额已耗尽，停止后续处理。")
                     self.quota_exceeded = True
+                    self.quota_exhausted_event.set()
                 return None
             else:
                 logger.error(f"❌ AI 处理失败 [{art.title}]: {e}")
