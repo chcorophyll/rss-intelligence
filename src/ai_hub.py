@@ -84,32 +84,46 @@ class IntelligenceHub:
             f"Content: {text}"
         )
         
-        try:
-            response = await self.client.aio.models.generate_content(
-                model=self.model_name, 
-                contents=prompt
-            )
-            
-            # 获取生成文本并转为 HTML
-            art.ai_html = markdown.markdown(response.text)
-            
-            # 免费版 API 必须设置延迟以防 RPM 限制
-            await asyncio.sleep(self.delay)
-            return art
-
-        except Exception as e:
-            if isinstance(e, asyncio.CancelledError):
-                raise e
+        max_retries = 3
+        base_delay = 2
+        
+        for attempt in range(max_retries):
+            try:
+                response = await self.client.aio.models.generate_content(
+                    model=self.model_name, 
+                    contents=prompt
+                )
                 
-            error_msg = str(e)
-            if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
-                if not self.quota_exceeded:
-                    logger.warning("⚠️ AI 配额已耗尽，停止后续处理。")
-                    self.quota_exceeded = True
-                    self.quota_exhausted_event.set()
-                return None
-            else:
-                logger.error(f"❌ AI 处理失败 [{art.title}]: {e}")
-                # 对于非配额错误，作为失败记录返回，避免无限积压重试
-                art.ai_html = f"<p>⚠️ AI 处理失败：{e}</p>"
+                # 获取生成文本并转为 HTML
+                art.ai_html = markdown.markdown(response.text)
+                
+                # 免费版 API 必须设置延迟以防 RPM 限制
+                await asyncio.sleep(self.delay)
                 return art
+    
+            except Exception as e:
+                if isinstance(e, asyncio.CancelledError):
+                    raise e
+                    
+                error_msg = str(e)
+                if "429" in error_msg or "RESOURCE_EXHAUSTED" in error_msg:
+                    if not self.quota_exceeded:
+                        logger.warning("⚠️ AI 配额已耗尽，停止后续处理。")
+                        self.quota_exceeded = True
+                        self.quota_exhausted_event.set()
+                    return None
+                elif "503" in error_msg or "UNAVAILABLE" in error_msg:
+                    if attempt < max_retries - 1:
+                        sleep_time = base_delay * (2 ** attempt)
+                        logger.warning(f"⚠️ AI API 服务器繁忙 (503), 等待 {sleep_time} 秒后重试 ({attempt + 1}/{max_retries})...")
+                        await asyncio.sleep(sleep_time)
+                        continue
+                    else:
+                        logger.error(f"❌ AI 处理失败 (超过最大重试次数) [{art.title}]: {e}")
+                        art.ai_html = f"<p>⚠️ AI 处理失败 (服务器繁忙)：{e}</p>"
+                        return art
+                else:
+                    logger.error(f"❌ AI 处理失败 [{art.title}]: {e}")
+                    # 对于非配额错误，作为失败记录返回，避免无限积压重试
+                    art.ai_html = f"<p>⚠️ AI 处理失败：{e}</p>"
+                    return art
