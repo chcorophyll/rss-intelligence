@@ -1,36 +1,4 @@
 {
-  "158c196183a5a62298c6354bd358b258": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "180b6c6ca2d334921e7f7489d145fe6e": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "ca785e528de2c30a07a1d90fd6f4c15b": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "4fd567de9eeb918af0c2b61671036552": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "9eb1d1313bcea8c023e08042ec3d3a3e": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "a47e4651883b1382064dabab75439df6": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "a2772c92c828b6f54312246f23b71cb2": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
-  "1007127e81cbc3555452a0ee957c3eb4": {
-    "ts": 1789083485.4350953,
-    "processed": true
-  },
   "156917f0352e1cf1052d5e5802d15682": {
     "ts": 1789170480.3243365,
     "processed": true
@@ -923,504 +891,524 @@
     "ts": 1791595615.66174,
     "processed": true
   },
-  "00f7c777829c2e79bb625837e28e8001": {
-    "ts": 1791595577.643548,
+  "509e2e86d4169d203c7b2fb26389ace2": {
+    "ts": 1791679080.80681,
+    "processed": true
+  },
+  "8f95f5a15e2719dc4b6c0e99ac2e5531": {
+    "ts": 1791679080.80681,
+    "processed": true
+  },
+  "56c07856ac05cdfece5caea41377fe3e": {
+    "ts": 1791679080.80681,
+    "processed": true
+  },
+  "8b0f206e25135d5ce3d75ba8c0cbce4d": {
+    "ts": 1791679080.80681,
+    "processed": true
+  },
+  "58e518a86fbe82d4cae03f59b49ef068": {
+    "ts": 1791679080.80681,
+    "processed": true
+  },
+  "f4faf8cd86a12b4a202f257294ba3a7c": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Software's centaur age may last decades",
-      "link": "https://seangoedecke.com/softwares-centaur-age-may-last-decades/",
+      "title": "How to read code",
+      "link": "https://seangoedecke.com/how-to-read-code/",
       "source": "seangoedecke.com RSS feed",
-      "hash": "00f7c777829c2e79bb625837e28e8001"
+      "hash": "f4faf8cd86a12b4a202f257294ba3a7c"
     }
   },
-  "cfb10f53fe6f7efa141983cbf1ed6554": {
-    "ts": 1791595577.643548,
+  "2a985ba6a4c2f8b0169f0937dd46da69": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Automatically detecting AI text in my browser",
-      "link": "https://seangoedecke.com/deckard/",
+      "title": "Why we should anthropomorphize AI agents",
+      "link": "https://seangoedecke.com/why-we-should-anthropomorphize-ai-agents/",
       "source": "seangoedecke.com RSS feed",
-      "hash": "cfb10f53fe6f7efa141983cbf1ed6554"
+      "hash": "2a985ba6a4c2f8b0169f0937dd46da69"
     }
   },
-  "ebf8282e5b855b682649fcd7f69bfaca": {
-    "ts": 1791595577.643548,
+  "ba81ae2679ae5e0fd19fd02fc7da8888": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "FBI Arrests Founder of Ransomware Negotiation Firm",
-      "link": "https://krebsonsecurity.com/2026/10/fbi-arrests-founder-of-ransomware-negotiation-firm/",
-      "source": "Krebs on Security",
-      "hash": "ebf8282e5b855b682649fcd7f69bfaca"
+      "title": "Advanced AI sycophancy",
+      "link": "https://seangoedecke.com/advanced-ai-sycophancy/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "ba81ae2679ae5e0fd19fd02fc7da8888"
     }
   },
-  "82b1e37b8f7fb8817eac9f471abbcf5e": {
-    "ts": 1791595577.643548,
+  "a0fd3d36c7c24ca1685da08e170fc6bf": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "ShinyHunters Extorted Boeing Spin-off Prior to Arrests",
-      "link": "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/",
-      "source": "Krebs on Security",
-      "hash": "82b1e37b8f7fb8817eac9f471abbcf5e"
-    }
-  },
-  "c8edec6ed0288734e84cadc5a0aaff2f": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Microsoft Plugs Nearly 1,000 Security Holes",
-      "link": "https://krebsonsecurity.com/2026/09/microsoft-plugs-nearly-1000-security-holes/",
-      "source": "Krebs on Security",
-      "hash": "c8edec6ed0288734e84cadc5a0aaff2f"
-    }
-  },
-  "24882473f2eb29dc535b5f4c98f9d13c": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Jaguar Type 01",
-      "link": "https://insideevs.com/news/810839/jaguar-type-01-launch-ev/",
+      "title": "‘Proof-of-Human’",
+      "link": "https://x.com/bzamayo/status/2108498107184934914",
       "source": "Daring Fireball",
-      "hash": "24882473f2eb29dc535b5f4c98f9d13c"
+      "hash": "a0fd3d36c7c24ca1685da08e170fc6bf"
     }
   },
-  "741191ac32cf37eee5c9860157c40784": {
-    "ts": 1791595577.643548,
+  "3ad7beeb49fb29a303673f4113676641": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Gurman Strikes Again: ‘Apple’s Smart Home Push Includes Doorbell, Lock, Thermostat Codeveloped With LG’",
-      "link": "https://www.bloomberg.com/news/articles/2026-10-06/apple-s-smart-home-push-includes-doorbell-lock-thermostat-codeveloped-with-lg?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MTMyMDkxNiwiZXhwIjoxNzkxOTI1NzE2LCJhcnRpY2xlSWQiOiJUTUdDN0lLSkg2VjUwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.LSK9jlXYPFHac9EpcJCErTgJNAwqmpV6qFoORcKffVo",
+      "title": "Let’s Check In on Trump’s Blog",
+      "link": "https://truthsocial.com/@realDonaldTrump/posts/117406176604364910",
       "source": "Daring Fireball",
-      "hash": "741191ac32cf37eee5c9860157c40784"
+      "hash": "3ad7beeb49fb29a303673f4113676641"
     }
   },
-  "16d320b7e8316acc5d68abc2c3c103ea": {
-    "ts": 1791595577.643548,
+  "f7aceb58eb2095754850ba2c804fbab7": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "[Sponsor] Sunnny",
-      "link": "https://sunnny.com/",
+      "title": "Apple Is Slow-Rolling iOS 27 Adoption, So Far",
+      "link": "https://mastodon.social/@_Davidsmith/117355154519434137",
       "source": "Daring Fireball",
-      "hash": "16d320b7e8316acc5d68abc2c3c103ea"
+      "hash": "f7aceb58eb2095754850ba2c804fbab7"
     }
   },
-  "0dab1d1657e5f90665a5da4df7d3f5ca": {
-    "ts": 1791595577.643548,
+  "96a0fd19d38eb599ff7b587d5d5175f4": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "OpenAI Announces Their Text Watermarking Plans",
-      "link": "https://openai.com/index/eu-text-provenance/",
+      "title": "Joz Announces ‘Welcome Home’ Keynote Coming Tuesday, 13 October",
+      "link": "https://x.com/gregjoz/status/2108226096407994858",
       "source": "Daring Fireball",
-      "hash": "0dab1d1657e5f90665a5da4df7d3f5ca"
+      "hash": "96a0fd19d38eb599ff7b587d5d5175f4"
     }
   },
-  "7c034ea2f33907fbdd2155d33f098c27": {
-    "ts": 1791595577.643548,
+  "b885ab921e9a2f2a11ca8b9277071b12": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Ternus and Cook Tweet Brief Remembrances on the 15th Anniversary of Steve Jobs’s Death",
-      "link": "https://x.com/johnternus/status/2107093462118199562",
+      "title": "Unofficial Command-Line Tool Removes Apple Intelligence From MacOS 27",
+      "link": "https://arstechnica.com/apple/2026/10/command-line-tool-quickly-removes-apple-intelligence-from-macos-27/",
       "source": "Daring Fireball",
-      "hash": "7c034ea2f33907fbdd2155d33f098c27"
+      "hash": "b885ab921e9a2f2a11ca8b9277071b12"
     }
   },
-  "8edc6aa6d6a8ea384aee024c65208aea": {
-    "ts": 1791595577.643548,
+  "bbeff8374d11ed6ece27f1d1f871d052": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Joanna Stern Pokes the Pickle",
-      "link": "https://www.youtube.com/watch?v=YNqYEMuoQAI",
+      "title": "Steve Jobs, Walking Through a Mockup for Apple Park in 2010",
+      "link": "https://book.stevejobsarchive.com/#photo-37",
       "source": "Daring Fireball",
-      "hash": "8edc6aa6d6a8ea384aee024c65208aea"
+      "hash": "bbeff8374d11ed6ece27f1d1f871d052"
     }
   },
-  "15e6dd6e971fe0d2b45501eec3d70c02": {
-    "ts": 1791595577.643548,
+  "14ce25a2063f68e96eaded01b8c6651d": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "★ The iPhone 4 ‘Antennagate’ Press Conference Q&A — Finally",
-      "link": "https://daringfireball.net/2026/09/iphone_4_antennagate_q_and_a",
+      "title": "Duo-Man",
+      "link": "https://x.com/viditb/status/2104103592726765722",
       "source": "Daring Fireball",
-      "hash": "15e6dd6e971fe0d2b45501eec3d70c02"
+      "hash": "14ce25a2063f68e96eaded01b8c6651d"
     }
   },
-  "d90d2b68f30fc646ff6a9904e80d997b": {
-    "ts": 1791595577.643548,
+  "30f67ed1795223811dd24103f1aa0bd9": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "★ AppZapper 3000",
-      "link": "https://daringfireball.net/2026/09/appzapper_3000",
+      "title": "Reelizer Returns",
+      "link": "https://www.reelizer.com/",
       "source": "Daring Fireball",
-      "hash": "d90d2b68f30fc646ff6a9904e80d997b"
+      "hash": "30f67ed1795223811dd24103f1aa0bd9"
     }
   },
-  "1fc1ae9d0b1e786d826895d1309785f9": {
-    "ts": 1791595577.643548,
+  "509b35ccbea24ad23a1a5ea3f59ce8dd": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "How I Use My Index 01 + Production Update",
-      "link": "https://repebble.com/blog/how-i-use-my-index-01-production-update",
+      "title": "Alexandr Wang: ‘Why I’m Building Muse’",
+      "link": "https://x.com/alexandr_wang/status/2103551714536439951",
+      "source": "Daring Fireball",
+      "hash": "509b35ccbea24ad23a1a5ea3f59ce8dd"
+    }
+  },
+  "a2559c8461eb498d8a6d1e17a742ef8b": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "Apple’s Other Recent ‘Duo’",
+      "link": "https://support.apple.com/en-us/111812",
+      "source": "Daring Fireball",
+      "hash": "a2559c8461eb498d8a6d1e17a742ef8b"
+    }
+  },
+  "f14145beb7ebaffabfe30712ef93f9c5": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "International Standard Paper Sizes",
+      "link": "https://www.cl.cam.ac.uk/~mgk25/iso-paper.html",
+      "source": "Daring Fireball",
+      "hash": "f14145beb7ebaffabfe30712ef93f9c5"
+    }
+  },
+  "e9ce6988929dd9e45538a37c28eaa7ae": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "Microsoft Took the ‘Copilot+ PC’ Brand Out Behind the Shed",
+      "link": "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
+      "source": "Daring Fireball",
+      "hash": "e9ce6988929dd9e45538a37c28eaa7ae"
+    }
+  },
+  "e4378b895156b01f22d0a653509158e9": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "The Talk Show: ‘I’m Thinking X, Not X’",
+      "link": "https://daringfireball.net/thetalkshow/2026/09/25/ep-455",
+      "source": "Daring Fireball",
+      "hash": "e4378b895156b01f22d0a653509158e9"
+    }
+  },
+  "ff1d1bad2b2b5860e6559b264f1be54f": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "★ The iPhones 18 Pro",
+      "link": "https://daringfireball.net/2026/09/the_iphones_18_pro",
+      "source": "Daring Fireball",
+      "hash": "ff1d1bad2b2b5860e6559b264f1be54f"
+    }
+  },
+  "6aba702da4bd6e965f00f74aad4dfa65": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "New Pebble Weather App + Software Updates",
+      "link": "https://repebble.com/blog/new-pebble-weather-app-software-updates",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "1fc1ae9d0b1e786d826895d1309785f9"
+      "hash": "6aba702da4bd6e965f00f74aad4dfa65"
     }
   },
-  "f25c24e13976907ef8602735ea75a04c": {
-    "ts": 1791595577.643548,
+  "faadad8ba24dc5d00ff72af06d01033b": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Pebble 2 Duo is in mass production!",
-      "link": "https://ericmigi.com/blog/pebble-2-duo-is-in-mass-production",
+      "title": "Index 01 Is In Mass Production!",
+      "link": "https://repebble.com/blog/index-01-is-in-mass-production",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "f25c24e13976907ef8602735ea75a04c"
+      "hash": "faadad8ba24dc5d00ff72af06d01033b"
     }
   },
-  "e9c5406c15c0ce3cdfb3dcc18f9dd6e8": {
-    "ts": 1791595577.643548,
+  "5ac430e43099771033a2d2b507940119": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Pebble Time 2* Design Reveal",
-      "link": "https://ericmigi.com/blog/pebble-time-2-design-reveal",
+      "title": "Pebble Mega Update - July 2026",
+      "link": "https://repebble.com/blog/pebble-mega-update-july-2026",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "e9c5406c15c0ce3cdfb3dcc18f9dd6e8"
+      "hash": "5ac430e43099771033a2d2b507940119"
     }
   },
-  "08a8a94e37a3319188dbae60fd5c0256": {
-    "ts": 1791595577.643548,
+  "b85c169aefc613f69c7165f7876a8b57": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "July Pebble Update",
-      "link": "https://ericmigi.com/blog/july-pebble-update",
+      "title": "Spring 2026 Dev Contest Results!",
+      "link": "https://repebble.com/blog/spring-2026-dev-contest-results",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "08a8a94e37a3319188dbae60fd5c0256"
+      "hash": "b85c169aefc613f69c7165f7876a8b57"
     }
   },
-  "ae3d891bcda0f4a9e81b52d4cb536bb2": {
-    "ts": 1791595577.643548,
+  "859942bc9ba56d120d127c2e408bcd0e": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Core 2 Duo - Beta Test Signup!",
-      "link": "https://ericmigi.com/blog/core-2-duo-alphabeta-test-signup",
+      "title": "Spring 2026 Pebble App Contest + SDK Updates",
+      "link": "https://repebble.com/blog/spring-2026-pebble-app-contest",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "ae3d891bcda0f4a9e81b52d4cb536bb2"
+      "hash": "859942bc9ba56d120d127c2e408bcd0e"
     }
   },
-  "8f14073749a458c887c74fab41d2c748": {
-    "ts": 1791595577.643548,
+  "99f1d4ba72ee2c2d688fa64509f7d29e": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "How To Build A Smartwatch: Picking A Chip",
-      "link": "https://ericmigi.com/blog/how-to-build-a-smartwatch-picking-a-chip",
+      "title": "Pebble Time 2 Is In Mass Production!",
+      "link": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "8f14073749a458c887c74fab41d2c748"
+      "hash": "99f1d4ba72ee2c2d688fa64509f7d29e"
     }
   },
-  "361edf94f7f622c4b81c86f497e0d879": {
-    "ts": 1791595577.643548,
+  "5bd668624849783ee10d864da514bf40": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "My new podcast: Tick Talk + Core 2 Duo demo",
-      "link": "https://ericmigi.com/blog/i-started-a-podcast-called-tick-talk",
+      "title": "CloudPebble Returns! Plus New Pure JavaScript and Round 2 SDK",
+      "link": "https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "361edf94f7f622c4b81c86f497e0d879"
+      "hash": "5bd668624849783ee10d864da514bf40"
     }
   },
-  "f118f91224ddc33ea428660ec78958f6": {
-    "ts": 1791595577.643548,
+  "f8ee080801da89c8f944297bb9093270": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Gratitude and FAQ",
-      "link": "https://ericmigi.com/blog/gratitude-and-faq",
+      "title": "February Pebble Production and Software Updates",
+      "link": "https://repebble.com/blog/february-pebble-production-and-software-updates",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "f118f91224ddc33ea428660ec78958f6"
+      "hash": "f8ee080801da89c8f944297bb9093270"
     }
   },
-  "2e4b9c8b041d4791e9c90b2b1d6b7232": {
-    "ts": 1791595577.643548,
+  "f89000414aa432a0378faed865aefee4": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Introducing two new Pebble watches!",
-      "link": "https://ericmigi.com/blog/introducing-two-new-pebbleos-watches",
+      "title": "On Being A Canadian In America In 2026",
+      "link": "https://ericmigi.com/blog/on-being-a-canadian-in-america-in-2026",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "2e4b9c8b041d4791e9c90b2b1d6b7232"
+      "hash": "f89000414aa432a0378faed865aefee4"
     }
   },
-  "41d84a29dd9bb721ede9dfb3f3ba0b3e": {
-    "ts": 1791595577.643548,
+  "83adf6af26b1f89302e068d8e8246527": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Apple restricts Pebble from being awesome with iPhones",
-      "link": "https://ericmigi.com/blog/apple-restricts-pebble-from-being-awesome-with-iphones",
+      "title": "Pebble Round 2 - The Most Stylish Pebble Ever",
+      "link": "https://repebble.com/blog/pebble-round-2-the-most-stylish-pebble-ever",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "41d84a29dd9bb721ede9dfb3f3ba0b3e"
+      "hash": "83adf6af26b1f89302e068d8e8246527"
     }
   },
-  "2515b2f687b5ad3dd43afd71f2e80255": {
-    "ts": 1791595577.643548,
+  "a4682b4e813e0bce485afe7d9d6ded61": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "February Shenzhen Trip Update",
-      "link": "https://ericmigi.com/blog/february-shenzhen-trip-update",
+      "title": "Pebble Relaunch - Year One Done!",
+      "link": "https://ericmigi.com/blog/pebble-relaunch-year-one-done",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "2515b2f687b5ad3dd43afd71f2e80255"
+      "hash": "a4682b4e813e0bce485afe7d9d6ded61"
     }
   },
-  "73ee42803b6dd67c069929648e348cc8": {
-    "ts": 1791595577.643548,
+  "1af2697014c9397eab85d99f9c417367": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "How to help us build open source Pebble software!",
-      "link": "https://ericmigi.com/blog/how-to-help-build-open-source-pebble-software",
+      "title": "Meet Pebble Index 01 - External Memory For Your Brain",
+      "link": "https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "73ee42803b6dd67c069929648e348cc8"
+      "hash": "1af2697014c9397eab85d99f9c417367"
     }
   },
-  "e9a6a28ac89383355e0033a87dca90c5": {
-    "ts": 1791595577.643548,
+  "dd2d4ed8004a87a8ce34d3ff96bb11d2": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Why We’re Bringing Pebble Back",
-      "link": "https://ericmigi.com/blog/why-were-bringing-pebble-back",
+      "title": "Pebble Watch Software Is Now 100% Open Source + Tick Talk #4 - PT2 Demos!",
+      "link": "https://ericmigi.com/blog/pebble-watch-software-is-now-100percent-open-source",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "e9a6a28ac89383355e0033a87dca90c5"
+      "hash": "dd2d4ed8004a87a8ce34d3ff96bb11d2"
     }
   },
-  "938ee0d9130e49006cc5026da6ac874d": {
-    "ts": 1791595577.643548,
+  "c280f67d25f375cc78be809dedede02e": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Remember how awesome PebbleOS is?",
-      "link": "https://ericmigi.com/blog/pebbleos-is-awesome",
+      "title": "Pebble, Rebble, and a Path Forward",
+      "link": "https://ericmigi.com/blog/pebble-rebble-and-a-path-forward",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "938ee0d9130e49006cc5026da6ac874d"
+      "hash": "c280f67d25f375cc78be809dedede02e"
     }
   },
-  "3b667150f4288fd21d02b1888d336e63": {
-    "ts": 1791595577.643548,
+  "4a0ba1a9d5b5bc82fb121921fbc930bb": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "The better, smarter future of messaging | The Vergecast",
-      "link": "https://ericmigi.com/blog/the-better-smarter-future-of-messaging-or-the-vergecast",
+      "title": "The new Pebble app is live on iOS and Android",
+      "link": "https://ericmigi.com/blog/the-new-pebble-app-is-live-on-ios-and-android",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "3b667150f4288fd21d02b1888d336e63"
+      "hash": "4a0ba1a9d5b5bc82fb121921fbc930bb"
     }
   },
-  "dac87cc5d1cd5bb3ab1858138df7eb2f": {
-    "ts": 1791595577.643548,
+  "4daf178422049c18629d81cad77ed64d": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Introducing Beepberry – a portable e-paper computer for hackers",
-      "link": "https://ericmigi.com/blog/introducing-beepberry-a-portable-e-paper-computer-for-hackers",
+      "title": "How To Build A Smartwatch: Software - Setting Expectations & Roadmap",
+      "link": "https://ericmigi.com/blog/how-to-build-a-smartwatch-software-setting-expectations-and-roadmap",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "dac87cc5d1cd5bb3ab1858138df7eb2f"
+      "hash": "4daf178422049c18629d81cad77ed64d"
     }
   },
-  "fa7aff0c1ec6961a2da927b506f1262a": {
-    "ts": 1791595577.643548,
+  "f8171fcef08101c22c92fdc42472ff8a": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "I want an iPhone Mini-sized Android phone",
-      "link": "https://ericmigi.com/blog/i-want-an-iphone-mini-sized-android-phone",
+      "title": "(re)Introducing the Pebble Appstore",
+      "link": "https://ericmigi.com/blog/re-introducing-the-pebble-appstore",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "fa7aff0c1ec6961a2da927b506f1262a"
+      "hash": "f8171fcef08101c22c92fdc42472ff8a"
     }
   },
-  "ebef49dd3c92ae9f2b42ea6c8bcce798": {
-    "ts": 1791595577.643548,
+  "785bd44074d019b2ef59f6b88ab7fb3a": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Success and Failure at Pebble",
-      "link": "https://ericmigi.com/blog/success-and-failure-at-pebble",
+      "title": "Introducing Pebble - Hackable E-Paper Watch for iPhone and Android",
+      "link": "https://ericmigi.com/blog/introducing-pebble-hackable-e-paper-watch-for-iphone-and-android",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "ebef49dd3c92ae9f2b42ea6c8bcce798"
+      "hash": "785bd44074d019b2ef59f6b88ab7fb3a"
     }
   },
-  "47e3aeaa3ba96653336ec2654ce4e49b": {
-    "ts": 1791595577.643548,
+  "d2953c29e3cf32d6b48864913085d2ae": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Show HN: Beeper – All Your Chats in One App",
-      "link": "https://ericmigi.com/blog/show-hn-beeper-all-your-chats-in-one-app",
+      "title": "Show HN: Version 1.1 of our $99 hackable Bluetooth smartwatch",
+      "link": "https://ericmigi.com/blog/show-hn-version-11-of-our-dollar99-hackable-bluetooth-smartwatch",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "47e3aeaa3ba96653336ec2654ce4e49b"
+      "hash": "d2953c29e3cf32d6b48864913085d2ae"
     }
   },
-  "d009219c219bf934a056876fc8ff99a5": {
-    "ts": 1791595577.643548,
+  "94f6986526cf5af303093c74d1de1358": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "The Universal Communication Bus",
-      "link": "https://ericmigi.com/blog/the-universal-communication-bus",
+      "title": "Candid experiences starting a hardware startup",
+      "link": "https://ericmigi.com/blog/candid-experiences-starting-a-hardware-startup",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "d009219c219bf934a056876fc8ff99a5"
+      "hash": "94f6986526cf5af303093c74d1de1358"
     }
   },
-  "7246e1c31ae0791d2309531962bd94d7": {
-    "ts": 1791595577.643548,
+  "ec4d1c3c270ea135c13bfcd5c59ecdd1": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Startup School - How to talk to users",
-      "link": "https://ericmigi.com/blog/startup-school-how-to-talk-to-users",
+      "title": "Interview on Crackberry",
+      "link": "https://ericmigi.com/blog/interview-on-crackberry",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "7246e1c31ae0791d2309531962bd94d7"
+      "hash": "ec4d1c3c270ea135c13bfcd5c59ecdd1"
     }
   },
-  "06edc49e77cb6ceee1dafcbb5bb44a07": {
-    "ts": 1791595577.643548,
+  "5aa49803ba0467bbda82b05f6a9c1e15": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Startup School - A Conversation on Hard Tech",
-      "link": "https://ericmigi.com/blog/startup-school-a-conversation-on-hard-tech",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "06edc49e77cb6ceee1dafcbb5bb44a07"
-    }
-  },
-  "712a313ff98219c35d5b066f2acb6b71": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Hardware Founders: (When) Should You Try To Raise VC Money?",
-      "link": "https://ericmigi.com/blog/hardware-founders-when-should-you-try-to-raise-vc-money",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "712a313ff98219c35d5b066f2acb6b71"
-    }
-  },
-  "5332279c3691f13b34ce762d8c5b7dd2": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "What working on Pebble taught me about building hardware",
-      "link": "https://ericmigi.com/blog/what-working-on-pebble-taught-me-about-building-hardware",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "5332279c3691f13b34ce762d8c5b7dd2"
-    }
-  },
-  "8ab0b96732bc353c0b0db39f1fd7a701": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Verge interview at CES 2016",
-      "link": "https://ericmigi.com/blog/verge-interview-at-ces-2016",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "8ab0b96732bc353c0b0db39f1fd7a701"
-    }
-  },
-  "171e28240f5fa858f4a8dbe18baef86c": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Verge interview at CES 2013",
-      "link": "https://ericmigi.com/blog/verge-interview-at-ces-2013",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "171e28240f5fa858f4a8dbe18baef86c"
-    }
-  },
-  "0a3caaff091e6f7dee6ceab38cca73a7": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "Watchduino - first video",
-      "link": "https://ericmigi.com/blog/watchduino-first-video",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "0a3caaff091e6f7dee6ceab38cca73a7"
-    }
-  },
-  "8bc853bea1ea1c11cecd0781a3898b20": {
-    "ts": 1791595577.643548,
-    "processed": false,
-    "data": {
-      "title": "The real AI risk is inside the labs",
-      "link": "http://antirez.com/news/172",
+      "title": "Don't fall into the anti-AI hype",
+      "link": "http://antirez.com/news/158",
       "source": "<antirez>",
-      "hash": "8bc853bea1ea1c11cecd0781a3898b20"
+      "hash": "5aa49803ba0467bbda82b05f6a9c1e15"
     }
   },
-  "99acb94678d17bb11fa180ea66a3a027": {
-    "ts": 1791595577.643548,
+  "438bc80550243c52a2a70816b0833763": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Being Linux Torvalds",
-      "link": "http://antirez.com/news/171",
+      "title": "Reflections on AI at the end of 2025",
+      "link": "http://antirez.com/news/157",
       "source": "<antirez>",
-      "hash": "99acb94678d17bb11fa180ea66a3a027"
+      "hash": "438bc80550243c52a2a70816b0833763"
     }
   },
-  "df7d9d2802dfb2ee0871f455f8c5f6e8": {
-    "ts": 1791595577.643548,
+  "ce59cb0ac885508f752fbada503666eb": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Not just development, distribution of software may change as well",
-      "link": "http://antirez.com/news/170",
+      "title": "Scaling HNSWs",
+      "link": "http://antirez.com/news/156",
       "source": "<antirez>",
-      "hash": "df7d9d2802dfb2ee0871f455f8c5f6e8"
+      "hash": "ce59cb0ac885508f752fbada503666eb"
     }
   },
-  "1ef2a41d72e72b1bce3d81697f837529": {
-    "ts": 1791595577.643548,
+  "a4640b6b04297ac2b966f2e15d40b561": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Control the ideas, not the code",
-      "link": "http://antirez.com/news/169",
+      "title": "AI is different",
+      "link": "http://antirez.com/news/155",
       "source": "<antirez>",
-      "hash": "1ef2a41d72e72b1bce3d81697f837529"
+      "hash": "a4640b6b04297ac2b966f2e15d40b561"
     }
   },
-  "b10c3d4ee7c01b0e4df30bfc13655735": {
-    "ts": 1791595577.643548,
+  "7ac8ae7b8b4c841f066f4b7807e65db0": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Distributing LLM inference in DwarfStar",
-      "link": "http://antirez.com/news/167",
+      "title": "Coding with LLMs in the summer of 2025 (an update)",
+      "link": "http://antirez.com/news/154",
       "source": "<antirez>",
-      "hash": "b10c3d4ee7c01b0e4df30bfc13655735"
+      "hash": "7ac8ae7b8b4c841f066f4b7807e65db0"
     }
   },
-  "c7f12317d1b8e2c990e9161eabbcafcd": {
-    "ts": 1791595577.643548,
+  "01212c29cef616b6348d36d3428e3c27": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Alternatives for the EDIT tool of LLM agents",
-      "link": "http://antirez.com/news/166",
+      "title": "Human coders are still better than LLMs",
+      "link": "http://antirez.com/news/153",
       "source": "<antirez>",
-      "hash": "c7f12317d1b8e2c990e9161eabbcafcd"
+      "hash": "01212c29cef616b6348d36d3428e3c27"
     }
   },
-  "c4f0151cdfbe65e225b9b47063c46f76": {
-    "ts": 1791595577.643548,
+  "9e311beb0db4014cc20451bf2c9c016a": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Redis array type: short story of a long development",
-      "link": "http://antirez.com/news/164",
+      "title": "What I learned during the license switch",
+      "link": "http://antirez.com/news/152",
       "source": "<antirez>",
-      "hash": "c4f0151cdfbe65e225b9b47063c46f76"
+      "hash": "9e311beb0db4014cc20451bf2c9c016a"
     }
   },
-  "b2d5c21e4f1dbb6a167d2ffc5932dafa": {
-    "ts": 1791595577.643548,
+  "cc4e07cfc9382115129b6f8a81f47a98": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Redis patterns for coding",
-      "link": "http://antirez.com/news/161",
+      "title": "Redis is open source again",
+      "link": "http://antirez.com/news/151",
       "source": "<antirez>",
-      "hash": "b2d5c21e4f1dbb6a167d2ffc5932dafa"
+      "hash": "cc4e07cfc9382115129b6f8a81f47a98"
     }
   },
-  "d6d841a8516143e75ea0e10e9060a60b": {
-    "ts": 1791595577.643548,
+  "5ab2fdf73189528c5857ebec01b573fd": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code",
-      "link": "http://antirez.com/news/160",
+      "title": "Reproducing Hacker News writing style fingerprinting",
+      "link": "http://antirez.com/news/150",
       "source": "<antirez>",
-      "hash": "d6d841a8516143e75ea0e10e9060a60b"
+      "hash": "5ab2fdf73189528c5857ebec01b573fd"
     }
   },
-  "0b9d78e520500ad68cca0204ceb1d7ee": {
-    "ts": 1791595577.643548,
+  "e507a6b6917086a67b9dea1b15e28504": {
+    "ts": 1791679050.076704,
     "processed": false,
     "data": {
-      "title": "Automatic programming",
-      "link": "http://antirez.com/news/159",
+      "title": "Vector Sets are part of Redis",
+      "link": "http://antirez.com/news/149",
       "source": "<antirez>",
-      "hash": "0b9d78e520500ad68cca0204ceb1d7ee"
+      "hash": "e507a6b6917086a67b9dea1b15e28504"
+    }
+  },
+  "0a0c1a182d131154c61a8f8b1d915cd5": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "AI is useless, but it is our best bet for the future",
+      "link": "http://antirez.com/news/148",
+      "source": "<antirez>",
+      "hash": "0a0c1a182d131154c61a8f8b1d915cd5"
+    }
+  },
+  "874826ddf5f677df9ed3c0a798b14738": {
+    "ts": 1791679050.076704,
+    "processed": false,
+    "data": {
+      "title": "Big LLMs weights are a piece of history",
+      "link": "http://antirez.com/news/147",
+      "source": "<antirez>",
+      "hash": "874826ddf5f677df9ed3c0a798b14738"
     }
   }
 }
