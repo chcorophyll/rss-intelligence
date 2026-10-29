@@ -1,32 +1,4 @@
 {
-  "1c8ed6a55c59eb57551e27226e7e53df": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "12d854ee0c6b2a17ab5b61e5b6774f1c": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "7e040f4942c4c74df43f1dac18b3df7c": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "2ea2660a97f16b2e89e7b56a9de1c1f4": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "7a7bb7ab650ff9783b0287ec61561493": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "271da82e67bdde8deb801e6f6d797cbb": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
-  "233c84af3b0bdcdfc6107aa013100525": {
-    "ts": 1790645062.80774,
-    "processed": true
-  },
   "92506a30955d503872fd90124be0a912": {
     "ts": 1790729883.6075988,
     "processed": true
@@ -724,504 +696,524 @@
     "processed": true,
     "retry_count": 1
   },
-  "962ab31bbffa8b93701d2056a6ea5c92": {
-    "ts": 1793148767.1250432,
+  "df9784fd80f89748bfbef47006936bbb": {
+    "ts": 1793237376.4452024,
+    "processed": true
+  },
+  "9aab3021d0d2d6584295d242edd807d6": {
+    "ts": 1793237376.4452024,
+    "processed": true
+  },
+  "2fcae8853da5c178d887ae53b6af4ef1": {
+    "ts": 1793237376.4452024,
+    "processed": true
+  },
+  "2aeb712eb62f14b753ad2b0346a9a553": {
+    "ts": 1793237376.4452024,
+    "processed": true
+  },
+  "5e4a51fd299e58b3c4cd15812891fffa": {
+    "ts": 1793237376.4452024,
+    "processed": true
+  },
+  "823f0823247e8d5d0359c1055a9f361a": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Grit your teeth and ship it",
-      "link": "https://seangoedecke.com/grit-your-teeth-and-ship-it/",
+      "title": "webframe: evaluated as a scraper and a sandbox",
+      "link": "https://simonwillison.net/2026/Oct/26/webframe-evaluation/",
+      "source": "Simon Willison's Weblog",
+      "hash": "823f0823247e8d5d0359c1055a9f361a"
+    }
+  },
+  "515de6e578fa7173e1013b6f64204a2c": {
+    "ts": 1793237335.346484,
+    "processed": false,
+    "data": {
+      "title": "Seam Cutter",
+      "link": "https://simonwillison.net/2026/Oct/25/seam-cutter/",
+      "source": "Simon Willison's Weblog",
+      "hash": "515de6e578fa7173e1013b6f64204a2c"
+    }
+  },
+  "73bdae489ea2a1be48cd74d7d6612cfd": {
+    "ts": 1793237335.346484,
+    "processed": false,
+    "data": {
+      "title": "Getting good at AI takes time and practice",
+      "link": "https://seangoedecke.com/getting-good-at-ai-takes-time-and-practice/",
       "source": "seangoedecke.com RSS feed",
-      "hash": "962ab31bbffa8b93701d2056a6ea5c92"
+      "hash": "73bdae489ea2a1be48cd74d7d6612cfd"
     }
   },
-  "78f4cc6aead27df6c2d266c30b921b28": {
-    "ts": 1793148767.1250432,
+  "5f3144ff22597206f51ca35bf546ce2c": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Two techniques for working with System One models",
-      "link": "https://seangoedecke.com/two-techniques-for-working-with-system-one-models/",
+      "title": "Human-AI partnerships are for alignment, not capability",
+      "link": "https://seangoedecke.com/human-ai-partnerships-are-for-alignment-not-capability/",
       "source": "seangoedecke.com RSS feed",
-      "hash": "78f4cc6aead27df6c2d266c30b921b28"
+      "hash": "5f3144ff22597206f51ca35bf546ce2c"
     }
   },
-  "8651e625050eb8ab8cf2c80e14339557": {
-    "ts": 1793148767.1250432,
+  "905df818f829e7fa269e008ba403187b": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
-      "link": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+      "title": "You should all be asking way more questions",
+      "link": "https://seangoedecke.com/you-should-all-be-asking-way-more-questions/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "905df818f829e7fa269e008ba403187b"
+    }
+  },
+  "cbc5138dae87ad8eefe09efc3227c301": {
+    "ts": 1793237335.346484,
+    "processed": false,
+    "data": {
+      "title": "Don't build tools for AI agents",
+      "link": "https://seangoedecke.com/dont-build-tools-for-ai-agents/",
+      "source": "seangoedecke.com RSS feed",
+      "hash": "cbc5138dae87ad8eefe09efc3227c301"
+    }
+  },
+  "9a3c108ea3f4944a73deb26602553675": {
+    "ts": 1793237335.346484,
+    "processed": false,
+    "data": {
+      "title": "U.S. Soldier Gets 70 Months in Prison for AT&T, Verizon Extortions",
+      "link": "https://krebsonsecurity.com/2026/09/u-s-soldier-gets-70-months-in-prison-for-att-verizon-extortions/",
       "source": "Krebs on Security",
-      "hash": "8651e625050eb8ab8cf2c80e14339557"
+      "hash": "9a3c108ea3f4944a73deb26602553675"
     }
   },
-  "1f5b4f3065bd928abd02dd5fdc667387": {
-    "ts": 1793148767.1250432,
+  "0b89f36a64e3e21abc1651e6e4b8019b": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site",
-      "link": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
-      "source": "Krebs on Security",
-      "hash": "1f5b4f3065bd928abd02dd5fdc667387"
-    }
-  },
-  "381df1ac16d30339a0a54b3c8f82f49f": {
-    "ts": 1793148767.1250432,
-    "processed": false,
-    "data": {
-      "title": "Siri AI Expands to More Languages in OS 27.2",
-      "link": "https://nr.apple.com/Du9G9W8Nq1",
+      "title": "Guessing the Name: MacBook Studio?",
+      "link": "https://www.macrumors.com/2026/10/28/macbook-studio/",
       "source": "Daring Fireball",
-      "hash": "381df1ac16d30339a0a54b3c8f82f49f"
+      "hash": "0b89f36a64e3e21abc1651e6e4b8019b"
     }
   },
-  "fadd2c4340a621439ec7d75be8e1d819": {
-    "ts": 1793148767.1250432,
+  "111cf0ecff7f743cae2f690156f4d8c5": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Apple Creator Studio Updated With a Slew of AI Features, Along With a New Open JSON File Format for Keynote",
-      "link": "https://www.apple.com/newsroom/2026/10/apple-creator-studio-adds-powerful-new-ai-features-and-even-more-creative-tools/",
+      "title": "The NYT Seemingly Does Marissa Mayer Dirty",
+      "link": "https://www.nytimes.com/2026/10/25/style/marissa-mayer-ai-assistants-women.html?unlocked_article_code=1.L1E.xBwx.X_EjBGNsRNqr",
       "source": "Daring Fireball",
-      "hash": "fadd2c4340a621439ec7d75be8e1d819"
+      "hash": "111cf0ecff7f743cae2f690156f4d8c5"
     }
   },
-  "35a0b346799c5ccd932bbb77f0054753": {
-    "ts": 1793148767.1250432,
+  "3b16f1a95b3eab963f747275d6ffe70b": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "★ Prestructured WYSIWYG",
-      "link": "https://daringfireball.net/2026/10/prestructured_wysiwyg",
+      "title": "Apple Issues Statement on iPhone Duo’s Crack Problem",
+      "link": "https://9to5mac.com/2026/10/26/apple-responds-to-reports-of-iphone-duos-inner-display-cracking/",
       "source": "Daring Fireball",
-      "hash": "35a0b346799c5ccd932bbb77f0054753"
+      "hash": "3b16f1a95b3eab963f747275d6ffe70b"
     }
   },
-  "17402e1ec9aad6cecb6afb083627ccf7": {
-    "ts": 1793148767.1250432,
+  "64b7117160e63b0b91d29fd845b3eca1": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "What’s Left for ‘Pro and Tell’ Week: Touch-Enabled OLED MacBooks",
-      "link": "https://www.macrumors.com/2026/10/27/macbook-pro-with-touchscreen-tomorrow/",
+      "title": "Glenn Fleishman on Apple Notes and Markdown",
+      "link": "https://sixcolors.com/post/2026/10/why-notes-will-never-let-us-edit-markdown/",
       "source": "Daring Fireball",
-      "hash": "17402e1ec9aad6cecb6afb083627ccf7"
+      "hash": "64b7117160e63b0b91d29fd845b3eca1"
     }
   },
-  "0f9944fd45fc48a91e432c3838e455a3": {
-    "ts": 1793148767.1250432,
+  "aa392bf92f7e8456030f0c3ddf09e9b1": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Apple Also Announces iMac With M6",
-      "link": "https://www.apple.com/newsroom/2026/10/apple-unveils-new-imac-with-m6/",
+      "title": "★ Apple Announces New A20 Pro iPad Mini",
+      "link": "https://daringfireball.net/2026/10/apple_announces_new_a20_pro_ipad_mini",
       "source": "Daring Fireball",
-      "hash": "0f9944fd45fc48a91e432c3838e455a3"
+      "hash": "aa392bf92f7e8456030f0c3ddf09e9b1"
     }
   },
-  "01dedcc113578cff66212af2ee607a44": {
-    "ts": 1793148767.1250432,
+  "4acc76f34cd59bd10ca42c6de1c6f145": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "[Sponsor] WorkOS: Let Agents Sign Up for Your App Without a Browser",
-      "link": "https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q42026",
+      "title": "A Simple Two-Step Shortcuts Shortcut Lets You Lock the iPhone Duo When You Close It",
+      "link": "https://x.com/viticci/status/2113888099784638932",
       "source": "Daring Fireball",
-      "hash": "01dedcc113578cff66212af2ee607a44"
+      "hash": "4acc76f34cd59bd10ca42c6de1c6f145"
     }
   },
-  "9d495a556be89f2bff564b332aece96c": {
-    "ts": 1793148767.1250432,
+  "74ef38298763da07eb1900781d839137": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Apple Introduces New Base MacBook Pro With M6, 14-Inch-Only",
-      "link": "https://www.apple.com/newsroom/2026/10/apple-introduces-the-new-14-inch-macbook-pro-with-m6/",
+      "title": "Tiny Computers for iPhone Duo",
+      "link": "https://www.fountaininteractive.com/TinyComputers/",
       "source": "Daring Fireball",
-      "hash": "9d495a556be89f2bff564b332aece96c"
+      "hash": "74ef38298763da07eb1900781d839137"
     }
   },
-  "16d320b7e8316acc5d68abc2c3c103ea": {
-    "ts": 1793148767.1250432,
+  "df3ac001c106f28512e1984d275253be": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Sunnny",
-      "link": "https://sunnny.com/",
+      "title": "Tim Pan’s iPhone Duo Review",
+      "link": "https://www.youtube.com/watch?v=8pCccpKjjos",
       "source": "Daring Fireball",
-      "hash": "16d320b7e8316acc5d68abc2c3c103ea"
+      "hash": "df3ac001c106f28512e1984d275253be"
     }
   },
-  "53f34e242ce54f472da3a722786e08e3": {
-    "ts": 1793148767.1250432,
+  "4dffabc3c3031328d7671930fc5f4d55": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Duo Users Are Registering the Base of Their Index Finger as a Touch ID Coping Strategy",
-      "link": "https://www.reddit.com/r/iPhoneDuo/comments/1xehtcj/best_fingerprint_method/",
+      "title": "Apple Built a Photo-Realistic Functional Original iPod for Apple Music’s 404 Page",
+      "link": "https://music.apple.com/404",
       "source": "Daring Fireball",
-      "hash": "53f34e242ce54f472da3a722786e08e3"
+      "hash": "4dffabc3c3031328d7671930fc5f4d55"
     }
   },
-  "2848a4ec587da520c58aaccbcc8e3834": {
-    "ts": 1793148767.1250432,
+  "0fbbc2408e1707a79c84fdb8d8b85919": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "The Talk Show: ‘Lubricate the Inside of the Hinge’",
-      "link": "https://daringfireball.net/thetalkshow/2026/10/25/ep-456",
+      "title": "Chan Karunamuni on the Duo’s Open/Close Translucent Transition",
+      "link": "https://x.com/chan_k/status/2113622379050246243",
       "source": "Daring Fireball",
-      "hash": "2848a4ec587da520c58aaccbcc8e3834"
+      "hash": "0fbbc2408e1707a79c84fdb8d8b85919"
     }
   },
-  "fb7e1abd9a387c4b7593a7c1d812855c": {
-    "ts": 1793148767.1250432,
+  "dfc99e0cccf17a4c8ee26e296dd8e2d4": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "iPhone Portrait Mode, 10 Years In",
-      "link": "https://x.com/johnnie/status/2114007844605612167",
+      "title": "Apple Highlights 50+ iPhone Apps That Have Already Been Optimized for the Duo",
+      "link": "https://www.apple.com/newsroom/2026/10/developers-bring-incredible-new-app-experiences-to-iphone-duo/",
       "source": "Daring Fireball",
-      "hash": "fb7e1abd9a387c4b7593a7c1d812855c"
+      "hash": "dfc99e0cccf17a4c8ee26e296dd8e2d4"
     }
   },
-  "d23a61eed1d15fa50e197b7d3e6656d8": {
-    "ts": 1793148767.1250432,
+  "b9760e7373a85a9326bd21ee8421ff74": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "The Verge’s Duo Review: ‘Apple’s Folding Phone Is a Messy, Expensive Good Time’",
-      "link": "https://www.theverge.com/tech/1015028/iphone-duo-review",
+      "title": "Barack Obama on the Trump Administration’s Intimidation Campaign Against Congresswoman Ilhan Omar",
+      "link": "https://x.com/BarackObama/status/2111819687524774170",
       "source": "Daring Fireball",
-      "hash": "d23a61eed1d15fa50e197b7d3e6656d8"
+      "hash": "b9760e7373a85a9326bd21ee8421ff74"
     }
   },
-  "bf3cd9627aab95b5b2010ece5e2a7400": {
-    "ts": 1793148767.1250432,
+  "b1c5471ec08aff08640d8da31d39a986": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Joanna Stern Reviews the Duo: ‘The Good, the Bad, and the Buggy’",
-      "link": "https://www.youtube.com/watch?v=bxDTWuL9GxY",
+      "title": "Tom the Dancing Bug’s Inner Hive, and Harvey Richards, the Greatest Lawyer in the History of Fiction",
+      "link": "https://tomthedancingbug.com/the-inner-hive/",
       "source": "Daring Fireball",
-      "hash": "bf3cd9627aab95b5b2010ece5e2a7400"
+      "hash": "b1c5471ec08aff08640d8da31d39a986"
     }
   },
-  "464ce25070a69a4e3e0301ea849b470a": {
-    "ts": 1793148767.1250432,
+  "bc64046f4b89c26bebcbd916b49caa3b": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Updates to My iPhone Duo Review",
-      "link": "https://daringfireball.net/2026/10/the_iphone_duo",
+      "title": "WorkOS AuthKit",
+      "link": "https://workos.com/?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q42026",
       "source": "Daring Fireball",
-      "hash": "464ce25070a69a4e3e0301ea849b470a"
+      "hash": "bc64046f4b89c26bebcbd916b49caa3b"
     }
   },
-  "7a0ce2b983f3b62d9d7557b800ad46b4": {
-    "ts": 1793148767.1250432,
+  "dba4fb20ab3f5369b10d8feca681c019": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "From the DF Archive: Should a CEO Be a Nerd About Their Company’s Products?",
-      "link": "https://daringfireball.net/linked/2022/10/11/ceos-as-nerds",
+      "title": "Verizon Is Going to Charge $10/Month for iPhone Handoff",
+      "link": "https://www.verizon.com/about/news/iphone-duo-verizon-offers",
       "source": "Daring Fireball",
-      "hash": "7a0ce2b983f3b62d9d7557b800ad46b4"
+      "hash": "dba4fb20ab3f5369b10d8feca681c019"
     }
   },
-  "24ce00b07fbcb1ed2404319b96103921": {
-    "ts": 1793148767.1250432,
+  "f681ae0fe00029c0a189da5a7b1f9bda": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Apple Event, in Los Angeles, Next Week: ‘Pro and Tell’",
-      "link": "https://x.com/gregjoz/status/2112212372182249831",
+      "title": "Gurman on HomeView: ‘Finished Units Have Been Sitting Boxed Up in Warehouses for the Better Part of a Year’",
+      "link": "https://www.bloomberg.com/news/newsletters/2026-10-18/apple-homeview-with-robotic-arm-new-mac-ipad-mini-nov-6-release-iphone-duo?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzb3VyY2UiOiJTdWJzY3JpYmVyR2lmdGVkQXJ0aWNsZSIsImlhdCI6MTc5MjMzMjQwNiwiZXhwIjoxNzkyOTM3MjA2LCJhcnRpY2xlSWQiOiJUTjNXODFLR1pBSjQwMCIsImJjb25uZWN0SWQiOiJDNEVEQ0FFMUZBMDU0MEJFQTI0QTlGMjExQzFFOTA4MCJ9.eu94lgz5qU35YdXhWFRwjbVBeJEKzpwFqF-pzh_GPJU&leadSource=article-gifting",
       "source": "Daring Fireball",
-      "hash": "24ce00b07fbcb1ed2404319b96103921"
+      "hash": "f681ae0fe00029c0a189da5a7b1f9bda"
     }
   },
-  "bfa1fff376c2915ca03ed6fd9ceb627b": {
-    "ts": 1793148767.1250432,
+  "e41b5efd422265bef5da504fca2a26aa": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "★ Estimated Arrival Dates for DF Readers’ Pre-Ordered iPhone Duos",
-      "link": "https://daringfireball.net/2026/10/estimated_arrival_dates_for_preordered_iphone_duos",
+      "title": "Claim Chowder: The Information on HomeView Having a ‘Robotic Swiveling Base’",
+      "link": "https://www.theinformation.com/articles/apple-developing-ai-wearable-pin",
       "source": "Daring Fireball",
-      "hash": "bfa1fff376c2915ca03ed6fd9ceb627b"
+      "hash": "e41b5efd422265bef5da504fca2a26aa"
     }
   },
-  "7bfc817f44125993db02a586ee40acb7": {
-    "ts": 1793148767.1250432,
+  "b967d507ba66c887ad3001c4266a50f2": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Netflix Shitcanned Film Chief Dan Lin Too",
-      "link": "https://deadline.com/2026/10/netflix-dan-lin-out-1237167562/",
+      "title": "Apple Issues Statement on Duo Demand Far Outstripping Supply",
+      "link": "https://www.ft.com/content/7b236286-ca1d-4063-a728-7f968a638b8f",
       "source": "Daring Fireball",
-      "hash": "7bfc817f44125993db02a586ee40acb7"
+      "hash": "b967d507ba66c887ad3001c4266a50f2"
     }
   },
-  "3e69f3049fc643b53bda75ac0069feb5": {
-    "ts": 1793148767.1250432,
+  "38d49e7727654aa5ded25eb1578b7d04": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Ex-Apple Employee Fred Potter on HomeView",
-      "link": "https://www.linkedin.com/posts/frpotter_tonight-im-looking-back-through-the-photo-share-7515791565718454272-ue-R/",
+      "title": "Manton Reece’s Spitball Theory on Why the Wall-Mounted HomeView Costs the Same as the Version With the Subwoofer Base",
+      "link": "https://www.manton.org/2026/10/17/in-john-grubers-initial-thoughts.html",
       "source": "Daring Fireball",
-      "hash": "3e69f3049fc643b53bda75ac0069feb5"
+      "hash": "38d49e7727654aa5ded25eb1578b7d04"
     }
   },
-  "e82975cb8b78653006078d4c8cc5ca6f": {
-    "ts": 1793148767.1250432,
+  "1fd2b6096f186d6932357db797df3cc9": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Netflix Lays Off 6 Percent of Staff",
-      "link": "https://www.wsj.com/business/media/netflix-eliminates-about-6-of-staff-in-biggest-cuts-since-2022-0a2d8ec3?st=NtEg5v&reflink=desktopwebshare_permalink",
+      "title": "★ Real Artists Ship, Tesla Edition",
+      "link": "https://daringfireball.net/2026/10/real_artists_ship_tesla_edition",
       "source": "Daring Fireball",
-      "hash": "e82975cb8b78653006078d4c8cc5ca6f"
+      "hash": "1fd2b6096f186d6932357db797df3cc9"
     }
   },
-  "0d5da849b2d3030225053f543b324377": {
-    "ts": 1793148767.1250432,
+  "6aba702da4bd6e965f00f74aad4dfa65": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Time Magazine Profiles John Ternus",
-      "link": "https://time.com/collection/best-inventions/2026/apple-iphone-duo/",
-      "source": "Daring Fireball",
-      "hash": "0d5da849b2d3030225053f543b324377"
-    }
-  },
-  "1fc1ae9d0b1e786d826895d1309785f9": {
-    "ts": 1793148767.1250432,
-    "processed": false,
-    "data": {
-      "title": "How I Use My Index 01 + Production Update",
-      "link": "https://repebble.com/blog/how-i-use-my-index-01-production-update",
+      "title": "New Pebble Weather App + Software Updates",
+      "link": "https://repebble.com/blog/new-pebble-weather-app-software-updates",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "1fc1ae9d0b1e786d826895d1309785f9"
+      "hash": "6aba702da4bd6e965f00f74aad4dfa65"
     }
   },
-  "f25c24e13976907ef8602735ea75a04c": {
-    "ts": 1793148767.1250432,
+  "faadad8ba24dc5d00ff72af06d01033b": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Pebble 2 Duo is in mass production!",
-      "link": "https://ericmigi.com/blog/pebble-2-duo-is-in-mass-production",
+      "title": "Index 01 Is In Mass Production!",
+      "link": "https://repebble.com/blog/index-01-is-in-mass-production",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "f25c24e13976907ef8602735ea75a04c"
+      "hash": "faadad8ba24dc5d00ff72af06d01033b"
     }
   },
-  "e9c5406c15c0ce3cdfb3dcc18f9dd6e8": {
-    "ts": 1793148767.1250432,
+  "5ac430e43099771033a2d2b507940119": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Pebble Time 2* Design Reveal",
-      "link": "https://ericmigi.com/blog/pebble-time-2-design-reveal",
+      "title": "Pebble Mega Update - July 2026",
+      "link": "https://repebble.com/blog/pebble-mega-update-july-2026",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "e9c5406c15c0ce3cdfb3dcc18f9dd6e8"
+      "hash": "5ac430e43099771033a2d2b507940119"
     }
   },
-  "08a8a94e37a3319188dbae60fd5c0256": {
-    "ts": 1793148767.1250432,
+  "b85c169aefc613f69c7165f7876a8b57": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "July Pebble Update",
-      "link": "https://ericmigi.com/blog/july-pebble-update",
+      "title": "Spring 2026 Dev Contest Results!",
+      "link": "https://repebble.com/blog/spring-2026-dev-contest-results",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "08a8a94e37a3319188dbae60fd5c0256"
+      "hash": "b85c169aefc613f69c7165f7876a8b57"
     }
   },
-  "ae3d891bcda0f4a9e81b52d4cb536bb2": {
-    "ts": 1793148767.1250432,
+  "859942bc9ba56d120d127c2e408bcd0e": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Core 2 Duo - Beta Test Signup!",
-      "link": "https://ericmigi.com/blog/core-2-duo-alphabeta-test-signup",
+      "title": "Spring 2026 Pebble App Contest + SDK Updates",
+      "link": "https://repebble.com/blog/spring-2026-pebble-app-contest",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "ae3d891bcda0f4a9e81b52d4cb536bb2"
+      "hash": "859942bc9ba56d120d127c2e408bcd0e"
     }
   },
-  "8f14073749a458c887c74fab41d2c748": {
-    "ts": 1793148767.1250432,
+  "99f1d4ba72ee2c2d688fa64509f7d29e": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "How To Build A Smartwatch: Picking A Chip",
-      "link": "https://ericmigi.com/blog/how-to-build-a-smartwatch-picking-a-chip",
+      "title": "Pebble Time 2 Is In Mass Production!",
+      "link": "https://repebble.com/blog/pebble-time-2-is-in-mass-production",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "8f14073749a458c887c74fab41d2c748"
+      "hash": "99f1d4ba72ee2c2d688fa64509f7d29e"
     }
   },
-  "361edf94f7f622c4b81c86f497e0d879": {
-    "ts": 1793148767.1250432,
+  "5bd668624849783ee10d864da514bf40": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "My new podcast: Tick Talk + Core 2 Duo demo",
-      "link": "https://ericmigi.com/blog/i-started-a-podcast-called-tick-talk",
+      "title": "CloudPebble Returns! Plus New Pure JavaScript and Round 2 SDK",
+      "link": "https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "361edf94f7f622c4b81c86f497e0d879"
+      "hash": "5bd668624849783ee10d864da514bf40"
     }
   },
-  "f118f91224ddc33ea428660ec78958f6": {
-    "ts": 1793148767.1250432,
+  "f8ee080801da89c8f944297bb9093270": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Gratitude and FAQ",
-      "link": "https://ericmigi.com/blog/gratitude-and-faq",
+      "title": "February Pebble Production and Software Updates",
+      "link": "https://repebble.com/blog/february-pebble-production-and-software-updates",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "f118f91224ddc33ea428660ec78958f6"
+      "hash": "f8ee080801da89c8f944297bb9093270"
     }
   },
-  "2e4b9c8b041d4791e9c90b2b1d6b7232": {
-    "ts": 1793148767.1250432,
+  "f89000414aa432a0378faed865aefee4": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Introducing two new Pebble watches!",
-      "link": "https://ericmigi.com/blog/introducing-two-new-pebbleos-watches",
+      "title": "On Being A Canadian In America In 2026",
+      "link": "https://ericmigi.com/blog/on-being-a-canadian-in-america-in-2026",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "2e4b9c8b041d4791e9c90b2b1d6b7232"
+      "hash": "f89000414aa432a0378faed865aefee4"
     }
   },
-  "41d84a29dd9bb721ede9dfb3f3ba0b3e": {
-    "ts": 1793148767.1250432,
+  "83adf6af26b1f89302e068d8e8246527": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Apple restricts Pebble from being awesome with iPhones",
-      "link": "https://ericmigi.com/blog/apple-restricts-pebble-from-being-awesome-with-iphones",
+      "title": "Pebble Round 2 - The Most Stylish Pebble Ever",
+      "link": "https://repebble.com/blog/pebble-round-2-the-most-stylish-pebble-ever",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "41d84a29dd9bb721ede9dfb3f3ba0b3e"
+      "hash": "83adf6af26b1f89302e068d8e8246527"
     }
   },
-  "2515b2f687b5ad3dd43afd71f2e80255": {
-    "ts": 1793148767.1250432,
+  "a4682b4e813e0bce485afe7d9d6ded61": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "February Shenzhen Trip Update",
-      "link": "https://ericmigi.com/blog/february-shenzhen-trip-update",
+      "title": "Pebble Relaunch - Year One Done!",
+      "link": "https://ericmigi.com/blog/pebble-relaunch-year-one-done",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "2515b2f687b5ad3dd43afd71f2e80255"
+      "hash": "a4682b4e813e0bce485afe7d9d6ded61"
     }
   },
-  "73ee42803b6dd67c069929648e348cc8": {
-    "ts": 1793148767.1250432,
+  "1af2697014c9397eab85d99f9c417367": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "How to help us build open source Pebble software!",
-      "link": "https://ericmigi.com/blog/how-to-help-build-open-source-pebble-software",
+      "title": "Meet Pebble Index 01 - External Memory For Your Brain",
+      "link": "https://repebble.com/blog/meet-pebble-index-01-external-memory-for-your-brain",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "73ee42803b6dd67c069929648e348cc8"
+      "hash": "1af2697014c9397eab85d99f9c417367"
     }
   },
-  "e9a6a28ac89383355e0033a87dca90c5": {
-    "ts": 1793148767.1250432,
+  "dd2d4ed8004a87a8ce34d3ff96bb11d2": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Why We’re Bringing Pebble Back",
-      "link": "https://ericmigi.com/blog/why-were-bringing-pebble-back",
+      "title": "Pebble Watch Software Is Now 100% Open Source + Tick Talk #4 - PT2 Demos!",
+      "link": "https://ericmigi.com/blog/pebble-watch-software-is-now-100percent-open-source",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "e9a6a28ac89383355e0033a87dca90c5"
+      "hash": "dd2d4ed8004a87a8ce34d3ff96bb11d2"
     }
   },
-  "938ee0d9130e49006cc5026da6ac874d": {
-    "ts": 1793148767.1250432,
+  "c280f67d25f375cc78be809dedede02e": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Remember how awesome PebbleOS is?",
-      "link": "https://ericmigi.com/blog/pebbleos-is-awesome",
+      "title": "Pebble, Rebble, and a Path Forward",
+      "link": "https://ericmigi.com/blog/pebble-rebble-and-a-path-forward",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "938ee0d9130e49006cc5026da6ac874d"
+      "hash": "c280f67d25f375cc78be809dedede02e"
     }
   },
-  "3b667150f4288fd21d02b1888d336e63": {
-    "ts": 1793148767.1250432,
+  "4a0ba1a9d5b5bc82fb121921fbc930bb": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "The better, smarter future of messaging | The Vergecast",
-      "link": "https://ericmigi.com/blog/the-better-smarter-future-of-messaging-or-the-vergecast",
+      "title": "The new Pebble app is live on iOS and Android",
+      "link": "https://ericmigi.com/blog/the-new-pebble-app-is-live-on-ios-and-android",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "3b667150f4288fd21d02b1888d336e63"
+      "hash": "4a0ba1a9d5b5bc82fb121921fbc930bb"
     }
   },
-  "dac87cc5d1cd5bb3ab1858138df7eb2f": {
-    "ts": 1793148767.1250432,
+  "4daf178422049c18629d81cad77ed64d": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Introducing Beepberry – a portable e-paper computer for hackers",
-      "link": "https://ericmigi.com/blog/introducing-beepberry-a-portable-e-paper-computer-for-hackers",
+      "title": "How To Build A Smartwatch: Software - Setting Expectations & Roadmap",
+      "link": "https://ericmigi.com/blog/how-to-build-a-smartwatch-software-setting-expectations-and-roadmap",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "dac87cc5d1cd5bb3ab1858138df7eb2f"
+      "hash": "4daf178422049c18629d81cad77ed64d"
     }
   },
-  "fa7aff0c1ec6961a2da927b506f1262a": {
-    "ts": 1793148767.1250432,
+  "f8171fcef08101c22c92fdc42472ff8a": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "I want an iPhone Mini-sized Android phone",
-      "link": "https://ericmigi.com/blog/i-want-an-iphone-mini-sized-android-phone",
+      "title": "(re)Introducing the Pebble Appstore",
+      "link": "https://ericmigi.com/blog/re-introducing-the-pebble-appstore",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "fa7aff0c1ec6961a2da927b506f1262a"
+      "hash": "f8171fcef08101c22c92fdc42472ff8a"
     }
   },
-  "ebef49dd3c92ae9f2b42ea6c8bcce798": {
-    "ts": 1793148767.1250432,
+  "171e28240f5fa858f4a8dbe18baef86c": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Success and Failure at Pebble",
-      "link": "https://ericmigi.com/blog/success-and-failure-at-pebble",
+      "title": "Verge interview at CES 2013",
+      "link": "https://ericmigi.com/blog/verge-interview-at-ces-2013",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "ebef49dd3c92ae9f2b42ea6c8bcce798"
+      "hash": "171e28240f5fa858f4a8dbe18baef86c"
     }
   },
-  "47e3aeaa3ba96653336ec2654ce4e49b": {
-    "ts": 1793148767.1250432,
+  "785bd44074d019b2ef59f6b88ab7fb3a": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Show HN: Beeper – All Your Chats in One App",
-      "link": "https://ericmigi.com/blog/show-hn-beeper-all-your-chats-in-one-app",
+      "title": "Introducing Pebble - Hackable E-Paper Watch for iPhone and Android",
+      "link": "https://ericmigi.com/blog/introducing-pebble-hackable-e-paper-watch-for-iphone-and-android",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "47e3aeaa3ba96653336ec2654ce4e49b"
+      "hash": "785bd44074d019b2ef59f6b88ab7fb3a"
     }
   },
-  "d009219c219bf934a056876fc8ff99a5": {
-    "ts": 1793148767.1250432,
+  "d2953c29e3cf32d6b48864913085d2ae": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "The Universal Communication Bus",
-      "link": "https://ericmigi.com/blog/the-universal-communication-bus",
+      "title": "Show HN: Version 1.1 of our $99 hackable Bluetooth smartwatch",
+      "link": "https://ericmigi.com/blog/show-hn-version-11-of-our-dollar99-hackable-bluetooth-smartwatch",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "d009219c219bf934a056876fc8ff99a5"
+      "hash": "d2953c29e3cf32d6b48864913085d2ae"
     }
   },
-  "7246e1c31ae0791d2309531962bd94d7": {
-    "ts": 1793148767.1250432,
+  "94f6986526cf5af303093c74d1de1358": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Startup School - How to talk to users",
-      "link": "https://ericmigi.com/blog/startup-school-how-to-talk-to-users",
+      "title": "Candid experiences starting a hardware startup",
+      "link": "https://ericmigi.com/blog/candid-experiences-starting-a-hardware-startup",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "7246e1c31ae0791d2309531962bd94d7"
+      "hash": "94f6986526cf5af303093c74d1de1358"
     }
   },
-  "06edc49e77cb6ceee1dafcbb5bb44a07": {
-    "ts": 1793148767.1250432,
+  "ec4d1c3c270ea135c13bfcd5c59ecdd1": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Startup School - A Conversation on Hard Tech",
-      "link": "https://ericmigi.com/blog/startup-school-a-conversation-on-hard-tech",
+      "title": "Interview on Crackberry",
+      "link": "https://ericmigi.com/blog/interview-on-crackberry",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "06edc49e77cb6ceee1dafcbb5bb44a07"
+      "hash": "ec4d1c3c270ea135c13bfcd5c59ecdd1"
     }
   },
-  "712a313ff98219c35d5b066f2acb6b71": {
-    "ts": 1793148767.1250432,
+  "7fb429edfed756e6e03c3fb94a774431": {
+    "ts": 1793237335.346484,
     "processed": false,
     "data": {
-      "title": "Hardware Founders: (When) Should You Try To Raise VC Money?",
-      "link": "https://ericmigi.com/blog/hardware-founders-when-should-you-try-to-raise-vc-money",
+      "title": "Evolution of inPulse - Part 2",
+      "link": "https://ericmigi.com/blog/evolution-of-inpulse-part-2",
       "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "712a313ff98219c35d5b066f2acb6b71"
-    }
-  },
-  "5332279c3691f13b34ce762d8c5b7dd2": {
-    "ts": 1793148767.1250432,
-    "processed": false,
-    "data": {
-      "title": "What working on Pebble taught me about building hardware",
-      "link": "https://ericmigi.com/blog/what-working-on-pebble-taught-me-about-building-hardware",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "5332279c3691f13b34ce762d8c5b7dd2"
-    }
-  },
-  "8ab0b96732bc353c0b0db39f1fd7a701": {
-    "ts": 1793148767.1250432,
-    "processed": false,
-    "data": {
-      "title": "Verge interview at CES 2016",
-      "link": "https://ericmigi.com/blog/verge-interview-at-ces-2016",
-      "source": "Eric Migicovsky's Blog RSS Feed",
-      "hash": "8ab0b96732bc353c0b0db39f1fd7a701"
+      "hash": "7fb429edfed756e6e03c3fb94a774431"
     }
   }
 }
